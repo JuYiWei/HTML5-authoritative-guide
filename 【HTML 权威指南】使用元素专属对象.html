@@ -1,0 +1,2286 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  4.7 使用元素专属对象 - 【HTML 权威指南】说了是村长
+  
+  </title>
+ <meta name="description" content="">
+ <link href="atom.xml" rel="alternate" title="【HTML 权威指南】说了是村长" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html">【HTML 权威指南】说了是村长</a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 【HTML 权威指南】说了是村长</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>开篇</label></li>
+
+          
+            <li><a title="1.1 HTML5 背景知识" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML5%20%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.html">1.1 HTML5 背景知识</a></li>
+          
+            <li><a title="1.2 准备工作" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.html">1.2 准备工作</a></li>
+          
+            <li><a title="1.3 HTML 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML%20%E7%AE%80%E4%BB%8B.html">1.3 HTML 简介</a></li>
+          
+            <li><a title="1.4 CSS 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E7%AE%80%E4%BB%8B.html">1.4 CSS 简介</a></li>
+          
+            <li><a title="1.5 JavaScript 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91JavaScript%20%E7%AE%80%E4%BB%8B.html">1.5 JavaScript 简介</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>HTML 元素</label></li>
+
+          
+            <li><a title="2.1 HTML5 元素背景知识" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML5%20%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.html">2.1 HTML5 元素背景知识</a></li>
+          
+            <li><a title="2.2 创建 HTML 文档" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3.html">2.2 创建 HTML 文档</a></li>
+          
+            <li><a title="2.3 标记文字" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97.html">2.3 标记文字</a></li>
+          
+            <li><a title="2.4 组织内容" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9.html">2.4 组织内容</a></li>
+          
+            <li><a title="2.5 文档分节" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82.html">2.5 文档分节</a></li>
+          
+            <li><a title="2.6 表格" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E6%A0%BC.html">2.6 表格</a></li>
+          
+            <li><a title="2.7 表单" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E5%8D%95.html">2.7 表单</a></li>
+          
+            <li><a title="2.8 定制 input 元素" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%AE%9A%E5%88%B6%20input%20%E5%85%83%E7%B4%A0.html">2.8 定制 input 元素</a></li>
+          
+            <li><a title="2.9 其他表单元素与输入验证" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%85%B6%E4%BB%96%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E4%B8%8E%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81.html">2.9 其他表单元素与输入验证</a></li>
+          
+            <li><a title="2.10 嵌入内容" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%B5%8C%E5%85%A5%E5%86%85%E5%AE%B9.html">2.10 嵌入内容</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>CSS</label></li>
+
+          
+            <li><a title="3.1 CSS" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS.html">3.1 CSS</a></li>
+          
+            <li><a title="3.2 CSS 选择器（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%881%EF%BC%89.html">3.2 CSS 选择器（1）</a></li>
+          
+            <li><a title="3.3 CSS 选择器（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%882%EF%BC%89.html">3.3 CSS 选择器（2）</a></li>
+          
+            <li><a title="3.4 边框和背景" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%BE%B9%E6%A1%86%E5%92%8C%E8%83%8C%E6%99%AF.html">3.4 边框和背景</a></li>
+          
+            <li><a title="3.5 使用盒模型" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E7%9B%92%E6%A8%A1%E5%9E%8B.html">3.5 使用盒模型</a></li>
+          
+            <li><a title="3.6 创建布局" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80.html">3.6 创建布局</a></li>
+          
+            <li><a title="3.7 设置文本样式" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%AE%BE%E7%BD%AE%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F.html">3.7 设置文本样式</a></li>
+          
+            <li><a title="3.8 过渡、动画、变换" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%BF%87%E6%B8%A1%E3%80%81%E5%8A%A8%E7%94%BB%E3%80%81%E5%8F%98%E6%8D%A2.html">3.8 过渡、动画、变换</a></li>
+          
+            <li><a title="3.9 CSS 其他属性与特性" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%89%B9%E6%80%A7.html">3.9 CSS 其他属性与特性</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>使用 DOM</label></li>
+
+          
+            <li><a title="4.1 理解 DOM" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E7%90%86%E8%A7%A3%20DOM.html">4.1 理解 DOM</a></li>
+          
+            <li><a title="4.2 使用 Document 对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Document%20%E5%AF%B9%E8%B1%A1.html">4.2 使用 Document 对象</a></li>
+          
+            <li><a title="4.3 使用 Window 对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Window%20%E5%AF%B9%E8%B1%A1.html">4.3 使用 Window 对象</a></li>
+          
+            <li><a title="4.4 使用 DOM 元素" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20DOM%20%E5%85%83%E7%B4%A0.html">4.4 使用 DOM 元素</a></li>
+          
+            <li><a title="4.5 为 DOM 元素设置样式" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%B8%BA%20DOM%20%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E6%A0%B7%E5%BC%8F.html">4.5 为 DOM 元素设置样式</a></li>
+          
+            <li><a title="4.6 使用事件" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E4%BA%8B%E4%BB%B6.html">4.6 使用事件</a></li>
+          
+            <li><a title="4.7 使用元素专属对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%85%83%E7%B4%A0%E4%B8%93%E5%B1%9E%E5%AF%B9%E8%B1%A1.html">4.7 使用元素专属对象</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>高级</label></li>
+
+          
+            <li><a title="5.1 使用 Ajax（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Ajax%EF%BC%881%EF%BC%89.html">5.1 使用 Ajax（1）</a></li>
+          
+            <li><a title="5.2 使用 Ajax（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Ajax%EF%BC%882%EF%BC%89.html">5.2 使用 Ajax（2）</a></li>
+          
+            <li><a title="5.3 使用多媒体" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%AA%92%E4%BD%93.html">5.3 使用多媒体</a></li>
+          
+            <li><a title="5.4 使用 canvas 元素（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20canvas%20%E5%85%83%E7%B4%A0%EF%BC%881%EF%BC%89.html">5.4 使用 canvas 元素（1）</a></li>
+          
+            <li><a title="5.4 使用 canvas 元素（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20canvas%20%E5%85%83%E7%B4%A0%EF%BC%882%EF%BC%89.html">5.4 使用 canvas 元素（2）</a></li>
+          
+            <li><a title="5.5 使用拖放" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E6%8B%96%E6%94%BE.html">5.5 使用拖放</a></li>
+          
+            <li><a title="5.6 使用地理定位" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D.html">5.6 使用地理定位</a></li>
+          
+            <li><a title="5.7 使用 Web 存储" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Web%20%E5%AD%98%E5%82%A8.html">5.7 使用 Web 存储</a></li>
+          
+            <li><a title="5.8 创建离线 Web 应用程序" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91.html">5.8 创建离线 Web 应用程序</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>开篇</span></li>
+                        
+                          <li><a title="1.1 HTML5 背景知识" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML5%20%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.html">1.1 HTML5 背景知识</a></li>
+                        
+                          <li><a title="1.2 准备工作" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.html">1.2 准备工作</a></li>
+                        
+                          <li><a title="1.3 HTML 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML%20%E7%AE%80%E4%BB%8B.html">1.3 HTML 简介</a></li>
+                        
+                          <li><a title="1.4 CSS 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E7%AE%80%E4%BB%8B.html">1.4 CSS 简介</a></li>
+                        
+                          <li><a title="1.5 JavaScript 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91JavaScript%20%E7%AE%80%E4%BB%8B.html">1.5 JavaScript 简介</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>HTML 元素</span></li>
+                        
+                          <li><a title="2.1 HTML5 元素背景知识" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML5%20%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.html">2.1 HTML5 元素背景知识</a></li>
+                        
+                          <li><a title="2.2 创建 HTML 文档" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3.html">2.2 创建 HTML 文档</a></li>
+                        
+                          <li><a title="2.3 标记文字" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97.html">2.3 标记文字</a></li>
+                        
+                          <li><a title="2.4 组织内容" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9.html">2.4 组织内容</a></li>
+                        
+                          <li><a title="2.5 文档分节" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82.html">2.5 文档分节</a></li>
+                        
+                          <li><a title="2.6 表格" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E6%A0%BC.html">2.6 表格</a></li>
+                        
+                          <li><a title="2.7 表单" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E5%8D%95.html">2.7 表单</a></li>
+                        
+                          <li><a title="2.8 定制 input 元素" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%AE%9A%E5%88%B6%20input%20%E5%85%83%E7%B4%A0.html">2.8 定制 input 元素</a></li>
+                        
+                          <li><a title="2.9 其他表单元素与输入验证" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%85%B6%E4%BB%96%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E4%B8%8E%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81.html">2.9 其他表单元素与输入验证</a></li>
+                        
+                          <li><a title="2.10 嵌入内容" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%B5%8C%E5%85%A5%E5%86%85%E5%AE%B9.html">2.10 嵌入内容</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>CSS</span></li>
+                        
+                          <li><a title="3.1 CSS" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS.html">3.1 CSS</a></li>
+                        
+                          <li><a title="3.2 CSS 选择器（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%881%EF%BC%89.html">3.2 CSS 选择器（1）</a></li>
+                        
+                          <li><a title="3.3 CSS 选择器（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%882%EF%BC%89.html">3.3 CSS 选择器（2）</a></li>
+                        
+                          <li><a title="3.4 边框和背景" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%BE%B9%E6%A1%86%E5%92%8C%E8%83%8C%E6%99%AF.html">3.4 边框和背景</a></li>
+                        
+                          <li><a title="3.5 使用盒模型" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E7%9B%92%E6%A8%A1%E5%9E%8B.html">3.5 使用盒模型</a></li>
+                        
+                          <li><a title="3.6 创建布局" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80.html">3.6 创建布局</a></li>
+                        
+                          <li><a title="3.7 设置文本样式" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%AE%BE%E7%BD%AE%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F.html">3.7 设置文本样式</a></li>
+                        
+                          <li><a title="3.8 过渡、动画、变换" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%BF%87%E6%B8%A1%E3%80%81%E5%8A%A8%E7%94%BB%E3%80%81%E5%8F%98%E6%8D%A2.html">3.8 过渡、动画、变换</a></li>
+                        
+                          <li><a title="3.9 CSS 其他属性与特性" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%89%B9%E6%80%A7.html">3.9 CSS 其他属性与特性</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>使用 DOM</span></li>
+                        
+                          <li><a title="4.1 理解 DOM" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E7%90%86%E8%A7%A3%20DOM.html">4.1 理解 DOM</a></li>
+                        
+                          <li><a title="4.2 使用 Document 对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Document%20%E5%AF%B9%E8%B1%A1.html">4.2 使用 Document 对象</a></li>
+                        
+                          <li><a title="4.3 使用 Window 对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Window%20%E5%AF%B9%E8%B1%A1.html">4.3 使用 Window 对象</a></li>
+                        
+                          <li><a title="4.4 使用 DOM 元素" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20DOM%20%E5%85%83%E7%B4%A0.html">4.4 使用 DOM 元素</a></li>
+                        
+                          <li><a title="4.5 为 DOM 元素设置样式" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%B8%BA%20DOM%20%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E6%A0%B7%E5%BC%8F.html">4.5 为 DOM 元素设置样式</a></li>
+                        
+                          <li><a title="4.6 使用事件" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E4%BA%8B%E4%BB%B6.html">4.6 使用事件</a></li>
+                        
+                          <li><a title="4.7 使用元素专属对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%85%83%E7%B4%A0%E4%B8%93%E5%B1%9E%E5%AF%B9%E8%B1%A1.html">4.7 使用元素专属对象</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>高级</span></li>
+                        
+                          <li><a title="5.1 使用 Ajax（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Ajax%EF%BC%881%EF%BC%89.html">5.1 使用 Ajax（1）</a></li>
+                        
+                          <li><a title="5.2 使用 Ajax（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Ajax%EF%BC%882%EF%BC%89.html">5.2 使用 Ajax（2）</a></li>
+                        
+                          <li><a title="5.3 使用多媒体" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%AA%92%E4%BD%93.html">5.3 使用多媒体</a></li>
+                        
+                          <li><a title="5.4 使用 canvas 元素（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20canvas%20%E5%85%83%E7%B4%A0%EF%BC%881%EF%BC%89.html">5.4 使用 canvas 元素（1）</a></li>
+                        
+                          <li><a title="5.4 使用 canvas 元素（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20canvas%20%E5%85%83%E7%B4%A0%EF%BC%882%EF%BC%89.html">5.4 使用 canvas 元素（2）</a></li>
+                        
+                          <li><a title="5.5 使用拖放" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E6%8B%96%E6%94%BE.html">5.5 使用拖放</a></li>
+                        
+                          <li><a title="5.6 使用地理定位" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D.html">5.6 使用地理定位</a></li>
+                        
+                          <li><a title="5.7 使用 Web 存储" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Web%20%E5%AD%98%E5%82%A8.html">5.7 使用 Web 存储</a></li>
+                        
+                          <li><a title="5.8 创建离线 Web 应用程序" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91.html">5.8 创建离线 Web 应用程序</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>4.7 使用元素专属对象</h1>
+
+<ul>
+<li>
+<a href="#toc_0">文档和元数据对象</a>
+</li>
+<li>
+<a href="#toc_1">文本元素</a>
+</li>
+<li>
+<a href="#toc_2">分组元素</a>
+</li>
+<li>
+<a href="#toc_3">区块元素</a>
+</li>
+<li>
+<a href="#toc_4">表格元素</a>
+</li>
+<li>
+<a href="#toc_5">表单元素</a>
+</li>
+<li>
+<a href="#toc_6">内容元素</a>
+</li>
+</ul>
+
+
+<h3 id="toc_0">文档和元数据对象</h3>
+
+<ul>
+<li><p>base</p></li>
+<li><p>HTMLBaseElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">href</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">target</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>body</p></li>
+<li><p>HTMLBodyElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">事件</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">error</td>
+<td style="text-align: left">脚本或图像等资源加载错误时</td>
+</tr>
+<tr>
+<td style="text-align: left">load</td>
+<td style="text-align: left">文档和它所有资源都已加载完成时</td>
+</tr>
+<tr>
+<td style="text-align: left">unload</td>
+<td style="text-align: left">浏览器卸载文档时</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>link</p></li>
+<li><p>HTMLLinkElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">href</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">rel</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">media</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">hreflang</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>meta</p></li>
+<li><p>HTMLMetaElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">httpEquiv</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">content</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>script</p></li>
+<li><p>HTMLScriptElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">src</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">async</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">defer</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">charset</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">text</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>style</p></li>
+<li><p>HTMLStyleElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">media</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">typed</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">scoped</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>title</p></li>
+<li><p>HTMLTitleElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">text</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>其他文档和元数据元素</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">其他</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">html</td>
+<td style="text-align: left">HTMLHtmlElement 无方法、属性、事件</td>
+</tr>
+<tr>
+<td style="text-align: left">head</td>
+<td style="text-align: left">HTMLHeadElement 无方法、属性、事件</td>
+</tr>
+<tr>
+<td style="text-align: left">noscript</td>
+<td style="text-align: left">没有 DOM 对象</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_1">文本元素</h3>
+
+<ul>
+<li><p>a</p></li>
+<li><p>HTMLAnchorElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">href</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">target</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">rel</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">media</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">hreflang</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">text</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">protocol</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">host</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">hostname</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">port</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">pathname</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">search</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">hash</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>del 与 ins</p></li>
+<li><p>HTMLModElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">cite</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">dateTime</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>q</p></li>
+<li><p>HTMLQuoteElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">cite</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>time</p></li>
+<li><p>HTMLTimeElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">dateTime</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">pubDate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">valueAsDate</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>其他文本元素</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">对象</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">br</td>
+<td style="text-align: left">HTMLBRElement</td>
+</tr>
+<tr>
+<td style="text-align: left">span</td>
+<td style="text-align: left">HTMLSpanElement</td>
+</tr>
+<tr>
+<td style="text-align: left">abbr、b、cite、code、dnf、em、i、u、kbd、mark、rt、rp、ruby、s、samp、small、strong、sub、sup、var、wbr</td>
+<td style="text-align: left">HTMLElement</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_2">分组元素</h3>
+
+<ul>
+<li><p>blockquote</p></li>
+<li><p>HTMLQuoteElement 对象，也就是上面的 <code>q</code>；</p></li>
+<li><p>li</p></li>
+<li><p>HTMLLIElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>ol</p></li>
+<li><p>HTMLOListElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">reversed</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">start</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>其他分组元素</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">对象</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">div</td>
+<td style="text-align: left">HTMLDivElement</td>
+</tr>
+<tr>
+<td style="text-align: left">dl</td>
+<td style="text-align: left">HTMLDListElement</td>
+</tr>
+<tr>
+<td style="text-align: left">hr</td>
+<td style="text-align: left">HTMLHRElement</td>
+</tr>
+<tr>
+<td style="text-align: left">p</td>
+<td style="text-align: left">HTMLParagraphElement</td>
+</tr>
+<tr>
+<td style="text-align: left">pre</td>
+<td style="text-align: left">HTMLPreElement</td>
+</tr>
+<tr>
+<td style="text-align: left">ul</td>
+<td style="text-align: left">HTMLUListElement</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_3">区块元素</h3>
+
+<ul>
+<li><p>details</p></li>
+<li><p>HTMLDetailElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">open</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>其他区块元素</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">对象</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">h1-h6</td>
+<td style="text-align: left">HTMLHeadingElement</td>
+</tr>
+<tr>
+<td style="text-align: left">address、article、aside、footer、header、hgroup、nav、section、summary</td>
+<td style="text-align: left">无专属对象</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_4">表格元素</h3>
+
+<ul>
+<li><p>col 与 colgroup</p></li>
+<li><p>HTMLTableColElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">span</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>table</p></li>
+<li><p>HTMLTableElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">border</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">caption</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">creatCaption()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">deleteCaption()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">tHead</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">creatTHead()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">deleteTHead()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">tFoot</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">creatTFoot()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">deleteTFoot()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">tBodies</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">creatTBody</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">rows</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">insertRow(<index>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">deleteRow(<index>)</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>thead、tbody、tfoot</p></li>
+<li><p>HTMLTableSectionElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">rows</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">insert(<index>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">deleteRow(<index>)</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>th</p></li>
+<li><p>HTMLTableHeaderCellElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">rows</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">insert(<index>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">deleteRow(<index>)</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>tr</p></li>
+<li><p>HTMLTableRowElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">rowIndex</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">sectionRowIndex</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">cells</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">insertCell(<index>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">deleteCell(<index>)</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>其他表格元素</p></li>
+<li><p>caption 与 td 无额外功能；</p></li>
+</ul>
+
+<h3 id="toc_5">表单元素</h3>
+
+<ul>
+<li><p>button</p></li>
+<li><p>HTMLButtonElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">autofocus</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formAction</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formEncType</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formMethod</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formNoValidate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formtarget</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">labels</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>datalist</p></li>
+<li><p>HTMLDataListElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">options</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>fieldset</p></li>
+<li><p>HTMLFieldSetElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">elements</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>form</p></li>
+<li><p>HTMLFormElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">acceptCharset</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">action</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">autocomplete</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">enctype</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">encodeing</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">method</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">noValidate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">target</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">elements</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">lenght</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">[<name>]</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">[<index>]</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">submit()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">reset()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">checkValidity()</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>input</p></li>
+<li><p>HTMLInputElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">accept</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">alt</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">autocomplete</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">autofocus</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">checked</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">dirName</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formAction</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formEnctype</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formMethod</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formNoValidate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">formTarget</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">list</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">max</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">maxLength</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">list</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">max</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">maxLength</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">min</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">multiple</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">pattern</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">placeholder</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">readOnly</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">size</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">src</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">step</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">valueAsDate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">valueAsNumber</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">selectedOption</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">stepUpp(<step>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">stepDown(<step>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">willValidate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">validity</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">validationMessage</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">checkValidity()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">setCustomValidity</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">labels</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>label</p></li>
+<li><p>HTMLLabelElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">htmlFor</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">control</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>legend</p></li>
+<li><p>HTMLLegebdElemenet 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>optgroup</p></li>
+<li><p>HTMLOptGroupElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">label</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>option</p></li>
+<li><p>HTMLOptionElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">label</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">selected</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">text</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">index</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>output</p></li>
+<li><p>HTMLOutputElemenet 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">htmlFor</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">willValidate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">validationMessage</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">checkValidity()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">setCustomValidity(<msg>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">labels</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>select</p></li>
+<li><p>HTMLSelectElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">autoFocus</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">multiple</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">size</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">options</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">length</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">[<index>]</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">selectedOptions</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">selectIndex</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">willValidate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">validationMessage</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">checkValidity()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">setCustomValidity(<msg>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">labels</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>textarea</p></li>
+<li><p>HTMLTextAreaElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">autofocus</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">cols</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">dirName</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">maxLength</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">placeholder</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">readOnly</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">rows</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">wrap</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">textLength</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">willValidate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">validationMessage</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">checkValidity()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">setCustomValidity(<msg>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">labels</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_6">内容元素</h3>
+
+<ul>
+<li><p>area </p></li>
+<li><p>HTMLAreaElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">alt</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">coords</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">shape</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">href</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">target</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">rel</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">media</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">hreflang</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">protocol</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">host</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">hostname</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">port</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">pathname</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">search</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">has</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>embed 元素</p></li>
+<li><p>HTMLEmbedElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">src</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">width</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">height</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>iframe</p></li>
+<li><p>HTMLIFrameElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">src</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">srcdoc</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">sandbox</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">seamless</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">width</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">height</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">contentDocument</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">contentWindow</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>img</p></li>
+<li><p>HTMLImageElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">alt</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">src</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">useMap</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">isMap</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">width</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">height</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">complete</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>map </p></li>
+<li><p>HTMLMapElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">areas</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">images</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>meter</p></li>
+<li><p>HTMLMeterElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">max</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">labels</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>object</p></li>
+<li><p>HTMLObjectElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">data</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">useMap</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">width</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">height</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">contentDocument</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">contentWindow</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">willValidate</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">validationMessage</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">checkValidity()</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">setCustomValidity(<msg>)</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">labels</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>param</p></li>
+<li><p>HTMLParamElement 对象；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>progress
+|属性|说明|
+|:--|:--|
+|value||
+|max||
+|postion||
+|form||
+|labels||</li>
+</ul>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E4%BA%8B%E4%BB%B6.html"  title="Previous Post: 4.6 使用事件">&laquo; 4.6 使用事件</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Ajax%EF%BC%881%EF%BC%89.html" 
+	        title="Next Post: 5.1 使用 Ajax（1）">5.1 使用 Ajax（1） &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%85%83%E7%B4%A0%E4%B8%93%E5%B1%9E%E5%AF%B9%E8%B1%A1.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+    
+
+
+  </body>
+</html>

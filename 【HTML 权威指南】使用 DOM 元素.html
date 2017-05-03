@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  4.4 使用 DOM 元素 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,489 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>4.4 使用 DOM 元素</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">使用元素对象</a>
+</li>
+<li>
+<a href="#toc_1">使用 Text 对象</a>
+</li>
+<li>
+<a href="#toc_2">修改模型</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">使用元素对象</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">checked</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">classList</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">className</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">dir</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">hidden</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">id</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">lang</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">spellcheck</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">tabIndex</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">tagName</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">title</td>
+<td style="text-align: left"></td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li><p>使用类</p></li>
+<li><p><code>className</code> 和 <code>classList</code></p></li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">add</td>
+<td style="text-align: left">添加类</td>
+</tr>
+<tr>
+<td style="text-align: left">contains</td>
+<td style="text-align: left">是否包含</td>
+</tr>
+<tr>
+<td style="text-align: left">length</td>
+<td style="text-align: left">类数量</td>
+</tr>
+<tr>
+<td style="text-align: left">remove</td>
+<td style="text-align: left">移除</td>
+</tr>
+<tr>
+<td style="text-align: left">toggle</td>
+<td style="text-align: left">不存在就添加，存在就移除</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li>使用元素属性</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">attributes</td>
+<td style="text-align: left">元素属性集合</td>
+</tr>
+<tr>
+<td style="text-align: left">dataset</td>
+<td style="text-align: left">data- 开头的属性</td>
+</tr>
+<tr>
+<td style="text-align: left">getAttribute(<name>)</td>
+<td style="text-align: left">获取指定属性</td>
+</tr>
+<tr>
+<td style="text-align: left">hasAttribute(<name>)</td>
+<td style="text-align: left">判断指定属性</td>
+</tr>
+<tr>
+<td style="text-align: left">removeAttribute(<name>)</td>
+<td style="text-align: left">移除指定属性</td>
+</tr>
+<tr>
+<td style="text-align: left">setAttribute(<name>,&lt;value)</td>
+<td style="text-align: left">设置指定属性</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<h3 id="toc_1">使用 Text 对象</h3>
 
- 
-	
+<ul>
+<li>文本对象，本身没有标签，难以定位，只能通过父元素向下获取；</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">appendData(<string>)</td>
+<td style="text-align: left">拼接字符串</td>
+</tr>
+<tr>
+<td style="text-align: left">data</td>
+<td style="text-align: left">设置文本</td>
+</tr>
+<tr>
+<td style="text-align: left">deletaData<offset>,&gt;string&gt;</td>
+<td style="text-align: left">删除字符串</td>
+</tr>
+<tr>
+<td style="text-align: left">insertData<offset>,<string></td>
+<td style="text-align: left">插入字符串</td>
+</tr>
+<tr>
+<td style="text-align: left">length</td>
+<td style="text-align: left">字符数量</td>
+</tr>
+<tr>
+<td style="text-align: left">replaceData<offset>,<count>,<string></td>
+<td style="text-align: left">替换指定字符串</td>
+</tr>
+<tr>
+<td style="text-align: left">replaceWholeText<string></td>
+<td style="text-align: left">替换全部字符串</td>
+</tr>
+<tr>
+<td style="text-align: left">splitText<number></td>
+<td style="text-align: left">切分字符串</td>
+</tr>
+<tr>
+<td style="text-align: left">substringData<offset>,<count></td>
+<td style="text-align: left">子字符串</td>
+</tr>
+<tr>
+<td style="text-align: left">wholeText</td>
+<td style="text-align: left">获取文本</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<h3 id="toc_2">修改模型</h3>
 
- 
-	
+<ul>
+<li>创建和删除元素</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">createElement(<tag>)</td>
+<td style="text-align: left">创建元素</td>
+</tr>
+<tr>
+<td style="text-align: left">createTextNode(<text>)</td>
+<td style="text-align: left">创建文本</td>
+</tr>
+<tr>
+<td style="text-align: left">removeChild()</td>
+<td style="text-align: left">移除元素</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>&lt;ol id=&quot;myol&quot;&gt;
+    &lt;li id=&quot;li1&quot;&gt;1111&lt;/li&gt;
+    &lt;li&gt;2222&lt;/li&gt;
+&lt;/ol&gt;
 
- 
-	
 
- 
-	
+&lt;script&gt;
+    var olElement = document.getElementById(&quot;myol&quot;);
 
- 
-	
+    var newli = document.createElement(&quot;li&quot;);
+    olElement.appendChild(newli);
 
- 
-	
+    var newlitext = document.createTextNode(&quot;3333&quot;);
+    newli.appendChild(newlitext);
 
- 
-	
+    var li1 = document.getElementById(&quot;li1&quot;);
+    olElement.removeChild(li1);
+&lt;/script&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>复制元素</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">cloneNode(boolean)</td>
+<td style="text-align: left">复制元素，是否复制其子元素</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li>移动元素</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">appendChild()</td>
+<td style="text-align: left">拼接元素</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>&lt;ol id=&quot;myol1&quot;&gt;
+    &lt;li&gt;1111&lt;/li&gt;
+    &lt;li&gt;2222&lt;/li&gt;
+&lt;/ol&gt;
 
- 
-	
+&lt;ol id=&quot;myol2&quot;&gt;
+    &lt;li&gt;aaa&lt;/li&gt;
+    &lt;li id=&quot;flag&quot;&gt;333&lt;/li&gt;
+&lt;/ol&gt;
 
- 
-	
 
- 
-	
+&lt;script&gt;
+    var olElem= document.getElementById(&quot;myol1&quot;);
+    var liElem = document.getElementById(&quot;flag&quot;);
 
- 
-	
+    olElem.appendChild(liElem);
+&lt;/script&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>比较元素对象</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">isEqualNode()</td>
+<td style="text-align: left">是否元素内容一样</td>
+</tr>
+<tr>
+<td style="text-align: left">isSameNode()</td>
+<td style="text-align: left">是否同一个元素</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li>使用 HTML 片段</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">innerHTML</td>
+<td style="text-align: left">读写某元素的内容</td>
+</tr>
+<tr>
+<td style="text-align: left">outerTHML</td>
+<td style="text-align: left">读写某元素的 HTML 和内容</td>
+</tr>
+<tr>
+<td style="text-align: left">insertAdjacetHTML(<pos>,<text>)</td>
+<td style="text-align: left">相对于元素 pos 插入 HTML</td>
+</tr>
+<tr>
+<td style="text-align: left">insertBefore(<newElem>,<childElem>)</td>
+<td style="text-align: left">在 childlem 元素前插入 newElem</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">pos 值</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
-  
-  
+<tbody>
+<tr>
+<td style="text-align: left">afterbenin</td>
+<td style="text-align: left">作为当前元素的第一个子元素插入</td>
+</tr>
+<tr>
+<td style="text-align: left">beforeend</td>
+<td style="text-align: left">作为当前元素的最后一个子元素插入</td>
+</tr>
+<tr>
+<td style="text-align: left">afterend</td>
+<td style="text-align: left">插入当前元素之后</td>
+</tr>
+<tr>
+<td style="text-align: left">beforebegin</td>
+<td style="text-align: left">当前元素之前</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>向文本块插入元素</li>
+</ul>
+
+<pre><code>&lt;p id=&quot;p1&quot;&gt;There are lots of different kinds of fruit&lt;/p&gt;
+
+&lt;script&gt;
+    var pElem= document.getElementById(&quot;p1&quot;);
+    pElem.firstChild.splitText(10);
+    var newText = pElem.childNodes[1].splitText(4).previousSibling;    
+    pElem.insertBefore(document.createElement(&quot;i&quot;),newText).appendChild(newText);
+&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>其他</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">compareDocumentPosition</td>
+<td style="text-align: left">判断元素相对位置</td>
+</tr>
+<tr>
+<td style="text-align: left">replaceChild()</td>
+<td style="text-align: left">替换</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Window%20%E5%AF%B9%E8%B1%A1.html"  title="Previous Post: 4.3 使用 Window 对象">&laquo; 4.3 使用 Window 对象</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%B8%BA%20DOM%20%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E6%A0%B7%E5%BC%8F.html" 
+	        title="Next Post: 4.5 为 DOM 元素设置样式">4.5 为 DOM 元素设置样式 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20DOM%20%E5%85%83%E7%B4%A0.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  4.3 使用 Window 对象 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,356 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>4.3 使用 Window 对象</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">获取 Window 对象</a>
+</li>
+<li>
+<a href="#toc_1">获取窗口信息</a>
+</li>
+<li>
+<a href="#toc_2">与窗口进行交互</a>
+</li>
+<li>
+<a href="#toc_3">用户提示</a>
+</li>
+<li>
+<a href="#toc_4">获取基本信息</a>
+</li>
+<li>
+<a href="#toc_5">浏览器历史</a>
+</li>
+<li>
+<a href="#toc_6">跨文档消息传递</a>
+</li>
+<li>
+<a href="#toc_7">计时器</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">获取 Window 对象</h3>
 
- 
-	
+<ul>
+<li><code>window</code> 通用方式；</li>
+<li><code>defaultView</code> HTML5 方式；</li>
+</ul>
 
- 
-	
+<h3 id="toc_1">获取窗口信息</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">innerHeight</td>
+<td style="text-align: left">窗口内容高</td>
+</tr>
+<tr>
+<td style="text-align: left">innerWidth</td>
+<td style="text-align: left">窗口内容宽</td>
+</tr>
+<tr>
+<td style="text-align: left">outerHeight</td>
+<td style="text-align: left">窗口本身高</td>
+</tr>
+<tr>
+<td style="text-align: left">outerWidth</td>
+<td style="text-align: left">窗口本身宽</td>
+</tr>
+<tr>
+<td style="text-align: left">pageXOffset</td>
+<td style="text-align: left">偏移</td>
+</tr>
+<tr>
+<td style="text-align: left">pageYOffset</td>
+<td style="text-align: left">偏移</td>
+</tr>
+<tr>
+<td style="text-align: left">screen</td>
+<td style="text-align: left">screen 对象</td>
+</tr>
+<tr>
+<td style="text-align: left">screenLeft/screenX</td>
+<td style="text-align: left">窗口距离屏幕的像素</td>
+</tr>
+<tr>
+<td style="text-align: left">screenRigght/screenY</td>
+<td style="text-align: left">窗口距离屏幕的像素</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li><code>screen</code> 屏幕对象</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">availHeight</td>
+<td style="text-align: left">屏幕上可显示窗口部分高度</td>
+</tr>
+<tr>
+<td style="text-align: left">availWidth</td>
+<td style="text-align: left">屏幕上可显示窗口部分宽度</td>
+</tr>
+<tr>
+<td style="text-align: left">colorDepth</td>
+<td style="text-align: left">颜色深度</td>
+</tr>
+<tr>
+<td style="text-align: left">height</td>
+<td style="text-align: left">屏幕高</td>
+</tr>
+<tr>
+<td style="text-align: left">width</td>
+<td style="text-align: left">屏幕宽</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<h3 id="toc_2">与窗口进行交互</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">blue()</td>
+<td style="text-align: left">时区键盘焦点</td>
+</tr>
+<tr>
+<td style="text-align: left">close()</td>
+<td style="text-align: left">关闭窗口</td>
+</tr>
+<tr>
+<td style="text-align: left">focus()</td>
+<td style="text-align: left">获取键盘焦点</td>
+</tr>
+<tr>
+<td style="text-align: left">print()</td>
+<td style="text-align: left">打印</td>
+</tr>
+<tr>
+<td style="text-align: left">scrollBy(x,y)</td>
+<td style="text-align: left">相对滚动</td>
+</tr>
+<tr>
+<td style="text-align: left">scrollTo(x,y)</td>
+<td style="text-align: left">绝对滚动</td>
+</tr>
+<tr>
+<td style="text-align: left">stop</td>
+<td style="text-align: left">停止载入</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<h3 id="toc_3">用户提示</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">alert(<msg>)</td>
+<td style="text-align: left">提示</td>
+</tr>
+<tr>
+<td style="text-align: left">confirm(<msg>)</td>
+<td style="text-align: left">有确认的提示</td>
+</tr>
+<tr>
+<td style="text-align: left">prompt(<msg>,&gt;val&gt;)</td>
+<td style="text-align: left">用户输入</td>
+</tr>
+<tr>
+<td style="text-align: left">showModalDialog(<url>)</td>
+<td style="text-align: left">弹出窗口，指定 URL</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<h3 id="toc_4">获取基本信息</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">document</td>
+<td style="text-align: left">与窗口关联的 Document 对象</td>
+</tr>
+<tr>
+<td style="text-align: left">history</td>
+<td style="text-align: left">浏览器历史对象</td>
+</tr>
+<tr>
+<td style="text-align: left">location</td>
+<td style="text-align: left">当前文档地址详细信息对象</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<h3 id="toc_5">浏览器历史</h3>
 
- 
-	
+<ul>
+<li>历史中导航</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">back()</td>
+<td style="text-align: left">后退</td>
+</tr>
+<tr>
+<td style="text-align: left">forward()</td>
+<td style="text-align: left">前进</td>
+</tr>
+<tr>
+<td style="text-align: left">go(<index>)</td>
+<td style="text-align: left">某个位置</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li><p>历史中插入条目</p></li>
+<li><p><code>pushState</code></p></li>
+<li><p>不同文档添加条目</p></li>
+</ul>
 
- 
-	
+<p>？？</p>
 
- 
-	
+<ul>
+<li>历史中保存复杂状态</li>
+</ul>
 
- 
-	
+<p>？？</p>
 
- 
-	
+<ul>
+<li><p>替换历史条目</p></li>
+<li><p><code>replaceState</code></p></li>
+</ul>
 
- 
-	
+<p>？？</p>
 
- 
-	
+<h3 id="toc_6">跨文档消息传递</h3>
 
- 
-	
+<ul>
+<li><code>postMessage(&lt;msg&gt;,&lt;origin&gt;)</code></li>
+</ul>
 
- 
-	
+<p>???</p>
 
- 
-	
+<h3 id="toc_7">计时器</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">clearInterval(<id>)</td>
+<td style="text-align: left">清除</td>
+</tr>
+<tr>
+<td style="text-align: left">setInterval(<fun>,<time>)</td>
+<td style="text-align: left">延时重复执行</td>
+</tr>
+<tr>
+<td style="text-align: left">clearTimeout(<id>)</td>
+<td style="text-align: left">清除</td>
+</tr>
+<tr>
+<td style="text-align: left">setTimeout(<fun>,<time></td>
+<td style="text-align: left">延时执行</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
 
- 
-	
+</div>
 
- 
-	
+<br /><br />
+<hr />
 
- 
-	
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Document%20%E5%AF%B9%E8%B1%A1.html"  title="Previous Post: 4.2 使用 Document 对象">&laquo; 4.2 使用 Document 对象</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20DOM%20%E5%85%83%E7%B4%A0.html" 
+	        title="Next Post: 4.4 使用 DOM 元素">4.4 使用 DOM 元素 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
 
- 
-	
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
 
- 
-	
-
- 
-	
-
- 
-	
-
-  
-  
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Window%20%E5%AF%B9%E8%B1%A1.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 

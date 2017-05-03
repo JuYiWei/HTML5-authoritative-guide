@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  3.3 CSS 选择器（2） - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,316 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>3.3 CSS 选择器（2）</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">结构性伪类</a>
+</li>
+<li>
+<a href="#toc_1">UI 伪类</a>
+</li>
+<li>
+<a href="#toc_2">动态伪类</a>
+</li>
+<li>
+<a href="#toc_3">其他伪类</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">结构性伪类</h3>
 
- 
-	
+<ul>
+<li><p>根元素</p></li>
+<li><p><code>:root</code>，总是返回<code>html</code>元素，实际使用可能比较少；</p></li>
+</ul>
 
- 
-	
+<pre><code>:root {
+    border: thin black solid;
+    background: grey;
+}
+</code></pre>
 
- 
-	
+<ul>
+<li>子元素</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">选择器</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">:first-child</td>
+<td style="text-align: left">第一个子元素</td>
+</tr>
+<tr>
+<td style="text-align: left">:last-child</td>
+<td style="text-align: left">最后一个子元素</td>
+</tr>
+<tr>
+<td style="text-align: left">:only-child</td>
+<td style="text-align: left">唯一子元素</td>
+</tr>
+<tr>
+<td style="text-align: left">:only-of-type</td>
+<td style="text-align: left">唯一指定类型的子元素</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li><code>first-child</code> 和 <code>last-child</code>是一样的；</li>
+</ul>
 
- 
-	
+<pre><code>// 每个元素的第一个子元素；
+:first-child {
+    border: thin black solid;
+}
 
- 
-	
+// 第一个子元素，且为 p 元素
+p:first-child {
+    color: yellow;
+}
 
- 
-	
+// body 中的第一个子元素，且为 p 元素
+body&gt;p:first-child {
+    color: red;
+}
 
- 
-	
+// 以上三种情况，用下面的看比较直观
+&lt;body&gt;
+&lt;p&gt;body 下第 1 个 p&lt;/p&gt;
+&lt;p&gt;body 下第 2 个 p&lt;/p&gt;
+&lt;div&gt;
+    &lt;p&gt;div1 下第 1 个 p&lt;/p&gt;
+    &lt;p&gt;div1 下第 2 个 p&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;h1&gt;div2 下第 1 个 h1&lt;/h1&gt;
+    &lt;p&gt;div2 下第 1 个 p&lt;/p&gt;
+    &lt;p&gt;div2 下第 2 个 p&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><code>only-child</code> 唯一子元素；</li>
+</ul>
 
- 
-	
+<pre><code>// 唯一子元素
+:only-child {
+    color: red;
+}
 
- 
-	
+// 唯一子元素，且为 p 元素
+p:only-child {
+    color: red;
+}
 
- 
-	
+// div 中唯一子元素，且为 p 元素
+div&gt;p:only-child {
+    color: red;
+}
 
- 
-	
+// 以上三种情况，用下面的看比较直观
+&lt;body&gt;
+&lt;p&gt;body 下第 1 个 p&lt;/p&gt;
+&lt;div&gt;
+    &lt;p&gt;div1 下唯一 p&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;p&gt;div2 下第 1 个 p&lt;/p&gt;
+    &lt;p&gt;div2 下第 2 个 p&lt;/p&gt;
+&lt;/div&gt;
+&lt;span&gt;
+    &lt;p&gt;span 下唯一 p&lt;/p&gt;
+&lt;/span&gt;
+&lt;/body&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><code>only-of-type</code> 唯一指定类型子元素；</li>
+</ul>
 
- 
-	
+<pre><code>// 唯一类型子元素
+:only-of-type {
+    border: thin black solid;
+}
 
- 
-	
+// 唯一类型子元素，且为 p 元素
+p:only-of-type {
+    border: thin black solid;
+}
 
- 
-	
+// div 元素下的唯一类型子元素，且为 p 元素
+div&gt;p:only-of-type {
+    border: thin black solid;
+}
 
- 
-	
+// 以上三种情况，用下面的看比较直观
+&lt;body&gt;
+&lt;p&gt;body 下唯一 p&lt;/p&gt;
+&lt;div&gt;
+    &lt;h1&gt;div1 下唯一 h1&lt;/h1&gt;
+    &lt;p&gt;div1 下唯一 p&lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;p&gt;div2 下第 1 个 p&lt;/p&gt;
+    &lt;p&gt;div2 下第 2 个 p&lt;/p&gt;
+&lt;/div&gt;
+&lt;span&gt;
+    &lt;p&gt;span 下唯一 p&lt;/p&gt;
+&lt;/span&gt;
+&lt;/body&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>nth-child</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">选择器</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">:nth-child(n)</td>
+<td style="text-align: left">第n个子元素</td>
+</tr>
+<tr>
+<td style="text-align: left">:nth-last-child(n)</td>
+<td style="text-align: left">倒数第n个子元素</td>
+</tr>
+<tr>
+<td style="text-align: left">:nth-of-type(n)</td>
+<td style="text-align: left">指定类型的第n个子元素</td>
+</tr>
+<tr>
+<td style="text-align: left">:nth-last-of-type(n)</td>
+<td style="text-align: left">指定类型的倒数第n个子元素</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<blockquote>
+<p>与上述类似，略了，要举一反三；</p>
+</blockquote>
 
- 
-	
+<h3 id="toc_1">UI 伪类</h3>
 
- 
-	
+<ul>
+<li><p>启用/禁用</p></li>
+<li><p><code>:enabled</code> 和 <code>:disabled</code></p></li>
+</ul>
 
- 
-	
+<pre><code>:enabled {
+    color: red;
+}
 
- 
-	
+:disabled {
+    color: green;
+}
 
- 
-	
 
- 
-	
+&lt;button&gt;可用&lt;/button&gt;
+&lt;button disabled&gt;不可用&lt;/button&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>已勾选</p></li>
+<li><p><code>:checked</code></p></li>
+<li><p>默认</p></li>
+<li><p><code>:default</code></p></li>
+<li><p>有效/无效的 input </p></li>
+<li><p><code>:valid</code> 和 <code>:invalid</code></p></li>
+<li><p>限定范围的 input</p></li>
+<li><p><code>:in-range</code> 和 <code>out-of-range</code></p></li>
+<li><p>必须/可选的 input</p></li>
+<li><p><code>:required</code> 和 <code>:optional</code></p></li>
+</ul>
 
- 
-	
+<h3 id="toc_2">动态伪类</h3>
 
- 
-	
+<ul>
+<li><p>link 超链接</p></li>
+<li><p>visited已访问的超链接</p></li>
+<li><p>hover 鼠标悬停</p></li>
+<li><p>active 元素激活时</p></li>
+<li><p>focus 焦点元素</p></li>
+</ul>
 
- 
-	
+<h3 id="toc_3">其他伪类</h3>
 
- 
-	
+<ul>
+<li><p>not 否定选择器</p></li>
+<li><p>empty 没有子元素的元素</p></li>
+<li><p>lang 基于 lang 全局属性的元素</p></li>
+<li><p>target 超链接 target 属性相关</p></li>
+</ul>
 
- 
-	
+<pre><code>:target {
+    border: thin black solid;
+    color: red;
+}
 
- 
-	
 
- 
-	
+&lt;a href=&quot;###p1&quot;&gt;p1&lt;/a&gt;
+&lt;a href=&quot;###p2&quot;&gt;p2&lt;/a&gt;
 
- 
-	
+&lt;p id=&quot;p1&quot;&gt;content 1&lt;/p&gt;
+&lt;p id=&quot;p2&quot;&gt;content 2&lt;/p&gt;
+</code></pre>
 
- 
-	
 
-  
-  
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%881%EF%BC%89.html"  title="Previous Post: 3.2 CSS 选择器（1）">&laquo; 3.2 CSS 选择器（1）</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%BE%B9%E6%A1%86%E5%92%8C%E8%83%8C%E6%99%AF.html" 
+	        title="Next Post: 3.4 边框和背景">3.4 边框和背景 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%882%EF%BC%89.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 

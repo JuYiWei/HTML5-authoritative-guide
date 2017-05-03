@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  2.4 组织内容 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,186 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>2.4 组织内容</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">div 块</a>
+</li>
+<li>
+<a href="#toc_1">引用他处内容</a>
+</li>
+<li>
+<a href="#toc_2">添加主题分离</a>
+</li>
+<li>
+<a href="#toc_3">内容组织为列表</a>
+</li>
+<li>
+<a href="#toc_4">插图</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">div 块</h3>
 
- 
-	
+<pre><code>略
+</code></pre>
 
- 
-	
+<h3 id="toc_1">引用他处内容</h3>
 
- 
-	
+<pre><code>&lt;blockquote&gt;类选择器在css样式编码中是最常用到的，如右侧代码编辑器中的代码:可以实现为“胆小如鼠”、“勇气”字体设置为红色。&lt;/blockquote&gt;
+</code></pre>
 
- 
-	
+<h3 id="toc_2">添加主题分离</h3>
 
- 
-	
+<pre><code>&lt;hr&gt;
+</code></pre>
 
- 
-	
+<h3 id="toc_3">内容组织为列表</h3>
 
- 
-	
+<ul>
+<li>有序列表</li>
+</ul>
 
- 
-	
+<pre><code>&lt;ol start=&quot;10&quot; type=&quot;a&quot; reversed&gt;
+    &lt;li&gt;apple&lt;/li&gt;
+    &lt;li&gt;orange&lt;/li&gt;
+    &lt;li&gt;banana&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>start：首项编号</li>
+<li>reversed：倒序</li>
+<li>type：编号类型</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性值</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">1</td>
+<td style="text-align: left">默认十进制</td>
+</tr>
+<tr>
+<td style="text-align: left">a</td>
+<td style="text-align: left">小写拉丁字母</td>
+</tr>
+<tr>
+<td style="text-align: left">A</td>
+<td style="text-align: left">大写拉丁字母</td>
+</tr>
+<tr>
+<td style="text-align: left">i</td>
+<td style="text-align: left">小写罗马数字</td>
+</tr>
+<tr>
+<td style="text-align: left">Ⅰ</td>
+<td style="text-align: left">大写罗马数字</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li>无序列表</li>
+</ul>
 
- 
-	
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;apple&lt;/li&gt;
+    &lt;li&gt;orange&lt;/li&gt;
+    &lt;li&gt;banana&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>li</p></li>
+<li><p>在有序列表中可用，<code>li</code>元素的<code>value</code>属性，设置编号；</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;apple&lt;/li&gt;
+    &lt;li value=&quot;10&quot;&gt;orange&lt;/li&gt;
+    &lt;li value=&quot;100&quot;&gt;banana&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>说明列表</li>
+</ul>
 
- 
-	
+<pre><code>&lt;dl&gt;
+    &lt;dt&gt;Apple&lt;/dt&gt;
+        &lt;dd&gt;Apple 1&lt;/dd&gt;
+        &lt;dd&gt;Apple 2&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>自定义列表</li>
+</ul>
 
- 
-	
+<p>结合 CSS counter 和 :before 选择器，具体在 17 章介绍；</p>
 
- 
-	
+<h3 id="toc_4">插图</h3>
 
- 
-	
+<ul>
+<li>有点像缩进的 div；</li>
+</ul>
 
- 
-	
+<pre><code>&lt;figure&gt;
+    &lt;figcaption&gt;插图标题&lt;/figcaption&gt;
+    &lt;p&gt;asd&lt;/p&gt;
+    
+&lt;/figure&gt;
+</code></pre>
 
- 
-	
 
- 
-	
+</div>
 
- 
-	
+<br /><br />
+<hr />
 
- 
-	
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97.html"  title="Previous Post: 2.3 标记文字">&laquo; 2.3 标记文字</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82.html" 
+	        title="Next Post: 2.5 文档分节">2.5 文档分节 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
 
- 
-	
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
 
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
-  
-  
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 

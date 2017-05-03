@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  2.8 定制 input 元素 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,519 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>2.8 定制 input 元素</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">输入文字</a>
+</li>
+<li>
+<a href="#toc_1">输入密码</a>
+</li>
+<li>
+<a href="#toc_2">生成按钮</a>
+</li>
+<li>
+<a href="#toc_3">数据检查</a>
+</li>
+<li>
+<a href="#toc_4">获取搜索用词</a>
+</li>
+<li>
+<a href="#toc_5">生成隐藏的数据项</a>
+</li>
+<li>
+<a href="#toc_6">生成图像按钮和分区响应图</a>
+</li>
+<li>
+<a href="#toc_7">上传文件</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">输入文字</h3>
 
- 
-	
+<ul>
+<li><code>text</code>，默认 type</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">text 额外属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">dirname</td>
+<td style="text-align: left">方向</td>
+</tr>
+<tr>
+<td style="text-align: left">list</td>
+<td style="text-align: left">建议输入值</td>
+</tr>
+<tr>
+<td style="text-align: left">maxlength</td>
+<td style="text-align: left">字符最大数量</td>
+</tr>
+<tr>
+<td style="text-align: left">pattern</td>
+<td style="text-align: left">正则表达式</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholder</td>
+<td style="text-align: left">提示</td>
+</tr>
+<tr>
+<td style="text-align: left">readonly</td>
+<td style="text-align: left">只读</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须输入</td>
+</tr>
+<tr>
+<td style="text-align: left">size</td>
+<td style="text-align: left">宽度</td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left">初始值</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li><p>大小</p></li>
+<li><p><code>maxlength</code>：输入字符个数限制；</p></li>
+<li><p><code>size</code>：可显示字符数限制，宽度限制；</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; maxlength=&quot;8&quot;/&gt;&lt;/label&gt;
+&lt;label&gt;密码：&lt;input name=&quot;password&quot; size=&quot;10&quot;/&gt;&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>初始值与占位提示</p></li>
+<li><p><code>value</code>：初始值；</p></li>
+<li><p><code>placeholder</code>：占位提示；</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; value=&quot;Li Lei&quot;/&gt;&lt;/label&gt;
+&lt;label&gt;密码：&lt;input name=&quot;password&quot; placeholder=&quot;123456&quot;/&gt;&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>数据列表</li>
+</ul>
 
- 
-	
+<pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; list=&quot;userNames&quot;/&gt;&lt;/label&gt;
+    
+&lt;datalist id=&quot;userNames&quot;&gt;
+    &lt;option value=&quot;Li Lei&quot;&gt;&lt;/option&gt;
+    &lt;option value=&quot;Han Meimei&quot;&gt;&lt;/option&gt;
+    &lt;option value=&quot;Xiao Ming&quot;&gt;&lt;/option&gt;
+&lt;/datalist&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>只读或禁用</p></li>
+<li><p><code>readonly</code>：只读；</p></li>
+<li><p><code>disable</code>：禁用；</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; readonly/&gt;&lt;/label&gt;
+&lt;label&gt;密码：&lt;input name=&quot;password&quot; disabled/&gt;&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>方向</li>
+</ul>
 
- 
-	
+<p>略，有毛用？</p>
 
- 
-	
+<h3 id="toc_1">输入密码</h3>
 
- 
-	
+<ul>
+<li><code>password</code>，额外属性与<code>text</code>用法一样；</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">text 额外属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">maxlength</td>
+<td style="text-align: left">字符最大数量</td>
+</tr>
+<tr>
+<td style="text-align: left">pattern</td>
+<td style="text-align: left">正则表达式</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholder</td>
+<td style="text-align: left">提示</td>
+</tr>
+<tr>
+<td style="text-align: left">readonly</td>
+<td style="text-align: left">只读</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须输入</td>
+</tr>
+<tr>
+<td style="text-align: left">size</td>
+<td style="text-align: left">宽度</td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left">初始值</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<h3 id="toc_2">生成按钮</h3>
 
- 
-	
+<ul>
+<li><code>submit</code><code>reset</code><code>button</code>，会对应变成<code>button</code>的三种类型，使用方式一样；</li>
+</ul>
 
- 
-	
+<h3 id="toc_3">数据检查</h3>
 
- 
-	
+<p>|属性|说明|<br/>
+|checkbox|是否选择|<br/>
+|color|颜色|<br/>
+|date|日期|<br/>
+|datetime|带时区的世界时|<br/>
+|datetime-local|不带时区的世界时|<br/>
+|email|油箱|<br/>
+|month|年月|<br/>
+|number|数字|<br/>
+|radiobutton|一组固定选项中选择|<br/>
+|range|指定范围|<br/>
+|tel|电话|<br/>
+|time|时间|<br/>
+|week|年与星期|<br/>
+|url|URL|</p>
 
- 
-	
+<ul>
+<li><p>数值</p></li>
+<li><p><code>number</code></p></li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">list</td>
+<td style="text-align: left">建议值</td>
+</tr>
+<tr>
+<td style="text-align: left">min</td>
+<td style="text-align: left">最小值</td>
+</tr>
+<tr>
+<td style="text-align: left">max</td>
+<td style="text-align: left">最大值</td>
+</tr>
+<tr>
+<td style="text-align: left">readonly</td>
+<td style="text-align: left">只读</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须</td>
+</tr>
+<tr>
+<td style="text-align: left">step</td>
+<td style="text-align: left">数值调节步长</td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left">初始值</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>&lt;label&gt;购买数量：&lt;input type=&quot;number&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;2&quot;&gt;&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>指定范围</p></li>
+<li><p><code>range</code>，与<code>number</code>功能相同，显示不同；</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;label&gt;购买数量：&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;2&quot;&gt;&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>布尔、多选</p></li>
+<li><p><code>checkbox</code></p></li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">checked</td>
+<td style="text-align: left">选中</td>
+</tr>
+<tr>
+<td style="text-align: left">min</td>
+<td style="text-align: left">必须</td>
+</tr>
+<tr>
+<td style="text-align: left">max</td>
+<td style="text-align: left">勾选状态时提交的数据值，默认 on</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>&lt;label&gt;apple：&lt;input type=&quot;checkbox&quot; name=&quot;fav&quot; checked&gt;&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>单选</p></li>
+<li><p><code>radio</code>，属性与<code>checkbox</code>一致；</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;label&gt;性别：
+    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;man&quot;&gt;男
+    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;woman&quot;&gt;女
+&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>规定格式的字符串</p></li>
+<li><p><code>email</code>、<code>tel</code>、<code>url</code>；</p></li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">list</td>
+<td style="text-align: left">选择列表</td>
+</tr>
+<tr>
+<td style="text-align: left">maxlength</td>
+<td style="text-align: left">字符限制</td>
+</tr>
+<tr>
+<td style="text-align: left">pattern</td>
+<td style="text-align: left">正则</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholder</td>
+<td style="text-align: left">占位提示</td>
+</tr>
+<tr>
+<td style="text-align: left">readonly</td>
+<td style="text-align: left">只读</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须</td>
+</tr>
+<tr>
+<td style="text-align: left">size</td>
+<td style="text-align: left">宽度</td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left">初始值</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<blockquote>
+<p><code>email</code> 还有额外的<code>multipe</code>属性，接受多个邮箱地址； </p>
+</blockquote>
 
- 
-	
+<pre><code>&lt;label&gt;邮箱：&lt;input type=&quot;email&quot;&gt;&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>时间日期</p></li>
+<li><p>直接使用 jQuery 之类的 JS 日历选择工具好了；</p></li>
+<li><p>颜色值</p></li>
+<li><p><code>color</code>，</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;label&gt;背景颜色：&lt;input type=&quot;color&quot; name=&quot;backgroundColor&quot;&gt;&lt;/label&gt;
+</code></pre>
 
-  
-  
+<h3 id="toc_4">获取搜索用词</h3>
+
+<ul>
+<li><code>search</code>，一般浏览器都直接以<code>text</code>类型处理；但是可以根据不同类型有不同的样式；</li>
+</ul>
+
+<h3 id="toc_5">生成隐藏的数据项</h3>
+
+<ul>
+<li><code>hidden</code>，用户不需要输入，也不给用户看到，道士默认上传给服务器；</li>
+</ul>
+
+<pre><code>&lt;input type=&quot;hidden&quot; name=&quot;token&quot; value=&quot;qs1234&quot;&gt;
+</code></pre>
+
+<h3 id="toc_6">生成图像按钮和分区响应图</h3>
+
+<ul>
+<li><code>image</code>，作用同<code>button</code>类型，属性稍多几个；</li>
+</ul>
+
+<pre><code>&lt;input type=&quot;image&quot; src=&quot;123.jpg&quot; name=&quot;submit&quot;&gt;
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">alt</td>
+<td style="text-align: left">说明文字</td>
+</tr>
+<tr>
+<td style="text-align: left">formaction</td>
+<td style="text-align: left">重新关联 action</td>
+</tr>
+<tr>
+<td style="text-align: left">formenctype</td>
+<td style="text-align: left">重新关联 enctype</td>
+</tr>
+<tr>
+<td style="text-align: left">formmethod</td>
+<td style="text-align: left">重新关联 method</td>
+</tr>
+<tr>
+<td style="text-align: left">formtarget</td>
+<td style="text-align: left">重新关联 target</td>
+</tr>
+<tr>
+<td style="text-align: left">formnovalidate</td>
+<td style="text-align: left">重新关联，与输入数据检查有关</td>
+</tr>
+<tr>
+<td style="text-align: left">height</td>
+<td style="text-align: left">高</td>
+</tr>
+<tr>
+<td style="text-align: left">src</td>
+<td style="text-align: left">图片资源</td>
+</tr>
+<tr>
+<td style="text-align: left">width</td>
+<td style="text-align: left">宽</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_7">上传文件</h3>
+
+<ul>
+<li><code>file</code>；</li>
+</ul>
+
+<pre><code>&lt;input type=&quot;file&quot; accept=&quot;application/pdf&quot; required&gt;
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">accept</td>
+<td style="text-align: left">MIME 类型</td>
+</tr>
+<tr>
+<td style="text-align: left">multiple</td>
+<td style="text-align: left">文件多选，浏览器支持不多？</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E5%8D%95.html"  title="Previous Post: 2.7 表单">&laquo; 2.7 表单</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%85%B6%E4%BB%96%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E4%B8%8E%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81.html" 
+	        title="Next Post: 2.9 其他表单元素与输入验证">2.9 其他表单元素与输入验证 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%AE%9A%E5%88%B6%20input%20%E5%85%83%E7%B4%A0.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 

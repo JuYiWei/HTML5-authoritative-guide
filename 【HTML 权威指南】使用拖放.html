@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  5.5 使用拖放 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,256 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>5.5 使用拖放</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">创建来源项目</a>
+</li>
+<li>
+<a href="#toc_1">创建释放区</a>
+</li>
+<li>
+<a href="#toc_2">使用 DataTransfer</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">创建来源项目</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th>draggable 属性值</th>
+<th>说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>false</td>
+<td></td>
+</tr>
+<tr>
+<td>auto</td>
+<td>浏览器决定</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th>拖动事件</th>
+<th>说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td>dragstart</td>
+<td>开始时</td>
+</tr>
+<tr>
+<td>drag</td>
+<td>拖动时</td>
+</tr>
+<tr>
+<td>dragend</td>
+<td>完成时</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>&lt;div&gt;
+    &lt;img id=&quot;src&quot; height=&quot;100px&quot; width=&quot;100px&quot; src=&quot;src/test_on.png&quot; draggable=&quot;true&quot;&gt;
+    &lt;div id=&quot;target&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
- 
-	
+&lt;script&gt;
+    var src = document.getElementById(&quot;src&quot;);
+    
+    src.ondragstart = function (e) {
+        console.log(&quot;start&quot;);
+    };
 
- 
-	
+    src.ondrag = function (e) {
+        console.log(&quot;drag&quot;);
+    };
 
- 
-	
+    src.ondragend = function (e) {
+        console.log(&quot;end&quot;);
+    };
 
- 
-	
+&lt;/script&gt;
+</code></pre>
 
- 
-	
+<h3 id="toc_1">创建释放区</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th>释放区事件</th>
+<th>说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td>dragenter</td>
+<td>进入释放区</td>
+</tr>
+<tr>
+<td>dragover</td>
+<td>释放区移动时</td>
+</tr>
+<tr>
+<td>dragleave</td>
+<td>离开释放区</td>
+</tr>
+<tr>
+<td>drop</td>
+<td>在释放区放下</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>&lt;div&gt;
+    &lt;img id=&quot;src&quot; height=&quot;100px&quot; width=&quot;100px&quot; src=&quot;src/test_on.png&quot; draggable=&quot;true&quot;&gt;
+    &lt;div id=&quot;target&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
- 
-	
+&lt;script&gt;
+    var src = document.getElementById(&quot;src&quot;);
+    var dragId;
 
- 
-	
+    src.ondragstart = function (e) {
+        console.log(&quot;start&quot;);
+        dragId = e.target.id;
+    };
+    
+    var target = document.getElementById(&quot;target&quot;);
+    target.ondragenter = function (e) {
+        var el = document.getElementById(dragId).cloneNode(false);
+        target.innerHTML = &quot;&quot;;
+        target.appendChild(el);
+        e.preventDefault();
+    }
+&lt;/script&gt;
+</code></pre>
 
- 
-	
+<h3 id="toc_2">使用 DataTransfer</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th>DragEvent 对象属性</th>
+<th>说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td>dataTransfer</td>
+<td>传输数据到释放区的对象</td>
+</tr>
+<tr>
+<td>types</td>
+<td>数据格式</td>
+</tr>
+<tr>
+<td>getData(<format>)</td>
+<td>指定格式的数据</td>
+</tr>
+<tr>
+<td>setData(<format>)</td>
+<td>设置指定格式的数据</td>
+</tr>
+<tr>
+<td>clearData(<format>)</td>
+<td>移除指定格式的数据</td>
+</tr>
+<tr>
+<td>files</td>
+<td>被拖动的文件</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li>下面代码，实测有问题，待解决；</li>
+</ul>
 
- 
-	
+<pre><code>&lt;script&gt;
+    var src = document.getElementById(&quot;src&quot;);
+    var target = document.getElementById(&quot;target&quot;);
 
- 
-	
+    target.ondrop = function (e) {
+        var dragId = e.dataTransfer.getData(&quot;Text&quot;);
+        var el = document.getElementById(dragId).cloneNode(false);
+        target.innerHTML = &quot;&quot;;
+        target.appendChild(el);
+        e.preventDefault();
+    };
 
- 
-	
+    src.ondragstart = function (e) {
+        e.dataTransfer.setData(&quot;Text&quot;, e.target.id);
+        e.target.classList.add(&quot;dragged&quot;);
+    };
 
- 
-	
+    src.ondragend = function (e) {
+      var elems = document.querySelectorAll(&quot;.dragged&quot;);
+      for (var i = 0; i &lt; elems.length; i++) {
+          elems[i].classList.remove(&quot;dragged&quot;);
+      }
+    };
+&lt;/script&gt;
+</code></pre>
 
- 
-	
 
- 
-	
+</div>
 
- 
-	
+<br /><br />
+<hr />
 
- 
-	
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20canvas%20%E5%85%83%E7%B4%A0%EF%BC%882%EF%BC%89.html"  title="Previous Post: 5.4 使用 canvas 元素（2）">&laquo; 5.4 使用 canvas 元素（2）</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D.html" 
+	        title="Next Post: 5.6 使用地理定位">5.6 使用地理定位 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
 
- 
-	
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
 
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
-  
-  
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E6%8B%96%E6%94%BE.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 

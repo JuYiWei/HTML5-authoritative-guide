@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  4.5 为 DOM 元素设置样式 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,291 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>4.5 为 DOM 元素设置样式</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">使用样式表</a>
+</li>
+<li>
+<a href="#toc_1">使用元素样式</a>
+</li>
+<li>
+<a href="#toc_2">使用 CSSStyleDeclaration 对象</a>
+</li>
+<li>
+<a href="#toc_3">使用计算样式</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">使用样式表</h3>
 
- 
-	
+<ul>
+<li><p><code>document.stylesheets</code> 获取样式表集合；</p></li>
+<li><p>获得样式表的基本信息</p></li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">CSSStyleSheet 属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left">type</td>
+</tr>
+<tr>
+<td style="text-align: left">title</td>
+<td style="text-align: left">title</td>
+</tr>
+<tr>
+<td style="text-align: left">href</td>
+<td style="text-align: left">返回样式表的 href</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>    var sheets = document.styleSheets;
+    for (var i=0;i&lt;sheets.length;i++) {
+        var s = sheets[i];
+        document.write(s.href+&quot; &quot;);
+        document.write(s.title+&quot; &quot;);
+        document.write(s.type+&quot; &quot;);
+        document.write(s.disabled);
+    }
+</code></pre>
 
- 
-	
+<ul>
+<li><p>使用媒介限制</p></li>
+<li><p><code>media</code> 属性；</p></li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">appendMedium(<medium>)</td>
+<td style="text-align: left">添加一个媒介</td>
+</tr>
+<tr>
+<td style="text-align: left">deleteMedium(<medium>)</td>
+<td style="text-align: left">移除一个媒介</td>
+</tr>
+<tr>
+<td style="text-align: left">item(<pos>)</td>
+<td style="text-align: left">索引媒介</td>
+</tr>
+<tr>
+<td style="text-align: left">length</td>
+<td style="text-align: left">媒介数量</td>
+</tr>
+<tr>
+<td style="text-align: left">mediaText</td>
+<td style="text-align: left">文本属性</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li><p>禁用样式表</p></li>
+<li><p><code>disabled</code> 读写样式表禁用状态:</p></li>
+<li><p>CSSRuleList 对象的成员</p></li>
+<li><p><code>cssRules</code>属性返回 CSSRuleList 对象；</p></li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">CSSRuleList 属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">item(<pos>)</td>
+<td style="text-align: left">返回 CSSStyleRue 对象</td>
+</tr>
+<tr>
+<td style="text-align: left">length</td>
+<td style="text-align: left">样式表样式数量</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">CSSStyleRue 属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">cssText</td>
+<td style="text-align: left">读写样式文本</td>
+</tr>
+<tr>
+<td style="text-align: left">parentStyleSheet</td>
+<td style="text-align: left">获取所属样式表 CSSStyleSheet</td>
+</tr>
+<tr>
+<td style="text-align: left">selectorText</td>
+<td style="text-align: left">读写样式的选择器文本</td>
+</tr>
+<tr>
+<td style="text-align: left">style</td>
+<td style="text-align: left">获取代表具体样式的属性对象 CSSStyleDeclaration</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li>其他</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">CSSStyleSheet 属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">deleteRule(<pos>)</td>
+<td style="text-align: left">移除一条规则</td>
+</tr>
+<tr>
+<td style="text-align: left">insertRule(<rule>,<pos></td>
+<td style="text-align: left">插入一条新规则到样式表</td>
+</tr>
+<tr>
+<td style="text-align: left">ownerNode</td>
+<td style="text-align: left">返回样式所定义的元素</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<h3 id="toc_1">使用元素样式</h3>
 
- 
-	
+<p>略</p>
 
- 
-	
+<h3 id="toc_2">使用 CSSStyleDeclaration 对象</h3>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">CSSStyleDeclaration 属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">cssText</td>
+<td style="text-align: left">读写样式文本</td>
+</tr>
+<tr>
+<td style="text-align: left">getPropertyCSSValue(<name>)</td>
+<td style="text-align: left">获取指定属性</td>
+</tr>
+<tr>
+<td style="text-align: left">getPropertyPriority(<name>)</td>
+<td style="text-align: left">获取指定属性优先级</td>
+</tr>
+<tr>
+<td style="text-align: left">getPropertyValue(<name>)</td>
+<td style="text-align: left">获取字符串形式的指定值</td>
+</tr>
+<tr>
+<td style="text-align: left">item(<pos>)</td>
+<td style="text-align: left">获取指定位置的项目</td>
+</tr>
+<tr>
+<td style="text-align: left">length</td>
+<td style="text-align: left">获取项目数量</td>
+</tr>
+<tr>
+<td style="text-align: left">parentRUle</td>
+<td style="text-align: left">样式规则 CSSStyleRule</td>
+</tr>
+<tr>
+<td style="text-align: left">removeProperty(<name>)</td>
+<td style="text-align: left">移除指定属性</td>
+</tr>
+<tr>
+<td style="text-align: left">setProperty(<name>,<value>,<priority>)</td>
+<td style="text-align: left">设置指定属性的优先级</td>
+</tr>
+<tr>
+<td style="text-align: left"><style></td>
+<td style="text-align: left">读写指定 CSS 属性的便捷属性</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li><p>使用便捷属性</p></li>
+<li><p>使用常规属性</p></li>
+<li><p>使用细粒度的 CSS DOM 对象</p></li>
+</ul>
 
- 
-	
+<h3 id="toc_3">使用计算样式</h3>
 
- 
-	
 
- 
-	
+</div>
 
- 
-	
+<br /><br />
+<hr />
 
- 
-	
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20DOM%20%E5%85%83%E7%B4%A0.html"  title="Previous Post: 4.4 使用 DOM 元素">&laquo; 4.4 使用 DOM 元素</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E4%BA%8B%E4%BB%B6.html" 
+	        title="Next Post: 4.6 使用事件">4.6 使用事件 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
 
- 
-	
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
 
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
-  
-  
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%B8%BA%20DOM%20%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E6%A0%B7%E5%BC%8F.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 

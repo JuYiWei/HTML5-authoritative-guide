@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  HTML 元素 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -280,120 +280,671 @@
 
 	
 		<div class="markdown-body">
-		<h1>0 总结</h1>
+		<h1>2.1 HTML5 元素背景知识</h1>
 
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
-
-<ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+		<ul>
+<li>
+<a href="#toc_0">语义与呈现分离</a>
+</li>
+<li>
+<a href="#toc_1">元素选用原则</a>
+</li>
+<li>
+<a href="#toc_2">元素说明体例</a>
+</li>
+<li>
+<a href="#toc_3">元素速览</a>
+</li>
+<li>
+<a href="#toc_4">其他</a>
+</li>
 </ul>
 
 
+<h3 id="toc_0">语义与呈现分离</h3>
+
+<p>略</p>
+
+<h3 id="toc_1">元素选用原则</h3>
+
+<p>略</p>
+
+<h3 id="toc_2">元素说明体例</h3>
+
+<p>略</p>
+
+<h3 id="toc_3">元素速览</h3>
+
+<ul>
+<li>文档与元数据元素</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">说明</th>
+<th style="text-align: left">类型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">base</td>
+<td style="text-align: left">相对 URL 基础</td>
+<td style="text-align: left">元数据</td>
+</tr>
+<tr>
+<td style="text-align: left">body</td>
+<td style="text-align: left">HTML 文档内容</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">DOCTYPE</td>
+<td style="text-align: left">HTML 开始</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">head</td>
+<td style="text-align: left">HTML 文档元数据</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">html</td>
+<td style="text-align: left">HTML 文档 html 部分</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">link</td>
+<td style="text-align: left">外部链接的关系</td>
+<td style="text-align: left">元数据</td>
+</tr>
+<tr>
+<td style="text-align: left">meta</td>
+<td style="text-align: left">文档信息</td>
+<td style="text-align: left">元数据</td>
+</tr>
+<tr>
+<td style="text-align: left">noscript</td>
+<td style="text-align: left">禁用脚本</td>
+<td style="text-align: left">元数据、短语</td>
+</tr>
+<tr>
+<td style="text-align: left">script</td>
+<td style="text-align: left">脚本</td>
+<td style="text-align: left">元数据、短语</td>
+</tr>
+<tr>
+<td style="text-align: left">style</td>
+<td style="text-align: left">CSS 样式</td>
+<td style="text-align: left">元数据</td>
+</tr>
+<tr>
+<td style="text-align: left">title</td>
+<td style="text-align: left">文档标题</td>
+<td style="text-align: left">元数据</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>文本元素</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">说明</th>
+<th style="text-align: left">类型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">a</td>
+<td style="text-align: left">超链接</td>
+<td style="text-align: left">短语、流</td>
+</tr>
+<tr>
+<td style="text-align: left">abbr</td>
+<td style="text-align: left">缩略语</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">b</td>
+<td style="text-align: left">非强调标记文字</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">br</td>
+<td style="text-align: left">换行</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">cite</td>
+<td style="text-align: left">其他作品标题</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">code</td>
+<td style="text-align: left">代码片段</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">del</td>
+<td style="text-align: left">文字删除线</td>
+<td style="text-align: left">短语、流</td>
+</tr>
+<tr>
+<td style="text-align: left">dfn</td>
+<td style="text-align: left">术语定义</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">em</td>
+<td style="text-align: left">强调标记</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">i</td>
+<td style="text-align: left">与周边不同的文字</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">ins</td>
+<td style="text-align: left">加入文档的文字</td>
+<td style="text-align: left">短语、流</td>
+</tr>
+<tr>
+<td style="text-align: left">kbd</td>
+<td style="text-align: left">用户输入的内容</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">mark</td>
+<td style="text-align: left">标记</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">q</td>
+<td style="text-align: left">引用他处的内容</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">rp</td>
+<td style="text-align: left">ruby 标记括号</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">rt</td>
+<td style="text-align: left">ruby 标记注音符号</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">ruby</td>
+<td style="text-align: left">位于表意文字上方或者右方的注音符号</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">s</td>
+<td style="text-align: left">表示内容不再准确</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">samp</td>
+<td style="text-align: left">计算机输出的内容</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">small</td>
+<td style="text-align: left">小号字体</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">span</td>
+<td style="text-align: left">同样元素</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">strong</td>
+<td style="text-align: left">重要内容</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">sub</td>
+<td style="text-align: left">下标</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">sup</td>
+<td style="text-align: left">上标</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">time</td>
+<td style="text-align: left">时间</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">u</td>
+<td style="text-align: left">非强调标记文字</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">var</td>
+<td style="text-align: left">计算机中的变量</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">wbr</td>
+<td style="text-align: left">安全换行的地方</td>
+<td style="text-align: left">短语</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>内容</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">说明</th>
+<th style="text-align: left">类型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">blockquote</td>
+<td style="text-align: left">引用的大段内容</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">dd</td>
+<td style="text-align: left">dl 元素中，表示定义</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">div</td>
+<td style="text-align: left">通用元素，与 span 对应</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">dl</td>
+<td style="text-align: left">术语定义的说明列表</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">dt</td>
+<td style="text-align: left">dl 元素中，表示术语</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">figcaption</td>
+<td style="text-align: left">figure 元素的标题</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">figure</td>
+<td style="text-align: left">图片</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">hr</td>
+<td style="text-align: left">段落级别的主题转换</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">li</td>
+<td style="text-align: left">ul、ol、menu 元素中，表示列表项</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">ol</td>
+<td style="text-align: left">有序列表</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">p</td>
+<td style="text-align: left">段落</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">pre</td>
+<td style="text-align: left">格式应被保留的内容</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">ul</td>
+<td style="text-align: left">无序列表</td>
+<td style="text-align: left">流</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>划分内容</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">说明</th>
+<th style="text-align: left">类型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">address</td>
+<td style="text-align: left">文档或者 article 的联系信息</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">article</td>
+<td style="text-align: left">作品信息</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">aside</td>
+<td style="text-align: left">周边牵涉内容</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">details</td>
+<td style="text-align: left">区域，展开获取细节</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">footer</td>
+<td style="text-align: left">尾部</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">h1-h6</td>
+<td style="text-align: left">标题</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">header</td>
+<td style="text-align: left">首部</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">hgroup</td>
+<td style="text-align: left">一组标题组织，形成目录</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">nav</td>
+<td style="text-align: left">导航元素</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">section</td>
+<td style="text-align: left">部分流</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">summary</td>
+<td style="text-align: left">details 元素中，表示该元素标题</td>
+<td style="text-align: left">无</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>制表</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">说明</th>
+<th style="text-align: left">类型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">caption</td>
+<td style="text-align: left">表格标题</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">col</td>
+<td style="text-align: left">列</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">colgroup</td>
+<td style="text-align: left">一组列</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">table</td>
+<td style="text-align: left">表格</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">tbody</td>
+<td style="text-align: left">表格主体</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">td</td>
+<td style="text-align: left">单元格</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">tfoot</td>
+<td style="text-align: left">表脚</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">th</td>
+<td style="text-align: left">表头表脚单元格</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">thead</td>
+<td style="text-align: left">表头</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">tr</td>
+<td style="text-align: left">一行单元格</td>
+<td style="text-align: left">无</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>表单</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">说明</th>
+<th style="text-align: left">类型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">button</td>
+<td style="text-align: left">按钮</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">datalist</td>
+<td style="text-align: left">建议列表</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">fieldset</td>
+<td style="text-align: left">一组表单元素</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left">表单</td>
+<td style="text-align: left">流</td>
+</tr>
+<tr>
+<td style="text-align: left">input</td>
+<td style="text-align: left">输入</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">keygen</td>
+<td style="text-align: left">生成公私钥</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">label</td>
+<td style="text-align: left">表单说明标签</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">legend</td>
+<td style="text-align: left">fieldset 元素说明标签</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">optgroup</td>
+<td style="text-align: left">一组相关的 option 元素</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">option</td>
+<td style="text-align: left">用户选择的可选项</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">output</td>
+<td style="text-align: left">计算结果</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">select</td>
+<td style="text-align: left">用户选择固定项</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">textarea</td>
+<td style="text-align: left">多行输入</td>
+<td style="text-align: left">短语</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>嵌入内容</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">元素</th>
+<th style="text-align: left">说明</th>
+<th style="text-align: left">类型</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">area</td>
+<td style="text-align: left">客户端分区响应区域</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">audio</td>
+<td style="text-align: left">音频</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">canvas</td>
+<td style="text-align: left">画布</td>
+<td style="text-align: left">短语、流</td>
+</tr>
+<tr>
+<td style="text-align: left">embed</td>
+<td style="text-align: left">用插件嵌入内容</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">iframe</td>
+<td style="text-align: left">嵌入另一个文档</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">img</td>
+<td style="text-align: left">图片</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">map</td>
+<td style="text-align: left">客户端分区响应</td>
+<td style="text-align: left">短语、流</td>
+</tr>
+<tr>
+<td style="text-align: left">meter</td>
+<td style="text-align: left">许可值范围背景中的图形表示</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">object</td>
+<td style="text-align: left">生成上下文与客户端分区响应图</td>
+<td style="text-align: left">短语、流</td>
+</tr>
+<tr>
+<td style="text-align: left">param</td>
+<td style="text-align: left">通过 obj 元素传给插件的参数</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">progress</td>
+<td style="text-align: left">进度</td>
+<td style="text-align: left">短语</td>
+</tr>
+<tr>
+<td style="text-align: left">source</td>
+<td style="text-align: left">媒体资源</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">svg</td>
+<td style="text-align: left">结构化矢量内容</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">track</td>
+<td style="text-align: left">媒体附加轨道（如字幕）</td>
+<td style="text-align: left">无</td>
+</tr>
+<tr>
+<td style="text-align: left">video</td>
+<td style="text-align: left">视频</td>
+<td style="text-align: left">无</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_4">其他</h3>
+
+<p><code>command</code>和<code>menu</code>，不规范。</p>
+
+
 		</div>
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
 	
 
  

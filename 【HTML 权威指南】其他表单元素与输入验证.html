@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  2.9 其他表单元素与输入验证 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,180 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>2.9 其他表单元素与输入验证</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">其他表单元素</a>
+</li>
+<li>
+<a href="#toc_1">输入验证</a>
+</li>
+<li>
+<a href="#toc_2">禁用输入验证</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">其他表单元素</h3>
 
- 
-	
+<ul>
+<li><p>选项列表</p></li>
+<li><p><code>select</code>、<code>option</code>一般选择；</p></li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left"></th>
+<th style="text-align: left"></th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left">名称</td>
+</tr>
+<tr>
+<td style="text-align: left">disable</td>
+<td style="text-align: left">禁用</td>
+</tr>
+<tr>
+<td style="text-align: left">form</td>
+<td style="text-align: left">表单</td>
+</tr>
+<tr>
+<td style="text-align: left">size</td>
+<td style="text-align: left">选择框大小，行数</td>
+</tr>
+<tr>
+<td style="text-align: left">multiple</td>
+<td style="text-align: left">是否多选，control+/command+</td>
+</tr>
+<tr>
+<td style="text-align: left">autofocus</td>
+<td style="text-align: left">自动聚焦</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>&lt;label&gt;地址：
+    &lt;select name=&quot;address&quot; size=&quot;5&quot; multiple&gt;
+        &lt;option value=&quot;hangzhou&quot; label=&quot;hangzhou&quot;&gt;&lt;/option&gt;
+        &lt;option value=&quot;shanghai&quot; label=&quot;shanghai&quot;&gt;&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><code>optgroup</code>可选项分组；</li>
+</ul>
 
- 
-	
+<pre><code>&lt;label&gt;地址：
+    &lt;select name=&quot;address&quot; size=&quot;5&quot; multiple&gt;
+        &lt;optgroup label=&quot;浙江省&quot;&gt;
+            &lt;option value=&quot;杭州&quot; label=&quot;杭州&quot;&gt;&lt;/option&gt;
+            &lt;option value=&quot;嘉兴&quot; label=&quot;嘉兴&quot;&gt;&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label=&quot;上海&quot;&gt;
+            &lt;option value=&quot;上海&quot; label=&quot;上海&quot;&gt;&lt;/option&gt;
+        &lt;/optgroup&gt;
+    &lt;/select&gt;
+&lt;/label&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>多行输入</p></li>
+<li><p><code>textarea</code>属性：name、disable、form、readonly、maxlength、autofocus、required、placeholder、dirname、rows、wrap、cols；</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;textarea name=&quot;message&quot; cols=&quot;20&quot; rows=&quot;5&quot; wrap=&quot;hard&quot; id=&quot;message&quot;&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>计算结果</p></li>
+<li><p><code>output</code></p></li>
+</ul>
 
- 
-	
+<pre><code>
+&lt;form oninput=&quot;result.value=a.valueAsNumber * b.valueAsNumber&quot;&gt;
+    &lt;input type=&quot;number&quot; id=&quot;a&quot; name=&quot;a&quot;&gt; * &lt;input type=&quot;number&quot; id=&quot;b&quot; name=&quot;b&quot;&gt; =
+    &lt;output name=&quot;result&quot;&gt;&lt;/output&gt;
+&lt;/form&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>公私钥</p></li>
+<li><p><code>keygen</code>属性：challenge、keytype、autofoucus、name、disabled、form；</p></li>
+</ul>
 
- 
-	
+<h3 id="toc_1">输入验证</h3>
 
- 
-	
+<ul>
+<li><p>确保有值</p></li>
+<li><p><code>required</code>，必须；</p></li>
+<li><p>指定范围</p></li>
+<li><p><code>min</code>和<code>max</code>；</p></li>
+<li><p>模式匹配</p></li>
+<li><p><code>pattern</code>，正则匹配；</p></li>
+<li><p>检查 url 与 邮箱</p></li>
+<li><p>结合正则使用；</p></li>
+</ul>
 
- 
-	
+<h3 id="toc_2">禁用输入验证</h3>
 
- 
-	
+<ul>
+<li><code>novalidate</code> 和 <code>formnovalidate</code>；</li>
+</ul>
 
- 
-	
+<pre><code>&lt;input type=&quot;submit&quot; value=&quot;Save&quot; foormnocalidate /&gt;
+</code></pre>
 
- 
-	
 
- 
-	
+</div>
 
- 
-	
+<br /><br />
+<hr />
 
- 
-	
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%AE%9A%E5%88%B6%20input%20%E5%85%83%E7%B4%A0.html"  title="Previous Post: 2.8 定制 input 元素">&laquo; 2.8 定制 input 元素</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%B5%8C%E5%85%A5%E5%86%85%E5%AE%B9.html" 
+	        title="Next Post: 2.10 嵌入内容">2.10 嵌入内容 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
 
- 
-	
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
 
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
-  
-  
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%85%B6%E4%BB%96%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E4%B8%8E%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 

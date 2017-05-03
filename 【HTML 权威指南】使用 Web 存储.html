@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  5.7 使用 Web 存储 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,180 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>5.7 使用 Web 存储</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">使用本地存储</a>
+</li>
+<li>
+<a href="#toc_1">使用会话存储</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">使用本地存储</h3>
 
- 
-	
+<ul>
+<li>localStorage 全局属性，访问本地存储；</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th>Storage 方法</th>
+<th>说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td>clear()</td>
+<td>移除</td>
+</tr>
+<tr>
+<td>getItem(<key>)</td>
+<td>key 获取 value</td>
+</tr>
+<tr>
+<td>key(<index>)</td>
+<td>索引值获取 key</td>
+</tr>
+<tr>
+<td>length</td>
+<td>数量</td>
+</tr>
+<tr>
+<td>removeItem(<key>)</td>
+<td>移除 key</td>
+</tr>
+<tr>
+<td>setItem(<key>,<value>)</td>
+<td>设置key value</td>
+</tr>
+<tr>
+<td>[<key>]</td>
+<td>数组形式访问</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>    localStorage.setItem(&quot;name&quot;,&quot;LiLei&quot;);
+    localStorage.setItem(&quot;age&quot;,&quot;18&quot;);
 
- 
-	
+    var name = localStorage.getItem(&quot;name&quot;);
+    console.log(name);
 
- 
-	
+    var count = localStorage.length;
+    for (var i = 0; i&lt; count; i++) {
+        var key = localStorage.key(i);
+        console.log(key);
+    }
 
- 
-	
+    var age = localStorage[&quot;age&quot;];
+    console.log(age);
 
- 
-	
+    localStorage.removeItem(&quot;age&quot;);
+    localStorage.clear();
+</code></pre>
 
- 
-	
+<ul>
+<li>监听存储事件</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th>StorageEvent 属性</th>
+<th>说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td>key</td>
+<td>返回发送变化的键</td>
+</tr>
+<tr>
+<td>oldValue</td>
+<td>旧值</td>
+</tr>
+<tr>
+<td>newValue</td>
+<td>新值</td>
+</tr>
+<tr>
+<td>url</td>
+<td>制造变化文档的 url</td>
+</tr>
+<tr>
+<td>storageArea</td>
+<td>发生变化的Storage对象</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<pre><code>// 说明：下面实测并无效果，不知哪里不对；
+&lt;script&gt;
+    window.onStorage = handler;
+    function handler(s) {
+      console.log(s.key);
+      console.log(s.oldValue);
+      console.log(s.newValue);
+      console.log(s.url);
+    }
+    
+    localStorage.setItem(&quot;name&quot;,&quot;LiLei&quot;);
+    localStorage.setItem(&quot;name&quot;,&quot;18&quot;);
+&lt;/script&gt;
+</code></pre>
 
- 
-	
+<h3 id="toc_1">使用会话存储</h3>
 
- 
-	
+<ul>
+<li>sessionStorage，与 storage 类似；</li>
+</ul>
 
- 
-	
 
- 
-	
+</div>
 
- 
-	
+<br /><br />
+<hr />
 
- 
-	
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D.html"  title="Previous Post: 5.6 使用地理定位">&laquo; 5.6 使用地理定位</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91.html" 
+	        title="Next Post: 5.8 创建离线 Web 应用程序">5.8 创建离线 Web 应用程序 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
 
- 
-	
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
 
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
- 
-	
-
-  
-  
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Web%20%E5%AD%98%E5%82%A8.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 

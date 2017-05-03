@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  【HTML 权威指南】说了是村长
+  2.2 创建 HTML 文档 - 【HTML 权威指南】说了是村长
   
   </title>
  <meta name="description" content="">
@@ -275,156 +275,407 @@
             </div>
             <div class="large-9 medium-9 columns">
 
- 
-
-
-	
-		<div class="markdown-body">
-		<h1>0 总结</h1>
-
-		<blockquote>
-<p>HTML 权威指南<br/>
-图灵程序设计丛书<br/>
-作者：Adam Freeman<br/>
-出版社：人民邮电出版社</p>
-</blockquote>
-
-<p>开始时间：2017-3-3<br/>
-结束时间：2017-3-29</p>
-
-<hr/>
+ <div class="markdown-body">
+<h1>2.2 创建 HTML 文档</h1>
 
 <ul>
-<li>内容详细，分类清晰，果然是权威指南；</li>
-<li>可做工具书，查询使用；</li>
+<li>
+<a href="#toc_0">基本文档结构</a>
+</li>
+<li>
+<a href="#toc_1">元数据说明文档</a>
+</li>
+<li>
+<a href="#toc_2">脚本元素</a>
+</li>
 </ul>
 
 
-		</div>
-	
+<h3 id="toc_0">基本文档结构</h3>
 
- 
-	
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        // head 部分
+    &lt;/head&gt;
+    &lt;body&gt;
+        // 内容部分
+    &lt;/body&gt; 
+&lt;/html&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>DOCTYPE</p></li>
+<li><p>表示处理的是 HTML 文档；</p></li>
+<li><p>标记文档内容 HTML 版本；</p></li>
+<li><p>放在文档第一行；</p></li>
+<li><p>html</p></li>
+<li><p>文档根元素，包含内容和元素；</p></li>
+<li><p>head</p></li>
+<li><p>包含文档元数据，提供文档相关信息；</p></li>
+<li><p>body</p></li>
+<li><p>文档内容部分；</p></li>
+</ul>
 
- 
-	
+<h3 id="toc_1">元数据说明文档</h3>
 
- 
-	
+<ul>
+<li><p><code>&lt;head&gt;</code>标签中，设置；</p></li>
+<li><p>设置文档标题</p></li>
+<li><p>通常显示为浏览器标签；</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;head&gt;
+    &lt;title&gt;说了是村长&lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>设置相对 URL 基准</li>
+</ul>
 
- 
-	
+<pre><code>&lt;head&gt;
+    &lt;base href=&quot;http://testurl/&quot;&gt;
+&lt;/head&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li><p>元数据说明文档</p></li>
+<li><p>指定名/值元数据对（可以设置多个）</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;head&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;说了是村长&quot;&gt;
+&lt;/head&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>声明字符编码</li>
+</ul>
 
- 
-	
+<pre><code>&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;/head&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>模拟 HTTP 标头字段</li>
+</ul>
 
- 
-	
+<pre><code>&lt;head&gt;
+    &lt;meta http-equiv=&quot;refresh&quot; content=&quot;5&quot;&gt;
+&lt;/head&gt;
+</code></pre>
 
- 
-	
+<blockquote>
+<p>http-equiv 有三个值可用：refresh、default-style、content-type；</p>
+</blockquote>
 
- 
-	
+<ul>
+<li>CSS 样式</li>
+</ul>
 
- 
-	
+<pre><code>&lt;style type=&quot;text/css&quot; media=&quot;screen AND (min-width:500px&quot;&gt;
+   p {
+       color: red;
+   }
+&lt;/style&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>type：总是“text/css”；</li>
+<li>scoped：指定范围，基本没用；</li>
+<li>media：设备选择与适用条件</li>
+</ul>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">设备</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">all</td>
+<td style="text-align: left">所有</td>
+</tr>
+<tr>
+<td style="text-align: left">aural</td>
+<td style="text-align: left">语音合成器</td>
+</tr>
+<tr>
+<td style="text-align: left">braille</td>
+<td style="text-align: left">盲文设备</td>
+</tr>
+<tr>
+<td style="text-align: left">handheld</td>
+<td style="text-align: left">手持设备</td>
+</tr>
+<tr>
+<td style="text-align: left">projection</td>
+<td style="text-align: left">投影机</td>
+</tr>
+<tr>
+<td style="text-align: left">print</td>
+<td style="text-align: left">打印</td>
+</tr>
+<tr>
+<td style="text-align: left">screen</td>
+<td style="text-align: left">显示器</td>
+</tr>
+<tr>
+<td style="text-align: left">tty</td>
+<td style="text-align: left">电传打字机</td>
+</tr>
+<tr>
+<td style="text-align: left">tv</td>
+<td style="text-align: left">电视机</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">条件</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">width / height</td>
+<td style="text-align: left">浏览器宽高</td>
+</tr>
+<tr>
+<td style="text-align: left">device-width / device-height</td>
+<td style="text-align: left">设备宽高</td>
+</tr>
+<tr>
+<td style="text-align: left">resolution</td>
+<td style="text-align: left">像素密度</td>
+</tr>
+<tr>
+<td style="text-align: left">orientation</td>
+<td style="text-align: left">设备朝向：portrait、landscape</td>
+</tr>
+<tr>
+<td style="text-align: left">aspect-ratio / device-aspect-ratio</td>
+<td style="text-align: left">浏览器宽高比</td>
+</tr>
+<tr>
+<td style="text-align: left">color / monochrome</td>
+<td style="text-align: left">彩色、黑白设备像素占有的二进制数</td>
+</tr>
+<tr>
+<td style="text-align: left">color-index</td>
+<td style="text-align: left">设备显示颜色数目</td>
+</tr>
+<tr>
+<td style="text-align: left">scan</td>
+<td style="text-align: left">电视扫描模式：progressive、interlace</td>
+</tr>
+<tr>
+<td style="text-align: left">grid</td>
+<td style="text-align: left">网格显示内容：0、1</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li>指定外部资源</li>
+</ul>
 
- 
-	
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://res.wx.qq.com/open/libs/weui/0.4.2/weui.css&quot;/&gt;
+</code></pre>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">href</td>
+<td style="text-align: left">资源路径</td>
+</tr>
+<tr>
+<td style="text-align: left">hreflang</td>
+<td style="text-align: left">资源语言</td>
+</tr>
+<tr>
+<td style="text-align: left">media</td>
+<td style="text-align: left">设备，与上面相同</td>
+</tr>
+<tr>
+<td style="text-align: left">rel</td>
+<td style="text-align: left">资源关联类型</td>
+</tr>
+<tr>
+<td style="text-align: left">sizes</td>
+<td style="text-align: left">指定图标大小</td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left">关联资源 MIME 类型</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<table>
+<thead>
+<tr>
+<th style="text-align: left">rel 值</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
 
- 
-	
+<tbody>
+<tr>
+<td style="text-align: left">alternate</td>
+<td style="text-align: left">文档替代版本</td>
+</tr>
+<tr>
+<td style="text-align: left">author</td>
+<td style="text-align: left">文档作者</td>
+</tr>
+<tr>
+<td style="text-align: left">help</td>
+<td style="text-align: left">文档的说明文档</td>
+</tr>
+<tr>
+<td style="text-align: left">icon</td>
+<td style="text-align: left">图标资源</td>
+</tr>
+<tr>
+<td style="text-align: left">license</td>
+<td style="text-align: left">许可证</td>
+</tr>
+<tr>
+<td style="text-align: left">pingback</td>
+<td style="text-align: left">回探服务器</td>
+</tr>
+<tr>
+<td style="text-align: left">prefetch</td>
+<td style="text-align: left">预先获取资源</td>
+</tr>
+<tr>
+<td style="text-align: left">stylesheet</td>
+<td style="text-align: left">载入外部样式表</td>
+</tr>
+</tbody>
+</table>
 
- 
-	
+<ul>
+<li>载入样式表</li>
+</ul>
 
- 
-	
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>定义网站标志</li>
+</ul>
 
- 
-	
+<pre><code>&lt;link rel=&quot;icon&quot; href=&quot;123.jpg&quot; type=&quot;image/jpg&quot;&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>预先获取资源</li>
+</ul>
 
- 
-	
+<pre><code>&lt;link rel=&quot;prefetch&quot; href=&quot;/page2.html&quot;&gt;
+</code></pre>
 
- 
-	
+<h3 id="toc_2">脚本元素</h3>
 
- 
-	
+<p>建议放在 head 部分，便于维护；</p>
 
- 
-	
+<ul>
+<li><p>script</p></li>
+<li><p>文档内部脚本，type 默认 JavaScript；</p></li>
+</ul>
 
- 
-	
+<pre><code>&lt;script type=&quot;javascript&quot;&gt;
+    document.write(&quot;Hello&quot;);
+&lt;/script&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>连接外部脚本</li>
+</ul>
 
- 
-	
+<pre><code>&lt;script src=&quot;test.js&quot;&gt;&lt;/script&gt;
+</code></pre>
 
- 
-	
+<ul>
+<li>脚本延迟执行 defer</li>
+</ul>
 
-  
-  
+<pre><code>&lt;script defer src=&quot;test.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li>脚本异步执行 async</li>
+</ul>
+
+<pre><code>&lt;script async src=&quot;test.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li><p>noscript</p></li>
+<li><p>用来对禁用的 JavaScript 或不支持 JavaScript 的浏览器提示内容；</p></li>
+</ul>
+
+<pre><code>&lt;noscript&gt;
+    JavaScript is required！
+&lt;/noscript&gt;
+</code></pre>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML5%20%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.html"  title="Previous Post: 2.1 HTML5 元素背景知识">&laquo; 2.1 HTML5 元素背景知识</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97.html" 
+	        title="Next Post: 2.3 标记文字">2.3 标记文字 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
 </div></div>
 
 
