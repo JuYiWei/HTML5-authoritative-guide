@@ -1,0 +1,825 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  2.8 定制 input 元素 - 【HTML 权威指南】说了是村长
+  
+  </title>
+ <meta name="description" content="">
+ <link href="atom.xml" rel="alternate" title="【HTML 权威指南】说了是村长" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html">【HTML 权威指南】说了是村长</a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 【HTML 权威指南】说了是村长</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>开篇</label></li>
+
+          
+            <li><a title="1.1 HTML5 背景知识" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML5%20%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.html">1.1 HTML5 背景知识</a></li>
+          
+            <li><a title="1.2 准备工作" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.html">1.2 准备工作</a></li>
+          
+            <li><a title="1.3 HTML 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML%20%E7%AE%80%E4%BB%8B.html">1.3 HTML 简介</a></li>
+          
+            <li><a title="1.4 CSS 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E7%AE%80%E4%BB%8B.html">1.4 CSS 简介</a></li>
+          
+            <li><a title="1.5 JavaScript 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91JavaScript%20%E7%AE%80%E4%BB%8B.html">1.5 JavaScript 简介</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>HTML 元素</label></li>
+
+          
+            <li><a title="2.1 HTML5 元素背景知识" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML5%20%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.html">2.1 HTML5 元素背景知识</a></li>
+          
+            <li><a title="2.2 创建 HTML 文档" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3.html">2.2 创建 HTML 文档</a></li>
+          
+            <li><a title="2.3 标记文字" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97.html">2.3 标记文字</a></li>
+          
+            <li><a title="2.4 组织内容" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9.html">2.4 组织内容</a></li>
+          
+            <li><a title="2.5 文档分节" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82.html">2.5 文档分节</a></li>
+          
+            <li><a title="2.6 表格" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E6%A0%BC.html">2.6 表格</a></li>
+          
+            <li><a title="2.7 表单" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E5%8D%95.html">2.7 表单</a></li>
+          
+            <li><a title="2.8 定制 input 元素" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%AE%9A%E5%88%B6%20input%20%E5%85%83%E7%B4%A0.html">2.8 定制 input 元素</a></li>
+          
+            <li><a title="2.9 其他表单元素与输入验证" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%85%B6%E4%BB%96%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E4%B8%8E%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81.html">2.9 其他表单元素与输入验证</a></li>
+          
+            <li><a title="2.10 嵌入内容" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%B5%8C%E5%85%A5%E5%86%85%E5%AE%B9.html">2.10 嵌入内容</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>CSS</label></li>
+
+          
+            <li><a title="3.1 CSS" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS.html">3.1 CSS</a></li>
+          
+            <li><a title="3.2 CSS 选择器（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%881%EF%BC%89.html">3.2 CSS 选择器（1）</a></li>
+          
+            <li><a title="3.3 CSS 选择器（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%882%EF%BC%89.html">3.3 CSS 选择器（2）</a></li>
+          
+            <li><a title="3.4 边框和背景" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%BE%B9%E6%A1%86%E5%92%8C%E8%83%8C%E6%99%AF.html">3.4 边框和背景</a></li>
+          
+            <li><a title="3.5 使用盒模型" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E7%9B%92%E6%A8%A1%E5%9E%8B.html">3.5 使用盒模型</a></li>
+          
+            <li><a title="3.6 创建布局" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80.html">3.6 创建布局</a></li>
+          
+            <li><a title="3.7 设置文本样式" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%AE%BE%E7%BD%AE%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F.html">3.7 设置文本样式</a></li>
+          
+            <li><a title="3.8 过渡、动画、变换" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%BF%87%E6%B8%A1%E3%80%81%E5%8A%A8%E7%94%BB%E3%80%81%E5%8F%98%E6%8D%A2.html">3.8 过渡、动画、变换</a></li>
+          
+            <li><a title="3.9 CSS 其他属性与特性" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%89%B9%E6%80%A7.html">3.9 CSS 其他属性与特性</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>使用 DOM</label></li>
+
+          
+            <li><a title="4.1 理解 DOM" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E7%90%86%E8%A7%A3%20DOM.html">4.1 理解 DOM</a></li>
+          
+            <li><a title="4.2 使用 Document 对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Document%20%E5%AF%B9%E8%B1%A1.html">4.2 使用 Document 对象</a></li>
+          
+            <li><a title="4.3 使用 Window 对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Window%20%E5%AF%B9%E8%B1%A1.html">4.3 使用 Window 对象</a></li>
+          
+            <li><a title="4.4 使用 DOM 元素" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20DOM%20%E5%85%83%E7%B4%A0.html">4.4 使用 DOM 元素</a></li>
+          
+            <li><a title="4.5 为 DOM 元素设置样式" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%B8%BA%20DOM%20%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E6%A0%B7%E5%BC%8F.html">4.5 为 DOM 元素设置样式</a></li>
+          
+            <li><a title="4.6 使用事件" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E4%BA%8B%E4%BB%B6.html">4.6 使用事件</a></li>
+          
+            <li><a title="4.7 使用元素专属对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%85%83%E7%B4%A0%E4%B8%93%E5%B1%9E%E5%AF%B9%E8%B1%A1.html">4.7 使用元素专属对象</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>高级</label></li>
+
+          
+            <li><a title="5.1 使用 Ajax（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Ajax%EF%BC%881%EF%BC%89.html">5.1 使用 Ajax（1）</a></li>
+          
+            <li><a title="5.2 使用 Ajax（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Ajax%EF%BC%882%EF%BC%89.html">5.2 使用 Ajax（2）</a></li>
+          
+            <li><a title="5.3 使用多媒体" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%AA%92%E4%BD%93.html">5.3 使用多媒体</a></li>
+          
+            <li><a title="5.4 使用 canvas 元素（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20canvas%20%E5%85%83%E7%B4%A0%EF%BC%881%EF%BC%89.html">5.4 使用 canvas 元素（1）</a></li>
+          
+            <li><a title="5.4 使用 canvas 元素（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20canvas%20%E5%85%83%E7%B4%A0%EF%BC%882%EF%BC%89.html">5.4 使用 canvas 元素（2）</a></li>
+          
+            <li><a title="5.5 使用拖放" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E6%8B%96%E6%94%BE.html">5.5 使用拖放</a></li>
+          
+            <li><a title="5.6 使用地理定位" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D.html">5.6 使用地理定位</a></li>
+          
+            <li><a title="5.7 使用 Web 存储" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Web%20%E5%AD%98%E5%82%A8.html">5.7 使用 Web 存储</a></li>
+          
+            <li><a title="5.8 创建离线 Web 应用程序" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91.html">5.8 创建离线 Web 应用程序</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>开篇</span></li>
+                        
+                          <li><a title="1.1 HTML5 背景知识" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML5%20%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.html">1.1 HTML5 背景知识</a></li>
+                        
+                          <li><a title="1.2 准备工作" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.html">1.2 准备工作</a></li>
+                        
+                          <li><a title="1.3 HTML 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML%20%E7%AE%80%E4%BB%8B.html">1.3 HTML 简介</a></li>
+                        
+                          <li><a title="1.4 CSS 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E7%AE%80%E4%BB%8B.html">1.4 CSS 简介</a></li>
+                        
+                          <li><a title="1.5 JavaScript 简介" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91JavaScript%20%E7%AE%80%E4%BB%8B.html">1.5 JavaScript 简介</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>HTML 元素</span></li>
+                        
+                          <li><a title="2.1 HTML5 元素背景知识" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91HTML5%20%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86.html">2.1 HTML5 元素背景知识</a></li>
+                        
+                          <li><a title="2.2 创建 HTML 文档" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%88%9B%E5%BB%BA%20HTML%20%E6%96%87%E6%A1%A3.html">2.2 创建 HTML 文档</a></li>
+                        
+                          <li><a title="2.3 标记文字" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%A0%87%E8%AE%B0%E6%96%87%E5%AD%97.html">2.3 标记文字</a></li>
+                        
+                          <li><a title="2.4 组织内容" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E7%BB%84%E7%BB%87%E5%86%85%E5%AE%B9.html">2.4 组织内容</a></li>
+                        
+                          <li><a title="2.5 文档分节" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E6%96%87%E6%A1%A3%E5%88%86%E8%8A%82.html">2.5 文档分节</a></li>
+                        
+                          <li><a title="2.6 表格" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E6%A0%BC.html">2.6 表格</a></li>
+                        
+                          <li><a title="2.7 表单" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E5%8D%95.html">2.7 表单</a></li>
+                        
+                          <li><a title="2.8 定制 input 元素" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%AE%9A%E5%88%B6%20input%20%E5%85%83%E7%B4%A0.html">2.8 定制 input 元素</a></li>
+                        
+                          <li><a title="2.9 其他表单元素与输入验证" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%85%B6%E4%BB%96%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E4%B8%8E%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81.html">2.9 其他表单元素与输入验证</a></li>
+                        
+                          <li><a title="2.10 嵌入内容" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%B5%8C%E5%85%A5%E5%86%85%E5%AE%B9.html">2.10 嵌入内容</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>CSS</span></li>
+                        
+                          <li><a title="3.1 CSS" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS.html">3.1 CSS</a></li>
+                        
+                          <li><a title="3.2 CSS 选择器（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%881%EF%BC%89.html">3.2 CSS 选择器（1）</a></li>
+                        
+                          <li><a title="3.3 CSS 选择器（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%882%EF%BC%89.html">3.3 CSS 选择器（2）</a></li>
+                        
+                          <li><a title="3.4 边框和背景" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%BE%B9%E6%A1%86%E5%92%8C%E8%83%8C%E6%99%AF.html">3.4 边框和背景</a></li>
+                        
+                          <li><a title="3.5 使用盒模型" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E7%9B%92%E6%A8%A1%E5%9E%8B.html">3.5 使用盒模型</a></li>
+                        
+                          <li><a title="3.6 创建布局" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%88%9B%E5%BB%BA%E5%B8%83%E5%B1%80.html">3.6 创建布局</a></li>
+                        
+                          <li><a title="3.7 设置文本样式" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%AE%BE%E7%BD%AE%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F.html">3.7 设置文本样式</a></li>
+                        
+                          <li><a title="3.8 过渡、动画、变换" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%BF%87%E6%B8%A1%E3%80%81%E5%8A%A8%E7%94%BB%E3%80%81%E5%8F%98%E6%8D%A2.html">3.8 过渡、动画、变换</a></li>
+                        
+                          <li><a title="3.9 CSS 其他属性与特性" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91CSS%20%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%89%B9%E6%80%A7.html">3.9 CSS 其他属性与特性</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>使用 DOM</span></li>
+                        
+                          <li><a title="4.1 理解 DOM" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E7%90%86%E8%A7%A3%20DOM.html">4.1 理解 DOM</a></li>
+                        
+                          <li><a title="4.2 使用 Document 对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Document%20%E5%AF%B9%E8%B1%A1.html">4.2 使用 Document 对象</a></li>
+                        
+                          <li><a title="4.3 使用 Window 对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Window%20%E5%AF%B9%E8%B1%A1.html">4.3 使用 Window 对象</a></li>
+                        
+                          <li><a title="4.4 使用 DOM 元素" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20DOM%20%E5%85%83%E7%B4%A0.html">4.4 使用 DOM 元素</a></li>
+                        
+                          <li><a title="4.5 为 DOM 元素设置样式" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%B8%BA%20DOM%20%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E6%A0%B7%E5%BC%8F.html">4.5 为 DOM 元素设置样式</a></li>
+                        
+                          <li><a title="4.6 使用事件" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E4%BA%8B%E4%BB%B6.html">4.6 使用事件</a></li>
+                        
+                          <li><a title="4.7 使用元素专属对象" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%85%83%E7%B4%A0%E4%B8%93%E5%B1%9E%E5%AF%B9%E8%B1%A1.html">4.7 使用元素专属对象</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>高级</span></li>
+                        
+                          <li><a title="5.1 使用 Ajax（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Ajax%EF%BC%881%EF%BC%89.html">5.1 使用 Ajax（1）</a></li>
+                        
+                          <li><a title="5.2 使用 Ajax（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Ajax%EF%BC%882%EF%BC%89.html">5.2 使用 Ajax（2）</a></li>
+                        
+                          <li><a title="5.3 使用多媒体" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%A4%9A%E5%AA%92%E4%BD%93.html">5.3 使用多媒体</a></li>
+                        
+                          <li><a title="5.4 使用 canvas 元素（1）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20canvas%20%E5%85%83%E7%B4%A0%EF%BC%881%EF%BC%89.html">5.4 使用 canvas 元素（1）</a></li>
+                        
+                          <li><a title="5.4 使用 canvas 元素（2）" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20canvas%20%E5%85%83%E7%B4%A0%EF%BC%882%EF%BC%89.html">5.4 使用 canvas 元素（2）</a></li>
+                        
+                          <li><a title="5.5 使用拖放" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E6%8B%96%E6%94%BE.html">5.5 使用拖放</a></li>
+                        
+                          <li><a title="5.6 使用地理定位" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%E5%9C%B0%E7%90%86%E5%AE%9A%E4%BD%8D.html">5.6 使用地理定位</a></li>
+                        
+                          <li><a title="5.7 使用 Web 存储" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E4%BD%BF%E7%94%A8%20Web%20%E5%AD%98%E5%82%A8.html">5.7 使用 Web 存储</a></li>
+                        
+                          <li><a title="5.8 创建离线 Web 应用程序" href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91.html">5.8 创建离线 Web 应用程序</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>2.8 定制 input 元素</h1>
+
+<ul>
+<li>
+<a href="#toc_0">输入文字</a>
+</li>
+<li>
+<a href="#toc_1">输入密码</a>
+</li>
+<li>
+<a href="#toc_2">生成按钮</a>
+</li>
+<li>
+<a href="#toc_3">数据检查</a>
+</li>
+<li>
+<a href="#toc_4">获取搜索用词</a>
+</li>
+<li>
+<a href="#toc_5">生成隐藏的数据项</a>
+</li>
+<li>
+<a href="#toc_6">生成图像按钮和分区响应图</a>
+</li>
+<li>
+<a href="#toc_7">上传文件</a>
+</li>
+</ul>
+
+
+<h3 id="toc_0">输入文字</h3>
+
+<ul>
+<li><code>text</code>，默认 type</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">text 额外属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">dirname</td>
+<td style="text-align: left">方向</td>
+</tr>
+<tr>
+<td style="text-align: left">list</td>
+<td style="text-align: left">建议输入值</td>
+</tr>
+<tr>
+<td style="text-align: left">maxlength</td>
+<td style="text-align: left">字符最大数量</td>
+</tr>
+<tr>
+<td style="text-align: left">pattern</td>
+<td style="text-align: left">正则表达式</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholder</td>
+<td style="text-align: left">提示</td>
+</tr>
+<tr>
+<td style="text-align: left">readonly</td>
+<td style="text-align: left">只读</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须输入</td>
+</tr>
+<tr>
+<td style="text-align: left">size</td>
+<td style="text-align: left">宽度</td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left">初始值</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>大小</p></li>
+<li><p><code>maxlength</code>：输入字符个数限制；</p></li>
+<li><p><code>size</code>：可显示字符数限制，宽度限制；</p></li>
+</ul>
+
+<pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; maxlength=&quot;8&quot;/&gt;&lt;/label&gt;
+&lt;label&gt;密码：&lt;input name=&quot;password&quot; size=&quot;10&quot;/&gt;&lt;/label&gt;
+</code></pre>
+
+<ul>
+<li><p>初始值与占位提示</p></li>
+<li><p><code>value</code>：初始值；</p></li>
+<li><p><code>placeholder</code>：占位提示；</p></li>
+</ul>
+
+<pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; value=&quot;Li Lei&quot;/&gt;&lt;/label&gt;
+&lt;label&gt;密码：&lt;input name=&quot;password&quot; placeholder=&quot;123456&quot;/&gt;&lt;/label&gt;
+</code></pre>
+
+<ul>
+<li>数据列表</li>
+</ul>
+
+<pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; list=&quot;userNames&quot;/&gt;&lt;/label&gt;
+    
+&lt;datalist id=&quot;userNames&quot;&gt;
+    &lt;option value=&quot;Li Lei&quot;&gt;&lt;/option&gt;
+    &lt;option value=&quot;Han Meimei&quot;&gt;&lt;/option&gt;
+    &lt;option value=&quot;Xiao Ming&quot;&gt;&lt;/option&gt;
+&lt;/datalist&gt;
+</code></pre>
+
+<ul>
+<li><p>只读或禁用</p></li>
+<li><p><code>readonly</code>：只读；</p></li>
+<li><p><code>disable</code>：禁用；</p></li>
+</ul>
+
+<pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; readonly/&gt;&lt;/label&gt;
+&lt;label&gt;密码：&lt;input name=&quot;password&quot; disabled/&gt;&lt;/label&gt;
+</code></pre>
+
+<ul>
+<li>方向</li>
+</ul>
+
+<p>略，有毛用？</p>
+
+<h3 id="toc_1">输入密码</h3>
+
+<ul>
+<li><code>password</code>，额外属性与<code>text</code>用法一样；</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">text 额外属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">maxlength</td>
+<td style="text-align: left">字符最大数量</td>
+</tr>
+<tr>
+<td style="text-align: left">pattern</td>
+<td style="text-align: left">正则表达式</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholder</td>
+<td style="text-align: left">提示</td>
+</tr>
+<tr>
+<td style="text-align: left">readonly</td>
+<td style="text-align: left">只读</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须输入</td>
+</tr>
+<tr>
+<td style="text-align: left">size</td>
+<td style="text-align: left">宽度</td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left">初始值</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_2">生成按钮</h3>
+
+<ul>
+<li><code>submit</code><code>reset</code><code>button</code>，会对应变成<code>button</code>的三种类型，使用方式一样；</li>
+</ul>
+
+<h3 id="toc_3">数据检查</h3>
+
+<p>|属性|说明|<br/>
+|checkbox|是否选择|<br/>
+|color|颜色|<br/>
+|date|日期|<br/>
+|datetime|带时区的世界时|<br/>
+|datetime-local|不带时区的世界时|<br/>
+|email|油箱|<br/>
+|month|年月|<br/>
+|number|数字|<br/>
+|radiobutton|一组固定选项中选择|<br/>
+|range|指定范围|<br/>
+|tel|电话|<br/>
+|time|时间|<br/>
+|week|年与星期|<br/>
+|url|URL|</p>
+
+<ul>
+<li><p>数值</p></li>
+<li><p><code>number</code></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">list</td>
+<td style="text-align: left">建议值</td>
+</tr>
+<tr>
+<td style="text-align: left">min</td>
+<td style="text-align: left">最小值</td>
+</tr>
+<tr>
+<td style="text-align: left">max</td>
+<td style="text-align: left">最大值</td>
+</tr>
+<tr>
+<td style="text-align: left">readonly</td>
+<td style="text-align: left">只读</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须</td>
+</tr>
+<tr>
+<td style="text-align: left">step</td>
+<td style="text-align: left">数值调节步长</td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left">初始值</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code>&lt;label&gt;购买数量：&lt;input type=&quot;number&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;2&quot;&gt;&lt;/label&gt;
+</code></pre>
+
+<ul>
+<li><p>指定范围</p></li>
+<li><p><code>range</code>，与<code>number</code>功能相同，显示不同；</p></li>
+</ul>
+
+<pre><code>&lt;label&gt;购买数量：&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;2&quot;&gt;&lt;/label&gt;
+</code></pre>
+
+<ul>
+<li><p>布尔、多选</p></li>
+<li><p><code>checkbox</code></p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">checked</td>
+<td style="text-align: left">选中</td>
+</tr>
+<tr>
+<td style="text-align: left">min</td>
+<td style="text-align: left">必须</td>
+</tr>
+<tr>
+<td style="text-align: left">max</td>
+<td style="text-align: left">勾选状态时提交的数据值，默认 on</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code>&lt;label&gt;apple：&lt;input type=&quot;checkbox&quot; name=&quot;fav&quot; checked&gt;&lt;/label&gt;
+</code></pre>
+
+<ul>
+<li><p>单选</p></li>
+<li><p><code>radio</code>，属性与<code>checkbox</code>一致；</p></li>
+</ul>
+
+<pre><code>&lt;label&gt;性别：
+    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;man&quot;&gt;男
+    &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;woman&quot;&gt;女
+&lt;/label&gt;
+</code></pre>
+
+<ul>
+<li><p>规定格式的字符串</p></li>
+<li><p><code>email</code>、<code>tel</code>、<code>url</code>；</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">list</td>
+<td style="text-align: left">选择列表</td>
+</tr>
+<tr>
+<td style="text-align: left">maxlength</td>
+<td style="text-align: left">字符限制</td>
+</tr>
+<tr>
+<td style="text-align: left">pattern</td>
+<td style="text-align: left">正则</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholder</td>
+<td style="text-align: left">占位提示</td>
+</tr>
+<tr>
+<td style="text-align: left">readonly</td>
+<td style="text-align: left">只读</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须</td>
+</tr>
+<tr>
+<td style="text-align: left">size</td>
+<td style="text-align: left">宽度</td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: left">初始值</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><code>email</code> 还有额外的<code>multipe</code>属性，接受多个邮箱地址； </p>
+</blockquote>
+
+<pre><code>&lt;label&gt;邮箱：&lt;input type=&quot;email&quot;&gt;&lt;/label&gt;
+</code></pre>
+
+<ul>
+<li><p>时间日期</p></li>
+<li><p>直接使用 jQuery 之类的 JS 日历选择工具好了；</p></li>
+<li><p>颜色值</p></li>
+<li><p><code>color</code>，</p></li>
+</ul>
+
+<pre><code>&lt;label&gt;背景颜色：&lt;input type=&quot;color&quot; name=&quot;backgroundColor&quot;&gt;&lt;/label&gt;
+</code></pre>
+
+<h3 id="toc_4">获取搜索用词</h3>
+
+<ul>
+<li><code>search</code>，一般浏览器都直接以<code>text</code>类型处理；但是可以根据不同类型有不同的样式；</li>
+</ul>
+
+<h3 id="toc_5">生成隐藏的数据项</h3>
+
+<ul>
+<li><code>hidden</code>，用户不需要输入，也不给用户看到，道士默认上传给服务器；</li>
+</ul>
+
+<pre><code>&lt;input type=&quot;hidden&quot; name=&quot;token&quot; value=&quot;qs1234&quot;&gt;
+</code></pre>
+
+<h3 id="toc_6">生成图像按钮和分区响应图</h3>
+
+<ul>
+<li><code>image</code>，作用同<code>button</code>类型，属性稍多几个；</li>
+</ul>
+
+<pre><code>&lt;input type=&quot;image&quot; src=&quot;123.jpg&quot; name=&quot;submit&quot;&gt;
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">alt</td>
+<td style="text-align: left">说明文字</td>
+</tr>
+<tr>
+<td style="text-align: left">formaction</td>
+<td style="text-align: left">重新关联 action</td>
+</tr>
+<tr>
+<td style="text-align: left">formenctype</td>
+<td style="text-align: left">重新关联 enctype</td>
+</tr>
+<tr>
+<td style="text-align: left">formmethod</td>
+<td style="text-align: left">重新关联 method</td>
+</tr>
+<tr>
+<td style="text-align: left">formtarget</td>
+<td style="text-align: left">重新关联 target</td>
+</tr>
+<tr>
+<td style="text-align: left">formnovalidate</td>
+<td style="text-align: left">重新关联，与输入数据检查有关</td>
+</tr>
+<tr>
+<td style="text-align: left">height</td>
+<td style="text-align: left">高</td>
+</tr>
+<tr>
+<td style="text-align: left">src</td>
+<td style="text-align: left">图片资源</td>
+</tr>
+<tr>
+<td style="text-align: left">width</td>
+<td style="text-align: left">宽</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_7">上传文件</h3>
+
+<ul>
+<li><code>file</code>；</li>
+</ul>
+
+<pre><code>&lt;input type=&quot;file&quot; accept=&quot;application/pdf&quot; required&gt;
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">属性</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">accept</td>
+<td style="text-align: left">MIME 类型</td>
+</tr>
+<tr>
+<td style="text-align: left">multiple</td>
+<td style="text-align: left">文件多选，浏览器支持不多？</td>
+</tr>
+<tr>
+<td style="text-align: left">required</td>
+<td style="text-align: left">必须</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E8%A1%A8%E5%8D%95.html"  title="Previous Post: 2.7 表单">&laquo; 2.7 表单</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%85%B6%E4%BB%96%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E4%B8%8E%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81.html" 
+	        title="Next Post: 2.9 其他表单元素与输入验证">2.9 其他表单元素与输入验证 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90HTML%20%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97%E3%80%91%E5%AE%9A%E5%88%B6%20input%20%E5%85%83%E7%B4%A0.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+    
+
+
+  </body>
+</html>
