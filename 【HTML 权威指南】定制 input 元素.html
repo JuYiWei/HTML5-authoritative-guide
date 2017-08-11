@@ -280,36 +280,84 @@
 
 <ul>
 <li>
-<a href="#toc_0">输入文字</a>
+<a href="#toc_0">一、输入文字</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 大小</a>
 </li>
 <li>
-<a href="#toc_1">输入密码</a>
+<a href="#toc_2">2. 初始值与占位提示</a>
 </li>
 <li>
-<a href="#toc_2">生成按钮</a>
+<a href="#toc_3">3. 数据列表</a>
 </li>
 <li>
-<a href="#toc_3">数据检查</a>
+<a href="#toc_4">4. 只读或禁用</a>
 </li>
 <li>
-<a href="#toc_4">获取搜索用词</a>
+<a href="#toc_5">5. 方向</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_5">生成隐藏的数据项</a>
+<a href="#toc_6">二、输入密码</a>
 </li>
 <li>
-<a href="#toc_6">生成图像按钮和分区响应图</a>
+<a href="#toc_7">三、生成按钮</a>
 </li>
 <li>
-<a href="#toc_7">上传文件</a>
+<a href="#toc_8">四、数据检查</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_9">1. 数值</a>
+</li>
+<li>
+<a href="#toc_10">2. 指定范围</a>
+</li>
+<li>
+<a href="#toc_11">3. 布尔、多选</a>
+</li>
+<li>
+<a href="#toc_12">4. 单选</a>
+</li>
+<li>
+<a href="#toc_13">5. 规定格式的字符串</a>
+</li>
+<li>
+<a href="#toc_14">6. 时间日期</a>
+</li>
+<li>
+<a href="#toc_15">7. 颜色值</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_16">五、获取搜索用词</a>
+</li>
+<li>
+<a href="#toc_17">六、生成隐藏的数据项</a>
+</li>
+<li>
+<a href="#toc_18">七、生成图像按钮和分区响应图</a>
+</li>
+<li>
+<a href="#toc_19">八、上传文件</a>
 </li>
 </ul>
 
 
-<h3 id="toc_0">输入文字</h3>
+<h2 id="toc_0">一、输入文字</h2>
 
 <ul>
-<li><code>text</code>，默认 type</li>
+<li>type 类型为 <code>text</code>，拥有额外属性；</li>
 </ul>
 
 <table>
@@ -360,29 +408,29 @@
 </tbody>
 </table>
 
+<h4 id="toc_1">1. 大小</h4>
+
 <ul>
-<li><p>大小</p></li>
-<li><p><code>maxlength</code>：输入字符个数限制；</p></li>
-<li><p><code>size</code>：可显示字符数限制，宽度限制；</p></li>
+<li><code>maxlength</code>：输入字符个数限制；</li>
+<li><code>size</code>：可显示字符数限制，宽度限制；</li>
 </ul>
 
 <pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; maxlength=&quot;8&quot;/&gt;&lt;/label&gt;
 &lt;label&gt;密码：&lt;input name=&quot;password&quot; size=&quot;10&quot;/&gt;&lt;/label&gt;
 </code></pre>
 
+<h4 id="toc_2">2. 初始值与占位提示</h4>
+
 <ul>
-<li><p>初始值与占位提示</p></li>
-<li><p><code>value</code>：初始值；</p></li>
-<li><p><code>placeholder</code>：占位提示；</p></li>
+<li><code>value</code>：初始值；</li>
+<li><code>placeholder</code>：占位提示；</li>
 </ul>
 
 <pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; value=&quot;Li Lei&quot;/&gt;&lt;/label&gt;
 &lt;label&gt;密码：&lt;input name=&quot;password&quot; placeholder=&quot;123456&quot;/&gt;&lt;/label&gt;
 </code></pre>
 
-<ul>
-<li>数据列表</li>
-</ul>
+<h4 id="toc_3">3. 数据列表</h4>
 
 <pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; list=&quot;userNames&quot;/&gt;&lt;/label&gt;
     
@@ -393,26 +441,27 @@
 &lt;/datalist&gt;
 </code></pre>
 
+<h4 id="toc_4">4. 只读或禁用</h4>
+
 <ul>
-<li><p>只读或禁用</p></li>
-<li><p><code>readonly</code>：只读；</p></li>
-<li><p><code>disable</code>：禁用；</p></li>
+<li><code>readonly</code>：只读；</li>
+<li><code>disable</code>：禁用；</li>
 </ul>
 
 <pre><code>&lt;label&gt;用户名：&lt;input name=&quot;name&quot; readonly/&gt;&lt;/label&gt;
 &lt;label&gt;密码：&lt;input name=&quot;password&quot; disabled/&gt;&lt;/label&gt;
 </code></pre>
 
+<h4 id="toc_5">5. 方向</h4>
+
 <ul>
-<li>方向</li>
+<li>略；</li>
 </ul>
 
-<p>略，有毛用？</p>
-
-<h3 id="toc_1">输入密码</h3>
+<h2 id="toc_6">二、输入密码</h2>
 
 <ul>
-<li><code>password</code>，额外属性与<code>text</code>用法一样；</li>
+<li>type 类型为 <code>password</code>，额外属性与<code>text</code>用法一样；</li>
 </ul>
 
 <table>
@@ -455,13 +504,13 @@
 </tbody>
 </table>
 
-<h3 id="toc_2">生成按钮</h3>
+<h2 id="toc_7">三、生成按钮</h2>
 
 <ul>
 <li><code>submit</code><code>reset</code><code>button</code>，会对应变成<code>button</code>的三种类型，使用方式一样；</li>
 </ul>
 
-<h3 id="toc_3">数据检查</h3>
+<h2 id="toc_8">四、数据检查</h2>
 
 <p>|属性|说明|<br/>
 |checkbox|是否选择|<br/>
@@ -479,9 +528,10 @@
 |week|年与星期|<br/>
 |url|URL|</p>
 
+<h4 id="toc_9">1. 数值</h4>
+
 <ul>
-<li><p>数值</p></li>
-<li><p><code>number</code></p></li>
+<li><code>number</code></li>
 </ul>
 
 <table>
@@ -527,17 +577,19 @@
 <pre><code>&lt;label&gt;购买数量：&lt;input type=&quot;number&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;2&quot;&gt;&lt;/label&gt;
 </code></pre>
 
+<h4 id="toc_10">2. 指定范围</h4>
+
 <ul>
-<li><p>指定范围</p></li>
-<li><p><code>range</code>，与<code>number</code>功能相同，显示不同；</p></li>
+<li><code>range</code>，与<code>number</code>功能相同，显示不同；</li>
 </ul>
 
 <pre><code>&lt;label&gt;购买数量：&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;2&quot;&gt;&lt;/label&gt;
 </code></pre>
 
+<h4 id="toc_11">3. 布尔、多选</h4>
+
 <ul>
-<li><p>布尔、多选</p></li>
-<li><p><code>checkbox</code></p></li>
+<li><code>checkbox</code></li>
 </ul>
 
 <table>
@@ -567,9 +619,10 @@
 <pre><code>&lt;label&gt;apple：&lt;input type=&quot;checkbox&quot; name=&quot;fav&quot; checked&gt;&lt;/label&gt;
 </code></pre>
 
+<h4 id="toc_12">4. 单选</h4>
+
 <ul>
-<li><p>单选</p></li>
-<li><p><code>radio</code>，属性与<code>checkbox</code>一致；</p></li>
+<li><code>radio</code>，属性与<code>checkbox</code>一致；</li>
 </ul>
 
 <pre><code>&lt;label&gt;性别：
@@ -578,9 +631,10 @@
 &lt;/label&gt;
 </code></pre>
 
+<h4 id="toc_13">5. 规定格式的字符串</h4>
+
 <ul>
-<li><p>规定格式的字符串</p></li>
-<li><p><code>email</code>、<code>tel</code>、<code>url</code>；</p></li>
+<li><code>email</code>、<code>tel</code>、<code>url</code>；</li>
 </ul>
 
 <table>
@@ -634,32 +688,37 @@
 <pre><code>&lt;label&gt;邮箱：&lt;input type=&quot;email&quot;&gt;&lt;/label&gt;
 </code></pre>
 
+<h4 id="toc_14">6. 时间日期</h4>
+
 <ul>
-<li><p>时间日期</p></li>
-<li><p>直接使用 jQuery 之类的 JS 日历选择工具好了；</p></li>
-<li><p>颜色值</p></li>
-<li><p><code>color</code>，</p></li>
+<li>直接使用 jQuery 之类的 JS 日历选择工具好了；</li>
+</ul>
+
+<h4 id="toc_15">7. 颜色值</h4>
+
+<ul>
+<li><code>color</code>，</li>
 </ul>
 
 <pre><code>&lt;label&gt;背景颜色：&lt;input type=&quot;color&quot; name=&quot;backgroundColor&quot;&gt;&lt;/label&gt;
 </code></pre>
 
-<h3 id="toc_4">获取搜索用词</h3>
+<h2 id="toc_16">五、获取搜索用词</h2>
 
 <ul>
 <li><code>search</code>，一般浏览器都直接以<code>text</code>类型处理；但是可以根据不同类型有不同的样式；</li>
 </ul>
 
-<h3 id="toc_5">生成隐藏的数据项</h3>
+<h2 id="toc_17">六、生成隐藏的数据项</h2>
 
 <ul>
-<li><code>hidden</code>，用户不需要输入，也不给用户看到，道士默认上传给服务器；</li>
+<li><code>hidden</code>，用户不需要输入，也不给用户看到，但是默认上传给服务器；</li>
 </ul>
 
 <pre><code>&lt;input type=&quot;hidden&quot; name=&quot;token&quot; value=&quot;qs1234&quot;&gt;
 </code></pre>
 
-<h3 id="toc_6">生成图像按钮和分区响应图</h3>
+<h2 id="toc_18">七、生成图像按钮和分区响应图</h2>
 
 <ul>
 <li><code>image</code>，作用同<code>button</code>类型，属性稍多几个；</li>
@@ -716,7 +775,7 @@
 </tbody>
 </table>
 
-<h3 id="toc_7">上传文件</h3>
+<h2 id="toc_19">八、上传文件</h2>
 
 <ul>
 <li><code>file</code>；</li>

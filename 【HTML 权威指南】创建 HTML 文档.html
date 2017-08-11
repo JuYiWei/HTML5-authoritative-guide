@@ -280,23 +280,58 @@
 
 <ul>
 <li>
-<a href="#toc_0">基本文档结构</a>
+<a href="#toc_0">一、基本文档结构</a>
 </li>
 <li>
-<a href="#toc_1">元数据说明文档</a>
+<a href="#toc_1">二、元数据说明文档</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_2">1. 设置文档标题</a>
 </li>
 <li>
-<a href="#toc_2">脚本元素</a>
+<a href="#toc_3">2. 设置相对 URL 基准</a>
+</li>
+<li>
+<a href="#toc_4">3. 元数据说明文档</a>
+</li>
+<li>
+<a href="#toc_5">4. CSS 样式</a>
+<ul>
+<li>
+<a href="#toc_6">5. 指定外部资源</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_7">三、脚本元素</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_8">1. script</a>
+</li>
+<li>
+<a href="#toc_9">2. noscript</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
 
-<h3 id="toc_0">基本文档结构</h3>
+<h2 id="toc_0">一、基本文档结构</h2>
 
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
-        // head 部分
+        // 元数据部分
     &lt;/head&gt;
     &lt;body&gt;
         // 内容部分
@@ -304,25 +339,12 @@
 &lt;/html&gt;
 </code></pre>
 
-<ul>
-<li><p>DOCTYPE</p></li>
-<li><p>表示处理的是 HTML 文档；</p></li>
-<li><p>标记文档内容 HTML 版本；</p></li>
-<li><p>放在文档第一行；</p></li>
-<li><p>html</p></li>
-<li><p>文档根元素，包含内容和元素；</p></li>
-<li><p>head</p></li>
-<li><p>包含文档元数据，提供文档相关信息；</p></li>
-<li><p>body</p></li>
-<li><p>文档内容部分；</p></li>
-</ul>
+<h2 id="toc_1">二、元数据说明文档</h2>
 
-<h3 id="toc_1">元数据说明文档</h3>
+<h4 id="toc_2">1. 设置文档标题</h4>
 
 <ul>
-<li><p><code>&lt;head&gt;</code>标签中，设置；</p></li>
-<li><p>设置文档标题</p></li>
-<li><p>通常显示为浏览器标签；</p></li>
+<li>通常显示为浏览器标签；</li>
 </ul>
 
 <pre><code>&lt;head&gt;
@@ -330,8 +352,10 @@
 &lt;/head&gt;
 </code></pre>
 
+<h4 id="toc_3">2. 设置相对 URL 基准</h4>
+
 <ul>
-<li>设置相对 URL 基准</li>
+<li>不设置，会以当前文档 URL 作为基准；</li>
 </ul>
 
 <pre><code>&lt;head&gt;
@@ -339,9 +363,10 @@
 &lt;/head&gt;
 </code></pre>
 
+<h4 id="toc_4">3. 元数据说明文档</h4>
+
 <ul>
-<li><p>元数据说明文档</p></li>
-<li><p>指定名/值元数据对（可以设置多个）</p></li>
+<li>指定名/值元数据对（可以设置多个）</li>
 </ul>
 
 <pre><code>&lt;head&gt;
@@ -371,9 +396,7 @@
 <p>http-equiv 有三个值可用：refresh、default-style、content-type；</p>
 </blockquote>
 
-<ul>
-<li>CSS 样式</li>
-</ul>
+<h4 id="toc_5">4. CSS 样式</h4>
 
 <pre><code>&lt;style type=&quot;text/css&quot; media=&quot;screen AND (min-width:500px&quot;&gt;
    p {
@@ -484,9 +507,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>指定外部资源</li>
-</ul>
+<h5 id="toc_6">5. 指定外部资源</h5>
 
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://res.wx.qq.com/open/libs/weui/0.4.2/weui.css&quot;/&gt;
 </code></pre>
@@ -592,13 +613,16 @@
 <pre><code>&lt;link rel=&quot;prefetch&quot; href=&quot;/page2.html&quot;&gt;
 </code></pre>
 
-<h3 id="toc_2">脚本元素</h3>
-
-<p>建议放在 head 部分，便于维护；</p>
+<h2 id="toc_7">三、脚本元素</h2>
 
 <ul>
-<li><p>script</p></li>
-<li><p>文档内部脚本，type 默认 JavaScript；</p></li>
+<li>建议放在 body 最后部分；</li>
+</ul>
+
+<h4 id="toc_8">1. script</h4>
+
+<ul>
+<li>文档内部脚本，type 默认 JavaScript；</li>
 </ul>
 
 <pre><code>&lt;script type=&quot;javascript&quot;&gt;
@@ -627,9 +651,10 @@
 <pre><code>&lt;script async src=&quot;test.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
+<h4 id="toc_9">2. noscript</h4>
+
 <ul>
-<li><p>noscript</p></li>
-<li><p>用来对禁用的 JavaScript 或不支持 JavaScript 的浏览器提示内容；</p></li>
+<li>用来对禁用的 JavaScript 或不支持 JavaScript 的浏览器提示内容；</li>
 </ul>
 
 <pre><code>&lt;noscript&gt;

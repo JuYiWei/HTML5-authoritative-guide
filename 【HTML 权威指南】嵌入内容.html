@@ -280,41 +280,76 @@
 
 <ul>
 <li>
-<a href="#toc_0">嵌入图像</a>
+<a href="#toc_0">一、嵌入图像</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 超链接图片</a>
 </li>
 <li>
-<a href="#toc_1">嵌入另一个 HTML 文档</a>
+<a href="#toc_2">2. 分区响应图</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_2">插件嵌入内容</a>
+<a href="#toc_3">二、嵌入另一个 HTML 文档</a>
 </li>
 <li>
-<a href="#toc_3">object元素的其他用途</a>
+<a href="#toc_4">三、插件嵌入内容</a>
 </li>
 <li>
-<a href="#toc_4">嵌入数字表达式</a>
+<a href="#toc_5">四、object元素的其他用途</a>
 </li>
 <li>
-<a href="#toc_5">其他嵌入元素</a>
+<a href="#toc_6">五、嵌入数字表达式</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_7">1. 显示进度</a>
+</li>
+<li>
+<a href="#toc_8">2. 显示范围的值</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_9">六、其他嵌入元素</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_10">1. 音频视频</a>
+</li>
+<li>
+<a href="#toc_11">2. 图形</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
 
-<h3 id="toc_0">嵌入图像</h3>
+<h2 id="toc_0">一、嵌入图像</h2>
 
 <pre><code>&lt;img src=&quot;123.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 </code></pre>
 
-<ul>
-<li>超链接图片</li>
-</ul>
+<h4 id="toc_1">1. 超链接图片</h4>
 
 <pre><code>&lt;a href=&quot;Home.html&quot;&gt;&lt;img src=&quot;123.jpg&quot;&gt;&lt;/a&gt;
 </code></pre>
 
+<h4 id="toc_2">2. 分区响应图</h4>
+
 <ul>
-<li><p>分区响应图</p></li>
-<li><p><code>map</code></p></li>
+<li><code>map</code></li>
 </ul>
 
 <pre><code>&lt;img src=&quot;123.jpg&quot; width=&quot;400px&quot; height=&quot;400px&quot; usemap=&quot;###mymap&quot;&gt;
@@ -325,7 +360,7 @@
 &lt;/map&gt;
 </code></pre>
 
-<h3 id="toc_1">嵌入另一个 HTML 文档</h3>
+<h2 id="toc_3">二、嵌入另一个 HTML 文档</h2>
 
 <ul>
 <li><code>iframe</code>，安全限制，需要手动开启内部的表单、脚本等；</li>
@@ -336,7 +371,7 @@
 &lt;iframe name=&quot;myframe&quot; src=&quot;Home.html&quot; width=&quot;300&quot; height=&quot;300&quot; sandbox=&quot;allow-script&quot;&gt;
 </code></pre>
 
-<h3 id="toc_2">插件嵌入内容</h3>
+<h2 id="toc_4">三、插件嵌入内容</h2>
 
 <ul>
 <li><p>比较灵活，简单介绍，没有深入研究；</p></li>
@@ -353,7 +388,7 @@
 <pre><code>&lt;object data=&quot;Record.html&quot;&gt;&lt;param name=&quot;&quot; value=&quot;&quot;&gt;&lt;/object&gt;
 </code></pre>
 
-<h3 id="toc_3">object元素的其他用途</h3>
+<h2 id="toc_5">四、object元素的其他用途</h2>
 
 <ul>
 <li><p>感觉并没什么软用，这些其他用途；</p></li>
@@ -377,11 +412,9 @@
 <pre><code>&lt;object type=&quot;text/html&quot; name=&quot;frame&quot;&gt;&lt;/object&gt;
 </code></pre>
 
-<h3 id="toc_4">嵌入数字表达式</h3>
+<h2 id="toc_6">五、嵌入数字表达式</h2>
 
-<ul>
-<li>显示进度</li>
-</ul>
+<h4 id="toc_7">1. 显示进度</h4>
 
 <pre><code>&lt;progress id=&quot;myprogress&quot; value=&quot;10&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
 &lt;button onclick=&quot;complete()&quot;&gt;click&lt;/button&gt;
@@ -394,9 +427,10 @@
 &lt;/script&gt;
 </code></pre>
 
+<h4 id="toc_8">2. 显示范围的值</h4>
+
 <ul>
-<li><p>显示范围的值</p></li>
-<li><p>跟进度条类似，但是不同进度不同颜色；</p></li>
+<li>跟进度条类似，但是不同进度不同颜色；</li>
 </ul>
 
 <pre><code>&lt;meter id=&quot;mymeter&quot; value=&quot;10&quot; min=&quot;0&quot; max=&quot;100&quot; low=&quot;60&quot; high=&quot;90&quot;&gt;&lt;/meter&gt;
@@ -410,13 +444,18 @@
 &lt;/script&gt;
 </code></pre>
 
-<h3 id="toc_5">其他嵌入元素</h3>
+<h2 id="toc_9">六、其他嵌入元素</h2>
+
+<h4 id="toc_10">1. 音频视频</h4>
 
 <ul>
-<li><p>音频视频</p></li>
-<li><p><code>audio</code>、<code>video</code>、<code>source</code>、<code>track</code>在 34 章；</p></li>
-<li><p>图形</p></li>
-<li><p><code>canvas</code>在 35、36 章；</p></li>
+<li><code>audio</code>、<code>video</code>、<code>source</code>、<code>track</code>在第五部分；</li>
+</ul>
+
+<h4 id="toc_11">2. 图形</h4>
+
+<ul>
+<li><code>canvas</code>在第五部分；</li>
 </ul>
 
 

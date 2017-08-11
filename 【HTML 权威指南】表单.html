@@ -280,33 +280,87 @@
 
 <ul>
 <li>
-<a href="#toc_0">基本表单</a>
+<a href="#toc_0">一、基本表单</a>
 </li>
 <li>
-<a href="#toc_1">配置表单</a>
+<a href="#toc_1">二、配置表单</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_2">1. action</a>
 </li>
 <li>
-<a href="#toc_2">说明标签</a>
+<a href="#toc_3">2. HTTP 方法</a>
 </li>
 <li>
-<a href="#toc_3">自动聚焦 input</a>
+<a href="#toc_4">3. 配置数据编码</a>
 </li>
 <li>
-<a href="#toc_4">禁用 input</a>
+<a href="#toc_5">4. 表单自动完成</a>
 </li>
 <li>
-<a href="#toc_5">表单元素编组</a>
+<a href="#toc_6">5. 提交表单之后的打开方式</a>
 </li>
 <li>
-<a href="#toc_6">button 元素</a>
+<a href="#toc_7">6. 设置表单名称</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_7">表单外使用表单元素</a>
+<a href="#toc_8">三、说明标签</a>
+</li>
+<li>
+<a href="#toc_9">四、自动聚焦 input</a>
+</li>
+<li>
+<a href="#toc_10">五、禁用 input</a>
+</li>
+<li>
+<a href="#toc_11">六、表单元素编组</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_12">1. <code>fieldset</code>;</a>
+</li>
+<li>
+<a href="#toc_13">2. 说明标签</a>
+</li>
+<li>
+<a href="#toc_14">3. fieldest 禁用 input 元素</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_15">七、button 元素</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_16">1. 提交表单</a>
+</li>
+<li>
+<a href="#toc_17">2. 重置表单</a>
+</li>
+<li>
+<a href="#toc_18">3. 一般按钮使用</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_19">八、表单外使用表单元素</a>
 </li>
 </ul>
 
 
-<h3 id="toc_0">基本表单</h3>
+<h2 id="toc_0">一、基本表单</h2>
 
 <pre><code>&lt;form method=&quot;post&quot; action=&quot;http://xxxx:8080/login&quot;&gt;
     &lt;label&gt;用户名：&lt;input name=&quot;name&quot;/&gt;&lt;/label&gt;
@@ -315,27 +369,30 @@
 &lt;/form&gt;
 </code></pre>
 
-<h3 id="toc_1">配置表单</h3>
+<h2 id="toc_1">二、配置表单</h2>
+
+<h4 id="toc_2">1. action</h4>
 
 <ul>
-<li><p>action</p></li>
-<li><p><code>action</code>：提交表单服务器 url；</p></li>
+<li><code>action</code>：提交表单服务器 url；</li>
 </ul>
 
 <pre><code>&lt;form action=&quot;http://xxxxx:8080/form&gt;
 </code></pre>
 
+<h4 id="toc_3">2. HTTP 方法</h4>
+
 <ul>
-<li><p>HTTP 方法</p></li>
-<li><p><code>method</code>：GET 和 POST；</p></li>
+<li><code>method</code>：GET 和 POST；</li>
 </ul>
 
 <pre><code>&lt;form method=&quot;post&quot;&gt;
 </code></pre>
 
+<h4 id="toc_4">3. 配置数据编码</h4>
+
 <ul>
-<li><p>配置数据编码</p></li>
-<li><p><code>enctype</code></p></li>
+<li><code>enctype</code></li>
 </ul>
 
 <p>|值|说明|<br/>
@@ -343,11 +400,16 @@
 |multipart/form-data|上传文件|<br/>
 |text/plain|与浏览器有关，建议不要使用|</p>
 
+<h4 id="toc_5">4. 表单自动完成</h4>
+
 <ul>
-<li><p>表单自动完成</p></li>
-<li><p><code>autocomplete</code>：对<code>form</code>和<code>input</code>都可以设置；</p></li>
-<li><p>提交表单之后的打开方式</p></li>
-<li><p><code>target</code>：与<code>a</code>的<code>target</code>一样；</p></li>
+<li><code>autocomplete</code>：对<code>form</code>和<code>input</code>都可以设置；</li>
+</ul>
+
+<h4 id="toc_6">5. 提交表单之后的打开方式</h4>
+
+<ul>
+<li><code>target</code>：与<code>a</code>的<code>target</code>一样；</li>
 </ul>
 
 <table>
@@ -382,12 +444,13 @@
 </tbody>
 </table>
 
+<h4 id="toc_7">6. 设置表单名称</h4>
+
 <ul>
-<li><p>设置表单名称</p></li>
-<li><p><code>name</code>属性，与<code>id</code>不同，方便使用 DOM；<code>form</code>的<code>name</code>属性不会上传，<code>input</code>的<code>name</code>属性，会当成 key，用户内容为 value 上传；</p></li>
+<li><code>name</code>属性，与<code>id</code>不同，方便使用 DOM；<code>form</code>的<code>name</code>属性不会上传，<code>input</code>的<code>name</code>属性，会当成 key，用户内容为 value 上传；</li>
 </ul>
 
-<h3 id="toc_2">说明标签</h3>
+<h2 id="toc_8">三、说明标签</h2>
 
 <ul>
 <li><code>label</code></li>
@@ -396,7 +459,7 @@
 <pre><code>&lt;label&gt;密码：&lt;input name=&quot;password&quot;/&gt;&lt;/label&gt;
 </code></pre>
 
-<h3 id="toc_3">自动聚焦 input</h3>
+<h2 id="toc_9">四、自动聚焦 input</h2>
 
 <ul>
 <li><code>autofocus</code>；</li>
@@ -405,7 +468,7 @@
 <pre><code>&lt;label&gt;用户名：&lt;input autofocus name=&quot;name&quot;/&gt;&lt;/label&gt;
 </code></pre>
 
-<h3 id="toc_4">禁用 input</h3>
+<h2 id="toc_10">五、禁用 input</h2>
 
 <ul>
 <li><code>disabled</code>；</li>
@@ -414,11 +477,9 @@
 <pre><code>&lt;label&gt;验证码&lt;input name=&quot;code&quot; disabled&gt;&lt;/label&gt;
 </code></pre>
 
-<h3 id="toc_5">表单元素编组</h3>
+<h2 id="toc_11">六、表单元素编组</h2>
 
-<ul>
-<li><code>fieldset</code>;</li>
-</ul>
+<h4 id="toc_12">1. <code>fieldset</code>;</h4>
 
 <pre><code>&lt;form method=&quot;post&quot; action=&quot;http://xxxx:8080/register&quot; autocomplete=&quot;off&quot;&gt;
 
@@ -436,9 +497,10 @@
 &lt;/form&gt;
 </code></pre>
 
+<h4 id="toc_13">2. 说明标签</h4>
+
 <ul>
-<li><p>说明标签</p></li>
-<li><p><code>legend</code>；</p></li>
+<li><code>legend</code>；</li>
 </ul>
 
 <pre><code>&lt;form method=&quot;post&quot; action=&quot;http://xxxx:8080/register&quot; autocomplete=&quot;off&quot;&gt;
@@ -459,7 +521,27 @@
 &lt;/form&gt;
 </code></pre>
 
-<h3 id="toc_6">button 元素</h3>
+<h4 id="toc_14">3. fieldest 禁用 input 元素</h4>
+
+<pre><code>&lt;form method=&quot;post&quot; action=&quot;http://xxxx:8080/register&quot; autocomplete=&quot;off&quot;&gt;
+
+    &lt;fieldset&gt;
+        &lt;legend&gt;用户信息&lt;/legend&gt;
+        &lt;label&gt;用户名：&lt;input autofocus name=&quot;name&quot;/&gt;&lt;/label&gt;
+        &lt;label&gt;密码：&lt;input name=&quot;password&quot;/&gt;&lt;/label&gt;
+        &lt;label&gt;验证码：&lt;input name=&quot;code&quot; disabled&gt;&lt;/label&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset disabled&gt;
+        &lt;legend&gt;基本信息&lt;/legend&gt;
+        &lt;label&gt;地址：&lt;input name=&quot;address&quot;&gt;&lt;/label&gt;
+    &lt;/fieldset&gt;
+
+    &lt;button&gt;register&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2 id="toc_15">七、button 元素</h2>
 
 <table>
 <thead>
@@ -485,9 +567,10 @@
 </tbody>
 </table>
 
+<h4 id="toc_16">1. 提交表单</h4>
+
 <ul>
-<li><p>提交表单</p></li>
-<li><p><code>submit</code>类型时，额外属性；</p></li>
+<li><code>submit</code>类型时，额外属性；</li>
 </ul>
 
 <table>
@@ -529,23 +612,25 @@
 <pre><code>&lt;button type=&quot;submit&quot; formaction=&quot;http://xxxxx:8443/regisert&quot;&gt;register&lt;/button&gt;
 </code></pre>
 
+<h4 id="toc_17">2. 重置表单</h4>
+
 <ul>
-<li><p>重置表单</p></li>
-<li><p><code>reset</code>，重置表单输入内容；</p></li>
+<li><code>reset</code>，重置表单输入内容；</li>
 </ul>
 
 <pre><code>&lt;button type=&quot;reset&quot;&gt;Reset&lt;/button&gt;
 </code></pre>
 
+<h4 id="toc_18">3. 一般按钮使用</h4>
+
 <ul>
-<li><p>一般按钮使用</p></li>
-<li><p><code>button</code>，可用于触发 JavaScript；</p></li>
+<li><code>button</code>，可用于触发 JavaScript；</li>
 </ul>
 
 <pre><code>&lt;button type=&quot;button&quot;&gt;Normal Button&lt;/button&gt;
 </code></pre>
 
-<h3 id="toc_7">表单外使用表单元素</h3>
+<h2 id="toc_19">八、表单外使用表单元素</h2>
 
 <ul>
 <li><code>input</code>和<code>button</code>可以解除必须在<code>form</code>元素内部的限制，只有使用<code>form</code>属性关联即可；</li>

@@ -280,27 +280,81 @@
 
 <ul>
 <li>
-<a href="#toc_0">用路径绘制</a>
+<a href="#toc_0">一、用路径绘制</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 绘制直线</a>
 </li>
 <li>
-<a href="#toc_1">绘制圆弧</a>
+<a href="#toc_2">2. 绘制矩形</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_2">绘制贝塞尔曲线</a>
+<a href="#toc_3">二、绘制圆弧</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_4">1. arcTo，3 点画圆弧</a>
 </li>
 <li>
-<a href="#toc_3">创建剪辑区域</a>
+<a href="#toc_5">2. arc</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_4">绘制文本</a>
+<a href="#toc_6">三、绘制贝塞尔曲线</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_7">1. 三次 bezierCurveTo</a>
 </li>
 <li>
-<a href="#toc_5">使用特效和变换</a>
+<a href="#toc_8">2. 二次 quadraticCurveTo</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_9">三、创建剪辑区域</a>
+</li>
+<li>
+<a href="#toc_10">四、绘制文本</a>
+</li>
+<li>
+<a href="#toc_11">五、使用特效和变换</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_12">1. 阴影</a>
+</li>
+<li>
+<a href="#toc_13">2. 透明度</a>
+</li>
+<li>
+<a href="#toc_14">3. 合成，挺复杂的，未尝试</a>
+</li>
+<li>
+<a href="#toc_15">4. 变换</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
 
-<h3 id="toc_0">用路径绘制</h3>
+<h2 id="toc_0">一、用路径绘制</h2>
 
 <table>
 <thead>
@@ -346,9 +400,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>绘制直线</li>
-</ul>
+<h4 id="toc_1">1. 绘制直线</h4>
 
 <pre><code>    var ctx = document.getElementById(&quot;myCanvas&quot;).getContext(&quot;2d&quot;);
 
@@ -364,9 +416,7 @@
     ctx.stroke();
 </code></pre>
 
-<ul>
-<li>绘制矩形</li>
-</ul>
+<h4 id="toc_2">2. 绘制矩形</h4>
 
 <pre><code>    var ctx = document.getElementById(&quot;myCanvas&quot;).getContext(&quot;2d&quot;);
     ctx.fillStyle = &quot;yellow&quot;;
@@ -376,7 +426,7 @@
     ctx.stroke();
 </code></pre>
 
-<h3 id="toc_1">绘制圆弧</h3>
+<h2 id="toc_3">二、绘制圆弧</h2>
 
 <table>
 <thead>
@@ -398,9 +448,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>arcTo，3 点画圆弧</li>
-</ul>
+<h4 id="toc_4">1. arcTo，3 点画圆弧</h4>
 
 <pre><code>    var ctx = document.getElementById(&quot;myCanvas&quot;).getContext(&quot;2d&quot;);
     ctx.strokeStyle = &quot;red&quot;;
@@ -412,9 +460,7 @@
     ctx.stroke();
 </code></pre>
 
-<ul>
-<li>arc</li>
-</ul>
+<h4 id="toc_5">2. arc</h4>
 
 <pre><code>    var ctx = document.getElementById(&quot;myCanvas&quot;).getContext(&quot;2d&quot;);
     ctx.strokeStyle = &quot;red&quot;;
@@ -425,7 +471,7 @@
     ctx.stroke();
 </code></pre>
 
-<h3 id="toc_2">绘制贝塞尔曲线</h3>
+<h2 id="toc_6">三、绘制贝塞尔曲线</h2>
 
 <table>
 <thead>
@@ -447,9 +493,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>三次 bezierCurveTo</li>
-</ul>
+<h4 id="toc_7">1. 三次 bezierCurveTo</h4>
 
 <pre><code>   var ctx = document.getElementById(&quot;myCanvas&quot;).getContext(&quot;2d&quot;);
     ctx.strokeStyle = &quot;red&quot;;
@@ -461,9 +505,7 @@
     ctx.stroke();
 </code></pre>
 
-<ul>
-<li>二次 quadraticCurveTo</li>
-</ul>
+<h4 id="toc_8">2. 二次 quadraticCurveTo</h4>
 
 <pre><code>    var ctx = document.getElementById(&quot;myCanvas&quot;).getContext(&quot;2d&quot;);
     ctx.strokeStyle = &quot;red&quot;;
@@ -475,7 +517,7 @@
     ctx.stroke();
 </code></pre>
 
-<h3 id="toc_3">创建剪辑区域</h3>
+<h2 id="toc_9">三、创建剪辑区域</h2>
 
 <pre><code>    var ctx = document.getElementById(&quot;myCanvas&quot;).getContext(&quot;2d&quot;);
     ctx.strokeStyle = &quot;red&quot;;
@@ -492,7 +534,7 @@
     ctx.stroke();
 </code></pre>
 
-<h3 id="toc_4">绘制文本</h3>
+<h2 id="toc_10">四、绘制文本</h2>
 
 <table>
 <thead>
@@ -547,11 +589,9 @@
     ctx.stroke();
 </code></pre>
 
-<h3 id="toc_5">使用特效和变换</h3>
+<h2 id="toc_11">五、使用特效和变换</h2>
 
-<ul>
-<li>阴影</li>
-</ul>
+<h4 id="toc_12">1. 阴影</h4>
 
 <table>
 <thead>
@@ -593,16 +633,12 @@
     ctx.stroke();
 </code></pre>
 
-<ul>
-<li>透明度</li>
-</ul>
+<h4 id="toc_13">2. 透明度</h4>
 
 <pre><code>    ctx.globalAlpha = 0.6;
 </code></pre>
 
-<ul>
-<li>合成，挺复杂的，未尝试</li>
-</ul>
+<h4 id="toc_14">3. 合成，挺复杂的，未尝试</h4>
 
 <table>
 <thead>
@@ -660,9 +696,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>变换</li>
-</ul>
+<h4 id="toc_15">4. 变换</h4>
 
 <table>
 <thead>

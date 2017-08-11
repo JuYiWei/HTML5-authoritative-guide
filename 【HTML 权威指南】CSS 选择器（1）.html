@@ -280,40 +280,91 @@
 
 <ul>
 <li>
-<a href="#toc_0">基本选择器</a>
-</li>
-<li>
-<a href="#toc_1">复合选择器</a>
-</li>
-<li>
-<a href="#toc_2">伪类选择器</a>
-</li>
-</ul>
-
-
-<h3 id="toc_0">基本选择器</h3>
-
+<a href="#toc_0">一、基本选择器</a>
 <ul>
-<li>所有元素</li>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 所有元素</a>
+</li>
+<li>
+<a href="#toc_2">2. 元素类型</a>
+</li>
+<li>
+<a href="#toc_3">3. 类</a>
+</li>
+<li>
+<a href="#toc_4">4. ID</a>
+</li>
+<li>
+<a href="#toc_5">5. 属性</a>
+</li>
 </ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">二、复合选择器</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_7">1. 并集</a>
+</li>
+<li>
+<a href="#toc_8">2. 后代</a>
+</li>
+<li>
+<a href="#toc_9">3. 子元素</a>
+</li>
+<li>
+<a href="#toc_10">4. 兄弟元素</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_11">三、伪类选择器</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_12">1. ::first-line</a>
+</li>
+<li>
+<a href="#toc_13">2. ::first-letter</a>
+</li>
+<li>
+<a href="#toc_14">3. :before 和 :after</a>
+</li>
+<li>
+<a href="#toc_15">3. CSS 计数器</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="toc_0">一、基本选择器</h2>
+
+<h4 id="toc_1">1. 所有元素</h4>
 
 <pre><code>* {
     border: thin black solid;
 }
 </code></pre>
 
-<ul>
-<li>元素类型</li>
-</ul>
+<h4 id="toc_2">2. 元素类型</h4>
 
-<pre><code>p{
+<pre><code>p {
     color:blue;
 }
 </code></pre>
 
-<ul>
-<li>类</li>
-</ul>
+<h4 id="toc_3">3. 类</h4>
 
 <pre><code>// 所有
 .mygreen {
@@ -328,9 +379,7 @@ p.myred {
 &lt;p class=&quot;myred&quot;&gt;CSS 选择器&lt;/p&gt;
 </code></pre>
 
-<ul>
-<li>ID</li>
-</ul>
+<h4 id="toc_4">4. ID</h4>
 
 <pre><code>###myblue {
     color: blue;
@@ -339,9 +388,7 @@ p.myred {
 &lt;p id=&quot;myblue&quot;&gt;CSS 选择器&lt;/p&gt;
 </code></pre>
 
-<ul>
-<li>属性</li>
-</ul>
+<h4 id="toc_5">5. 属性</h4>
 
 <pre><code>[href] {
     color: orange;
@@ -390,11 +437,12 @@ p.myred {
 </tbody>
 </table>
 
-<h3 id="toc_1">复合选择器</h3>
+<h2 id="toc_6">二、复合选择器</h2>
+
+<h4 id="toc_7">1. 并集</h4>
 
 <ul>
-<li><p>并集</p></li>
-<li><p>逗号分割即可；</p></li>
+<li>逗号分割即可；</li>
 </ul>
 
 <pre><code>a, [lang|=&quot;en&quot;] {
@@ -402,16 +450,13 @@ p.myred {
 }
 </code></pre>
 
-<ul>
-<li>后代</li>
-</ul>
+<h4 id="toc_8">2. 后代</h4>
 
 <pre><code>// 选择 id 为 mytable 的td 元素
 ###mytable td {
     border: thin black solid;
     color: red;
 }
-
 
 &lt;table id=&quot;mytable&quot;&gt;
     &lt;tr&gt;
@@ -425,15 +470,15 @@ p.myred {
 &lt;/table&gt;
 </code></pre>
 
+<h4 id="toc_9">3. 子元素</h4>
+
 <ul>
-<li><p>子元素</p></li>
-<li><p>直接后代；</p></li>
+<li>直接后代；</li>
 </ul>
 
 <pre><code>div &gt; span {
     color: red;
 }
-
 
 &lt;div&gt;
     &lt;span&gt;111&lt;/span&gt;
@@ -443,9 +488,10 @@ p.myred {
 &lt;/div&gt;
 </code></pre>
 
+<h4 id="toc_10">4. 兄弟元素</h4>
+
 <ul>
-<li><p>兄弟元素</p></li>
-<li><p>相邻的兄弟元素；</p></li>
+<li>相邻的兄弟元素；</li>
 </ul>
 
 <pre><code>// 注意，这里匹配的是后者 a，不是 2 个都是；
@@ -467,17 +513,14 @@ p + a {
     color: red;
 }
 
-
 &lt;p class=&quot;mygreen&quot;&gt;今天天气不错&lt;/p&gt;
 &lt;a href=&quot;Record.html&quot;&gt;记录查询&lt;/a&gt;
 &lt;a href=&quot;Record.html&quot;&gt;记录查询&lt;/a&gt;
 </code></pre>
 
-<h3 id="toc_2">伪类选择器</h3>
+<h2 id="toc_11">三、伪类选择器</h2>
 
-<ul>
-<li>::first-line</li>
-</ul>
+<h4 id="toc_12">1. ::first-line</h4>
 
 <pre><code>p::first-line {
     color: red;
@@ -487,9 +530,7 @@ p + a {
 &lt;p class=&quot;mygreen&quot;&gt;今天天气不错&lt;br&gt;??? &lt;/p&gt;
 </code></pre>
 
-<ul>
-<li>::first-letter</li>
-</ul>
+<h4 id="toc_13">2. ::first-letter</h4>
 
 <pre><code>p::first-letter {
     color: red;
@@ -499,9 +540,10 @@ p + a {
 &lt;p&gt;今天天气不错&lt;br&gt;??? &lt;/p&gt;
 </code></pre>
 
+<h4 id="toc_14">3. :before 和 :after</h4>
+
 <ul>
-<li><p>:before 和 :after</p></li>
-<li><p>使用 <code>content</code> 值，分别在元素前后插入内容；</p></li>
+<li>使用 <code>content</code> 值，分别在元素前后插入内容；</li>
 </ul>
 
 <pre><code>a:before {
@@ -513,10 +555,7 @@ a:after {
 }
 </code></pre>
 
-<ul>
-<li><p>CSS 计数器</p></li>
-<li></li>
-</ul>
+<h4 id="toc_15">3. CSS 计数器</h4>
 
 <pre><code>body {
     counter-reset: myacount;

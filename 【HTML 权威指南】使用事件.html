@@ -280,22 +280,71 @@
 
 <ul>
 <li>
-<a href="#toc_0">使用简单事件处理器</a>
+<a href="#toc_0">一、使用简单事件处理器</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 实现简单的内联事件处理器</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_1">使用 DOM 和事件对象</a>
+<a href="#toc_2">二、使用 DOM 和事件对象</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_3">1. 使用默认的 <code>on</code> 开头的系统方式；</a>
 </li>
 <li>
-<a href="#toc_2">使用 HTML 事件</a>
+<a href="#toc_4">2. 按类型区分事件</a>
+</li>
+<li>
+<a href="#toc_5">2. 理解事件流</a>
+</li>
+<li>
+<a href="#toc_6">3. 使用可撤销事件</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_7">三、使用 HTML 事件</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_8">1. 文档和窗口事件</a>
+</li>
+<li>
+<a href="#toc_9">2. 使用鼠标事件</a>
+</li>
+<li>
+<a href="#toc_10">3. 使用键盘焦点事件</a>
+</li>
+<li>
+<a href="#toc_11">4. 使用键盘事件</a>
+</li>
+<li>
+<a href="#toc_12">5. 使用表单事件</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
 
-<h3 id="toc_0">使用简单事件处理器</h3>
+<h2 id="toc_0">一、使用简单事件处理器</h2>
+
+<h4 id="toc_1">1. 实现简单的内联事件处理器</h4>
 
 <ul>
-<li><p>实现简单的内联事件处理器</p></li>
-<li><p>实际使用，并不方便；</p></li>
+<li>实际使用，并不方便；</li>
 </ul>
 
 <pre><code>    &lt;style&gt;
@@ -336,11 +385,9 @@
 &lt;p onmousemove=&quot;pMouseOver(this)&quot; onmouseout=&quot;pMouseOut(this)&quot; id=&quot;p1&quot;&gt;There are lots of different kinds of fruit&lt;/p&gt;
 </code></pre>
 
-<h3 id="toc_1">使用 DOM 和事件对象</h3>
+<h2 id="toc_2">二、使用 DOM 和事件对象</h2>
 
-<ul>
-<li>使用默认的 <code>on</code> 开头的系统方式；</li>
-</ul>
+<h4 id="toc_3">1. 使用默认的 <code>on</code> 开头的系统方式；</h4>
 
 <pre><code>&lt;p id=&quot;p1&quot;&gt;There are lots of different kinds of fruit&lt;/p&gt;
 
@@ -444,9 +491,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>按类型区分事件</li>
-</ul>
+<h4 id="toc_4">2. 按类型区分事件</h4>
 
 <pre><code>&lt;script&gt;
     var pElem = document.getElementById(&#39;p1&#39;);
@@ -465,9 +510,7 @@
 &lt;/script&gt;
 </code></pre>
 
-<ul>
-<li>理解事件流</li>
-</ul>
+<h4 id="toc_5">2. 理解事件流</h4>
 
 <table>
 <thead>
@@ -497,8 +540,12 @@
 <li><p>捕捉：找出事件涉及元素，检查目标元素与 body 元素之间的所以元素，优先处理他们的事件处理器，然后是目标的处理器；</p></li>
 <li><p>目标：执行目标元素的添加的事件；</p></li>
 <li><p>冒泡：从目标元素，沿父元素向 <code>body</code> 元素检查，检查存在该事件类型但未启用捕捉监听器；可以用 <code>bubbles</code> 属性检查事件是否支持冒泡；</p></li>
-<li><p>使用可撤销事件</p></li>
-<li><p><code>preventDefault</code> 不会阻止事件流的捕捉、目标、冒泡，但是不会执行默认行为；</p></li>
+</ul>
+
+<h4 id="toc_6">3. 使用可撤销事件</h4>
+
+<ul>
+<li><code>preventDefault</code> 不会阻止事件流的捕捉、目标、冒泡，但是不会执行默认行为；</li>
 </ul>
 
 <pre><code>&lt;a href=&quot;https://www.baidu.com&quot;&gt;baidu&lt;/a&gt;
@@ -517,11 +564,12 @@
 &lt;/script&gt;
 </code></pre>
 
-<h3 id="toc_2">使用 HTML 事件</h3>
+<h2 id="toc_7">三、使用 HTML 事件</h2>
+
+<h4 id="toc_8">1. 文档和窗口事件</h4>
 
 <ul>
-<li><p>文档和窗口事件</p></li>
-<li><p>Document 对象的事件</p></li>
+<li>Document 对象的事件</li>
 </ul>
 
 <table>
@@ -592,9 +640,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>使用鼠标事件</li>
-</ul>
+<h4 id="toc_9">2. 使用鼠标事件</h4>
 
 <table>
 <thead>
@@ -688,9 +734,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>使用键盘焦点事件</li>
-</ul>
+<h4 id="toc_10">3. 使用键盘焦点事件</h4>
 
 <table>
 <thead>
@@ -736,9 +780,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>使用键盘事件</li>
-</ul>
+<h4 id="toc_11">4. 使用键盘事件</h4>
 
 <table>
 <thead>
@@ -800,9 +842,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>使用表单事件</li>
-</ul>
+<h4 id="toc_12">5. 使用表单事件</h4>
 
 <table>
 <thead>

@@ -284,27 +284,51 @@
 
 		<ul>
 <li>
-<a href="#toc_0">Ajax 起步</a>
+<a href="#toc_0">一、Ajax 起步</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 处理响应</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_1">使用 Ajax 事件</a>
+<a href="#toc_2">二、使用 Ajax 事件</a>
 </li>
 <li>
-<a href="#toc_2">错误处理</a>
+<a href="#toc_3">三、错误处理</a>
 </li>
 <li>
-<a href="#toc_3">获取和设置标头</a>
+<a href="#toc_4">四、获取和设置标头</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_5">1. 覆盖请求的 HTTP 方法，设置 <code>head</code> 需要在 <code>open</code> 之后；</a>
 </li>
 <li>
-<a href="#toc_4">生成跨源 Ajax 请求</a>
+<a href="#toc_6">2. 禁用内容缓存</a>
 </li>
 <li>
-<a href="#toc_5">中止请求</a>
+<a href="#toc_7">3. 读取响应标头</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_8">五、生成跨源 Ajax 请求</a>
+</li>
+<li>
+<a href="#toc_9">六、中止请求</a>
 </li>
 </ul>
 
 
-<h3 id="toc_0">Ajax 起步</h3>
+<h2 id="toc_0">一、Ajax 起步</h2>
 
 <pre><code> function getInfo() {
             var httpRequest = new XMLHttpRequest();
@@ -322,9 +346,7 @@
         }
 </code></pre>
 
-<ul>
-<li>处理响应</li>
-</ul>
+<h4 id="toc_1">1. 处理响应</h4>
 
 <table>
 <thead>
@@ -360,11 +382,7 @@
 
 <p>还需要根据 status 判断 HTTP 请求的状态码，确定请求结果；</p>
 
-<ul>
-<li>应对 Opear（略）；</li>
-</ul>
-
-<h3 id="toc_1">使用 Ajax 事件</h3>
+<h2 id="toc_2">二、使用 Ajax 事件</h2>
 
 <table>
 <thead>
@@ -438,7 +456,7 @@
 </tbody>
 </table>
 
-<h3 id="toc_2">错误处理</h3>
+<h2 id="toc_3">三、错误处理</h2>
 
 <ul>
 <li>第一类错误：某些因素阻止请求发送到服务器；</li>
@@ -476,7 +494,7 @@
             }
 </code></pre>
 
-<h3 id="toc_3">获取和设置标头</h3>
+<h2 id="toc_4">四、获取和设置标头</h2>
 
 <table>
 <thead>
@@ -502,9 +520,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>覆盖请求的 HTTP 方法，设置 <code>head</code> 需要在 <code>open</code> 之后；</li>
-</ul>
+<h4 id="toc_5">1. 覆盖请求的 HTTP 方法，设置 <code>head</code> 需要在 <code>open</code> 之后；</h4>
 
 <pre><code>            try {
                 httpRequest.open(&quot;GET&quot;,&quot;http://apis.baidu.com/heweather/pro/attractions&quot;);
@@ -515,17 +531,13 @@
             }
 </code></pre>
 
-<ul>
-<li>禁用内容缓存</li>
-</ul>
+<h4 id="toc_6">2. 禁用内容缓存</h4>
 
 <pre><code>                httpRequest.setRequestHeader(&quot;Cache-Control&quot;,&quot;no-cache&quot;);
 
 </code></pre>
 
-<ul>
-<li>读取响应标头</li>
-</ul>
+<h4 id="toc_7">3. 读取响应标头</h4>
 
 <pre><code>            if (e.target.readyState == HEADERS_RECEIVED) {
                 var contentType = httpRequest.getResponseHeader(&quot;Content-Type&quot;);
@@ -533,14 +545,13 @@
             }
 </code></pre>
 
-<h3 id="toc_4">生成跨源 Ajax 请求</h3>
+<h2 id="toc_8">五、生成跨源 Ajax 请求</h2>
 
 <ul>
-<li>不会；</li>
-<li>略；</li>
+<li>请求接口添加标头：&#39;Access-Control-Allow-Origin:*&#39; 允许所有源；</li>
 </ul>
 
-<h3 id="toc_5">中止请求</h3>
+<h2 id="toc_9">六、中止请求</h2>
 
 <pre><code>httpRequest.abort();
 </code></pre>

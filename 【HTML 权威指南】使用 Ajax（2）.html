@@ -280,29 +280,51 @@
 
 <ul>
 <li>
-<a href="#toc_0">准备向服务器发送数据</a>
+<a href="#toc_0">一、准备向服务器发送数据</a>
 </li>
 <li>
-<a href="#toc_1">发送表单数据</a>
+<a href="#toc_1">二、发送表单数据</a>
 </li>
 <li>
-<a href="#toc_2">使用 FormData 对象发送表单数据</a>
+<a href="#toc_2">三、使用 FormData 对象发送表单数据</a>
 </li>
 <li>
-<a href="#toc_3">发送 JSON 数据</a>
+<a href="#toc_3">四、发送 JSON 数据</a>
 </li>
 <li>
-<a href="#toc_4">发送文件</a>
+<a href="#toc_4">五、发送文件</a>
 </li>
 <li>
-<a href="#toc_5">请求并处理不同内容类型</a>
+<a href="#toc_5">六、追踪上传进度</a>
+</li>
+<li>
+<a href="#toc_6">七、请求并处理不同内容类型</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_7">1. 接收 HTML 片段，指定返回数据类型；</a>
+</li>
+<li>
+<a href="#toc_8">2. 接收 XML 数据；</a>
+</li>
+<li>
+<a href="#toc_9">3. 接收 JSON 数据</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
 
-<h3 id="toc_0">准备向服务器发送数据</h3>
+<h2 id="toc_0">一、准备向服务器发送数据</h2>
 
-<h3 id="toc_1">发送表单数据</h3>
+<ul>
+<li>略；</li>
+</ul>
+
+<h2 id="toc_1">二、发送表单数据</h2>
 
 <pre><code>&lt;form id=&quot;myform&quot; method=&quot;get&quot; action=&quot;iframe.html&quot;&gt;
     &lt;input name=&quot;cityid&quot; value=&quot;CN10101010018A&quot;&gt;
@@ -336,7 +358,7 @@ httpRequest.setRequestHeader(&quot;key&quot;,&quot;value&quot;);
     &lt;/script&gt;
 </code></pre>
 
-<h3 id="toc_2">使用 FormData 对象发送表单数据</h3>
+<h2 id="toc_2">三、使用 FormData 对象发送表单数据</h2>
 
 <ul>
 <li>直接使用 formData</li>
@@ -364,7 +386,7 @@ httpRequest.setRequestHeader(&quot;key&quot;,&quot;value&quot;);
 <pre><code>formData.append(&quot;key&quot;,&quot;value&quot;);
 </code></pre>
 
-<h3 id="toc_3">发送 JSON 数据</h3>
+<h2 id="toc_3">四、发送 JSON 数据</h2>
 
 <ul>
 <li>自带 JSON 转换；</li>
@@ -397,7 +419,7 @@ httpRequest.setRequestHeader(&quot;key&quot;,&quot;value&quot;);
 </tbody>
 </table>
 
-<h3 id="toc_4">发送文件</h3>
+<h2 id="toc_4">五、发送文件</h2>
 
 <ul>
 <li>类似上面串发送表单数据，区别在于：<code>form</code> 使用 <code>type</code> 类型 <code>file</code>，并且通过 <code>formData</code> 上传；</li>
@@ -437,9 +459,7 @@ httpRequest.setRequestHeader(&quot;key&quot;,&quot;value&quot;);
     &lt;/script&gt;
 </code></pre>
 
-<ul>
-<li>追踪上传进度</li>
-</ul>
+<h2 id="toc_5">六、追踪上传进度</h2>
 
 <pre><code>            var upload = httpRequest.upload;
             upload.onprogress = function (e) {
@@ -451,11 +471,9 @@ httpRequest.setRequestHeader(&quot;key&quot;,&quot;value&quot;);
             };
 </code></pre>
 
-<h3 id="toc_5">请求并处理不同内容类型</h3>
+<h2 id="toc_6">七、请求并处理不同内容类型</h2>
 
-<ul>
-<li>接收 HTML 片段，指定返回数据类型；</li>
-</ul>
+<h4 id="toc_7">1. 接收 HTML 片段，指定返回数据类型；</h4>
 
 <pre><code>        function handleResponse(e) {
             if (e.target.readyState == DONE) {
@@ -470,9 +488,7 @@ httpRequest.setRequestHeader(&quot;key&quot;,&quot;value&quot;);
             }
 </code></pre>
 
-<ul>
-<li>接收 XML 数据；</li>
-</ul>
+<h4 id="toc_8">2. 接收 XML 数据；</h4>
 
 <pre><code>        function handleResponse(e) {
             if (e.target.readyState == DONE) {
@@ -488,9 +504,7 @@ httpRequest.setRequestHeader(&quot;key&quot;,&quot;value&quot;);
         }
 </code></pre>
 
-<ul>
-<li>接收 JSON 数据</li>
-</ul>
+<h4 id="toc_9">3. 接收 JSON 数据</h4>
 
 <pre><code>        function handleResponse(e) {
             if (e.target.readyState == DONE) {

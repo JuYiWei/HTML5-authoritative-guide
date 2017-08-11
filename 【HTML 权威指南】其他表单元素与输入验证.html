@@ -280,22 +280,59 @@
 
 <ul>
 <li>
-<a href="#toc_0">其他表单元素</a>
+<a href="#toc_0">一、其他表单元素</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 选项列表</a>
 </li>
 <li>
-<a href="#toc_1">输入验证</a>
+<a href="#toc_2">2. 多行输入</a>
 </li>
 <li>
-<a href="#toc_2">禁用输入验证</a>
+<a href="#toc_3">3. 计算结果</a>
+</li>
+<li>
+<a href="#toc_4">4. 公私钥</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_5">二、输入验证</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_6">1. 确保有值</a>
+</li>
+<li>
+<a href="#toc_7">2. 指定范围</a>
+</li>
+<li>
+<a href="#toc_8">3. 模式匹配</a>
+</li>
+<li>
+<a href="#toc_9">4. 检查 url 与 邮箱</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_10">三、禁用输入验证</a>
 </li>
 </ul>
 
 
-<h3 id="toc_0">其他表单元素</h3>
+<h2 id="toc_0">一、其他表单元素</h2>
+
+<h4 id="toc_1">1. 选项列表</h4>
 
 <ul>
-<li><p>选项列表</p></li>
-<li><p><code>select</code>、<code>option</code>一般选择；</p></li>
+<li><code>select</code>、<code>option</code>一般选择；</li>
 </ul>
 
 <table>
@@ -363,17 +400,19 @@
 &lt;/label&gt;
 </code></pre>
 
+<h4 id="toc_2">2. 多行输入</h4>
+
 <ul>
-<li><p>多行输入</p></li>
-<li><p><code>textarea</code>属性：name、disable、form、readonly、maxlength、autofocus、required、placeholder、dirname、rows、wrap、cols；</p></li>
+<li><code>textarea</code>属性：name、disable、form、readonly、maxlength、autofocus、required、placeholder、dirname、rows、wrap、cols；</li>
 </ul>
 
 <pre><code>&lt;textarea name=&quot;message&quot; cols=&quot;20&quot; rows=&quot;5&quot; wrap=&quot;hard&quot; id=&quot;message&quot;&gt;
 </code></pre>
 
+<h4 id="toc_3">3. 计算结果</h4>
+
 <ul>
-<li><p>计算结果</p></li>
-<li><p><code>output</code></p></li>
+<li><code>output</code></li>
 </ul>
 
 <pre><code>
@@ -383,25 +422,39 @@
 &lt;/form&gt;
 </code></pre>
 
-<ul>
-<li><p>公私钥</p></li>
-<li><p><code>keygen</code>属性：challenge、keytype、autofoucus、name、disabled、form；</p></li>
-</ul>
-
-<h3 id="toc_1">输入验证</h3>
+<h4 id="toc_4">4. 公私钥</h4>
 
 <ul>
-<li><p>确保有值</p></li>
-<li><p><code>required</code>，必须；</p></li>
-<li><p>指定范围</p></li>
-<li><p><code>min</code>和<code>max</code>；</p></li>
-<li><p>模式匹配</p></li>
-<li><p><code>pattern</code>，正则匹配；</p></li>
-<li><p>检查 url 与 邮箱</p></li>
-<li><p>结合正则使用；</p></li>
+<li><code>keygen</code>属性：challenge、keytype、autofoucus、name、disabled、form；</li>
 </ul>
 
-<h3 id="toc_2">禁用输入验证</h3>
+<h2 id="toc_5">二、输入验证</h2>
+
+<h4 id="toc_6">1. 确保有值</h4>
+
+<ul>
+<li><code>required</code>，必须；</li>
+</ul>
+
+<h4 id="toc_7">2. 指定范围</h4>
+
+<ul>
+<li><code>min</code>和<code>max</code>；</li>
+</ul>
+
+<h4 id="toc_8">3. 模式匹配</h4>
+
+<ul>
+<li><code>pattern</code>，正则匹配；</li>
+</ul>
+
+<h4 id="toc_9">4. 检查 url 与 邮箱</h4>
+
+<ul>
+<li>结合正则使用；</li>
+</ul>
+
+<h2 id="toc_10">三、禁用输入验证</h2>
 
 <ul>
 <li><code>novalidate</code> 和 <code>formnovalidate</code>；</li>

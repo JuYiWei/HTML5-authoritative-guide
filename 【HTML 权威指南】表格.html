@@ -280,33 +280,45 @@
 
 <ul>
 <li>
-<a href="#toc_0">基本表格</a>
+<a href="#toc_0">一、基本表格</a>
 </li>
 <li>
-<a href="#toc_1">表头单元格</a>
+<a href="#toc_1">二、表头单元格</a>
 </li>
 <li>
-<a href="#toc_2">表结构</a>
+<a href="#toc_2">三、表结构</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_3">1. 表头表主题</a>
 </li>
 <li>
-<a href="#toc_3">不规则表格</a>
+<a href="#toc_4">2. 表脚</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_4">关联表头与单元格</a>
+<a href="#toc_5">四、不规则表格</a>
 </li>
 <li>
-<a href="#toc_5">表格标题</a>
+<a href="#toc_6">五、关联表头与单元格</a>
 </li>
 <li>
-<a href="#toc_6">处理列</a>
+<a href="#toc_7">六、表格标题</a>
 </li>
 <li>
-<a href="#toc_7">表格边框</a>
+<a href="#toc_8">七、处理列</a>
+</li>
+<li>
+<a href="#toc_9">八、表格边框</a>
 </li>
 </ul>
 
 
-<h3 id="toc_0">基本表格</h3>
+<h2 id="toc_0">一、基本表格</h2>
 
 <ul>
 <li>table：表格；</li>
@@ -326,7 +338,7 @@
 &lt;/table&gt;
 </code></pre>
 
-<h3 id="toc_1">表头单元格</h3>
+<h2 id="toc_1">二、表头单元格</h2>
 
 <ul>
 <li><code>th</code>；</li>
@@ -346,12 +358,13 @@
 &lt;/table&gt;
 </code></pre>
 
-<h3 id="toc_2">表结构</h3>
+<h2 id="toc_2">三、表结构</h2>
+
+<h4 id="toc_3">1. 表头表主题</h4>
 
 <ul>
-<li><p>表头表主题</p></li>
-<li><p><code>thead</code>：表头；</p></li>
-<li><p><code>tbody</code>：表主题；</p></li>
+<li><code>thead</code>：表头；</li>
+<li><code>tbody</code>：表主题；</li>
 </ul>
 
 <pre><code>&lt;table&gt;
@@ -380,9 +393,10 @@
 &lt;/table&gt;
 </code></pre>
 
+<h4 id="toc_4">2. 表脚</h4>
+
 <ul>
-<li><p>表脚</p></li>
-<li><p><code>tfoot</code></p></li>
+<li><code>tfoot</code></li>
 </ul>
 
 <pre><code>&lt;table&gt;
@@ -419,7 +433,7 @@
 &lt;/table&gt;
 </code></pre>
 
-<h3 id="toc_3">不规则表格</h3>
+<h2 id="toc_5">四、不规则表格</h2>
 
 <ul>
 <li>colspan：多列合并（横向）；</li>
@@ -445,7 +459,7 @@
 &lt;/table&gt;
 </code></pre>
 
-<h3 id="toc_4">关联表头与单元格</h3>
+<h2 id="toc_6">五、关联表头与单元格</h2>
 
 <pre><code>&lt;table&gt;
     &lt;thead&gt;
@@ -468,7 +482,7 @@
 &lt;/table&gt;
 </code></pre>
 
-<h3 id="toc_5">表格标题</h3>
+<h2 id="toc_7">六、表格标题</h2>
 
 <ul>
 <li><code>caption</code>;</li>
@@ -479,16 +493,18 @@
 &lt;/table&gt;
 </code></pre>
 
-<h3 id="toc_6">处理列</h3>
+<h2 id="toc_8">七、处理列</h2>
 
 <ul>
 <li>colgroup</li>
 <li>col</li>
 </ul>
 
-<p><code>###waring 还不懂，什么玩意；</code></p>
+<blockquote>
+<p>书中内容感觉有问题，看代码示例都没用到 colgroup；</p>
+</blockquote>
 
-<h3 id="toc_7">表格边框</h3>
+<h2 id="toc_9">八、表格边框</h2>
 
 <ul>
 <li>一般需要使用 CSS，不然表格太丑了；</li>

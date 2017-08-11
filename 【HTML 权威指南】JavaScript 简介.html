@@ -280,96 +280,153 @@
 
 <ul>
 <li>
-<a href="#toc_0">准备 JavaScript</a>
+<a href="#toc_0">一、准备 JavaScript</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 内嵌 JavaScript</a>
 </li>
 <li>
-<a href="#toc_1">使用语句</a>
+<a href="#toc_2">2. JavaScript 文件</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_2">函数的定义与使用</a>
+<a href="#toc_3">二、使用语句</a>
 </li>
 <li>
-<a href="#toc_3">变量与类型</a>
+<a href="#toc_4">三、函数的定义与使用</a>
 </li>
 <li>
-<a href="#toc_4">运算符</a>
+<a href="#toc_5">四、变量与类型</a>
+<ul>
+<li>
+<a href="#toc_6">1. 定义变量</a>
+<ul>
+<li>
+<a href="#toc_7">2. 基本类型</a>
 </li>
 <li>
-<a href="#toc_5">数组</a>
+<a href="#toc_8">3.创建对象</a>
 </li>
 <li>
-<a href="#toc_6">处理错误</a>
+<a href="#toc_9">4. 使用对象</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_7">undefined 和 null</a>
+<a href="#toc_10">五、运算符</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_11">1. 相等和等同</a>
 </li>
 <li>
-<a href="#toc_8">常用工具</a>
+<a href="#toc_12">2. 显式类型转换</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_13">六、数组</a>
+</li>
+<li>
+<a href="#toc_14">七、处理错误</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_15">1. try - catch</a>
+</li>
+<li>
+<a href="#toc_16">2. Error 对象</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_17">八、undefined 和 null</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_18">1. 检查</a>
+</li>
+<li>
+<a href="#toc_19">2. 区分</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_20">九、常用工具</a>
 </li>
 </ul>
 
 
-<p>JavaScript The Definitive Guide（JavaScript 权威指南）<br/>
-JavaScript Design Patterns（JavaScript 设计模式）</p>
+<blockquote>
+<p>直接推荐 【JavaScript：The Definitive Guide】</p>
+</blockquote>
 
-<h3 id="toc_0">准备 JavaScript</h3>
+<h2 id="toc_0">一、准备 JavaScript</h2>
 
-<p>插入脚本，修改 HTML 文档；<code>&lt;script type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code> 标签；</p>
+<h4 id="toc_1">1. 内嵌 JavaScript</h4>
 
-<pre><code>    &lt;script type=&quot;text/javascript&quot;&gt;
-        document.write(&quot;hello world&quot;);
-    &lt;/script&gt;
-</code></pre>
-
-<h3 id="toc_1">使用语句</h3>
-
-<p>基本元素时语句，结尾<code>;</code> 可省略；</p>
-
-<h3 id="toc_2">函数的定义与使用</h3>
-
-<pre><code>// 定义
-function myLog() {
+<pre><code>&lt;script&gt;
     document.write(&quot;hello world&quot;);
-}
-
-// 使用
-myLog();
+&lt;/script&gt;
 </code></pre>
+
+<h4 id="toc_2">2. JavaScript 文件</h4>
 
 <ul>
-<li>参数函数</li>
+<li>src 指向文件路径</li>
 </ul>
 
-<pre><code>function myLog(message) {
-    document.write(&quot;hello &quot;+message);
-}
-
-myLog(&quot;Li Lei&quot;);
+<pre><code>&lt;script src=&quot;//cdn.bootcss.com/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
+
+<h2 id="toc_3">二、使用语句</h2>
 
 <ul>
-<li>有返回</li>
+<li>略；</li>
 </ul>
 
-<pre><code>function myLog(message) {
-  return &quot;hello &quot; + message;
-}
+<h2 id="toc_4">三、函数的定义与使用</h2>
 
-document.write(myLog(&quot;Li Lei&quot;));
+<pre><code>&lt;script&gt;
+    function testSay(name, content) {
+        return &#39;hey！&#39; + name + &#39;:&#39; + content;
+    }
+    document.write(testSay(&#39;LiLei&#39;,&#39;早上好&#39;));
+&lt;/script&gt;
 </code></pre>
 
-<h3 id="toc_3">变量与类型</h3>
+<h2 id="toc_5">四、变量与类型</h2>
+
+<h3 id="toc_6">1. 定义变量</h3>
 
 <pre><code>var name = &quot;Li Lei&quot;;
 </code></pre>
 
+<h4 id="toc_7">2. 基本类型</h4>
+
 <ul>
-<li><p>基本类型</p></li>
-<li><p>字符串 string：单/双引号都可以，但是前后要匹配；</p></li>
-<li><p>布尔 boolean：ture/false；</p></li>
-<li><p>数值 number：整数/浮点；</p></li>
-<li><p>创建对象</p></li>
+<li>字符串 string：单/双引号都可以，但是前后要匹配；</li>
+<li>布尔 boolean：ture/false；</li>
+<li>数值 number：整数/浮点；</li>
 </ul>
+
+<h4 id="toc_8">3.创建对象</h4>
 
 <pre><code>var aObj = {
     // 属性
@@ -389,9 +446,10 @@ document.write(aObj.name+aObj.address);
 aObj.myLog();
 </code></pre>
 
+<h4 id="toc_9">4. 使用对象</h4>
+
 <ul>
-<li><p>使用对象</p></li>
-<li><p>读取修改属性（属性其实是在对象的属性列表，数组形式）</p></li>
+<li>读取修改属性（属性其实是在对象的属性列表，数组形式）</li>
 </ul>
 
 <pre><code>aObj.name = &quot;Han meimei&quot;;
@@ -432,11 +490,12 @@ delete aObj.say;
 document.write(hasAge);
 </code></pre>
 
-<h3 id="toc_4">运算符</h3>
+<h2 id="toc_10">五、运算符</h2>
+
+<h4 id="toc_11">1. 相等和等同</h4>
 
 <ul>
-<li><p>相等和等同</p></li>
-<li><p>相等（不判断类型，只判断值）</p></li>
+<li>相等（不判断类型，只判断值）</li>
 </ul>
 
 <pre><code>var a = 1;
@@ -457,9 +516,10 @@ if (a===b) {
 }
 </code></pre>
 
+<h4 id="toc_12">2. 显式类型转换</h4>
+
 <ul>
-<li><p>显式类型转换</p></li>
-<li><p>数值转字符串</p></li>
+<li>数值转字符串</li>
 </ul>
 
 <pre><code>var a = (18).toString();
@@ -537,9 +597,11 @@ var b = String(18);
 </tbody>
 </table>
 
-<h3 id="toc_5">数组</h3>
+<h2 id="toc_13">六、数组</h2>
 
-<p>创建</p>
+<ul>
+<li>创建</li>
+</ul>
 
 <pre><code>var array = [];
 array[0] = &quot;Li Lei&quot;;
@@ -631,7 +693,9 @@ document.write(array[0]);
 </tbody>
 </table>
 
-<h3 id="toc_6">处理错误</h3>
+<h2 id="toc_14">七、处理错误</h2>
+
+<h4 id="toc_15">1. try - catch</h4>
 
 <pre><code>try {
     var myArray;
@@ -643,9 +707,7 @@ document.write(array[0]);
 }
 </code></pre>
 
-<ul>
-<li>Error 对象</li>
-</ul>
+<h4 id="toc_16">2. Error 对象</h4>
 
 <table>
 <thead>
@@ -675,16 +737,16 @@ document.write(array[0]);
 </tbody>
 </table>
 
-<h3 id="toc_7">undefined 和 null</h3>
+<h2 id="toc_17">八、undefined 和 null</h2>
 
 <p>undefined：未赋值或无对象属性；<br/>
 null：已赋值，但值不是有效类型；</p>
 
-<ul>
-<li>检查</li>
-</ul>
+<h4 id="toc_18">1. 检查</h4>
 
-<p>都可以直接用逻辑非<code>!</code>判断；</p>
+<ul>
+<li>都可以直接用逻辑非<code>!</code>判断；</li>
+</ul>
 
 <pre><code>var a;
 var b = null;
@@ -698,11 +760,11 @@ if (!b) {
 }
 </code></pre>
 
-<ul>
-<li>区分</li>
-</ul>
+<h4 id="toc_19">2. 区分</h4>
 
-<p>undefined 与 null，值相等，但类型不一致；所以用相等于等同来区分；</p>
+<ul>
+<li>undefined 与 null，值相等，但类型不一致；所以用相等于等同来区分；</li>
+</ul>
 
 <pre><code>var a;
 var b = null;
@@ -716,11 +778,11 @@ if (a===b) {
 }
 </code></pre>
 
-<h3 id="toc_8">常用工具</h3>
+<h2 id="toc_20">九、常用工具</h2>
 
-<pre><code>库：jQuery，jQuery UI
-书：Pro jQuery
-</code></pre>
+<ul>
+<li>略；</li>
+</ul>
 
 
 </div>

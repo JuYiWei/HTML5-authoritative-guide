@@ -280,190 +280,215 @@
 
 <ul>
 <li>
-<a href="#toc_0">元素</a>
+<a href="#toc_0">一、元素</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 结构示例：</a>
 </li>
 <li>
-<a href="#toc_1">元素属性</a>
+<a href="#toc_2">2. 本章用到的元素</a>
 </li>
 <li>
-<a href="#toc_2">创建 HTML 文档</a>
+<a href="#toc_3">3. 空元素</a>
 </li>
 <li>
-<a href="#toc_3">HTML 实体</a>
+<a href="#toc_4">4. 自闭合标签</a>
 </li>
 <li>
-<a href="#toc_4">全局属性</a>
+<a href="#toc_5">5. 虚元素</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">二、元素属性</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_7">1. 结构示例：</a>
+</li>
+<li>
+<a href="#toc_8">2. 多个属性</a>
+</li>
+<li>
+<a href="#toc_9">3. 布尔属性</a>
+</li>
+<li>
+<a href="#toc_10">4. 自定义属性</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_11">三、创建 HTML 文档</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_12">1. 外层结构</a>
+</li>
+<li>
+<a href="#toc_13">2. 元数据与内容</a>
+</li>
+<li>
+<a href="#toc_14">3. 元素关系</a>
+</li>
+<li>
+<a href="#toc_15">4. 元素类型</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_16">四、HTML 实体</a>
+</li>
+<li>
+<a href="#toc_17">五、全局属性预览</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_18">1. accesskey</a>
+</li>
+<li>
+<a href="#toc_19">2. class</a>
+</li>
+<li>
+<a href="#toc_20">3. contenteditable</a>
+</li>
+<li>
+<a href="#toc_21">4. contextmenu</a>
+</li>
+<li>
+<a href="#toc_22">5. dir</a>
+</li>
+<li>
+<a href="#toc_23">6. draggable 和 dropzone</a>
+</li>
+<li>
+<a href="#toc_24">7. hidden</a>
+</li>
+<li>
+<a href="#toc_25">8. id</a>
+</li>
+<li>
+<a href="#toc_26">9. lang</a>
+</li>
+<li>
+<a href="#toc_27">10. spellcheck</a>
+</li>
+<li>
+<a href="#toc_28">11. style</a>
+</li>
+<li>
+<a href="#toc_29">12. tabindex</a>
+</li>
+<li>
+<a href="#toc_30">13. title</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
 
-<h3 id="toc_0">元素</h3>
+<h2 id="toc_0">一、元素</h2>
+
+<h4 id="toc_1">1. 结构示例：</h4>
 
 <pre><code>开始标签    内容    结束标签
     |       |        |
 &lt;code&gt;   示例内容   &lt;/code&gt;
 </code></pre>
 
-<blockquote>
-<p>注：元素标签不区分大小写，但习惯小写；</p>
-</blockquote>
-
 <ul>
-<li> 常用元素</li>
+<li>举例：</li>
 </ul>
 
-<table>
-<thead>
-<tr>
-<th style="text-align: left">元素</th>
-<th style="text-align: left">说明</th>
-<th style="text-align: left">章节</th>
-</tr>
-</thead>
+<pre><code>&lt;p&gt;Hello World&lt;/p&gt;
+</code></pre>
 
-<tbody>
-<tr>
-<td style="text-align: left">DOCTYPE</td>
-<td style="text-align: left">HTML 文档开始</td>
-<td style="text-align: left">7</td>
-</tr>
-<tr>
-<td style="text-align: left">html</td>
-<td style="text-align: left">HTML 文档 html 部分</td>
-<td style="text-align: left">7</td>
-</tr>
-<tr>
-<td style="text-align: left">head</td>
-<td style="text-align: left">HTML 文档头</td>
-<td style="text-align: left">7</td>
-</tr>
-<tr>
-<td style="text-align: left">title</td>
-<td style="text-align: left">HTML 文档标题</td>
-<td style="text-align: left">7</td>
-</tr>
-<tr>
-<td style="text-align: left">body</td>
-<td style="text-align: left">HTML 文档内容</td>
-<td style="text-align: left">7</td>
-</tr>
-<tr>
-<td style="text-align: left">style</td>
-<td style="text-align: left">CSS 样式</td>
-<td style="text-align: left">7</td>
-</tr>
-<tr>
-<td style="text-align: left">a</td>
-<td style="text-align: left">超链接</td>
-<td style="text-align: left">8</td>
-</tr>
-<tr>
-<td style="text-align: left">code</td>
-<td style="text-align: left">计算机代码片段</td>
-<td style="text-align: left">8</td>
-</tr>
-<tr>
-<td style="text-align: left">input</td>
-<td style="text-align: left">用户输入</td>
-<td style="text-align: left">8</td>
-</tr>
-<tr>
-<td style="text-align: left">hr</td>
-<td style="text-align: left">主题</td>
-<td style="text-align: left">9</td>
-</tr>
-<tr>
-<td style="text-align: left">p</td>
-<td style="text-align: left">段落</td>
-<td style="text-align: left">9</td>
-</tr>
-<tr>
-<td style="text-align: left">table</td>
-<td style="text-align: left">表格组织</td>
-<td style="text-align: left">11</td>
-</tr>
-<tr>
-<td style="text-align: left">th</td>
-<td style="text-align: left">表头单元格</td>
-<td style="text-align: left">11</td>
-</tr>
-<tr>
-<td style="text-align: left">td</td>
-<td style="text-align: left">表格单元格</td>
-<td style="text-align: left">11</td>
-</tr>
-<tr>
-<td style="text-align: left">tr</td>
-<td style="text-align: left">表格行</td>
-<td style="text-align: left">11</td>
-</tr>
-<tr>
-<td style="text-align: left">button</td>
-<td style="text-align: left">按钮</td>
-<td style="text-align: left">12</td>
-</tr>
-<tr>
-<td style="text-align: left">label</td>
-<td style="text-align: left">元素说明标签</td>
-<td style="text-align: left">12</td>
-</tr>
-<tr>
-<td style="text-align: left">textarea</td>
-<td style="text-align: left">输入文本框</td>
-<td style="text-align: left">14</td>
-</tr>
-</tbody>
-</table>
+<h4 id="toc_2">2. 本章用到的元素</h4>
 
 <ul>
-<li>空元素</li>
+<li>略；</li>
+</ul>
+
+<h4 id="toc_3">3. 空元素</h4>
+
+<ul>
+<li>只有元素标签，没有内容；</li>
 </ul>
 
 <pre><code>&lt;code&gt;&lt;/code&gt;
 </code></pre>
 
-<ul>
-<li>自闭合标签</li>
-</ul>
-
-<pre><code>&lt;code /&gt;
-效果同上；
-</code></pre>
+<h4 id="toc_4">4. 自闭合标签</h4>
 
 <ul>
-<li>虚元素</li>
+<li>开始、结束标签二合一；</li>
 </ul>
 
-<pre><code>&lt;hr /&gt;
-&lt;br /&gt;
-建议使用自闭合标签标示，虽然只使用开始标签亦可；
-</code></pre>
-
-<h3 id="toc_1">元素属性</h3>
-
-<pre><code>&lt;a href=&quot;https://www.baidu.com&quot;&gt;百度一下&lt;/a&gt;
-
-href：定义的元素属性，表示超链接目标 URL
+<pre><code>正常：&lt;a href=&quot;tets.html&quot;&gt;链接&lt;/a&gt;
+自闭合：&lt;a href=&quot;tets.html&quot;/&gt;链接
 </code></pre>
 
 <blockquote>
-<p>注：属性用在开始标签内部，通常由属性名与属性值组成；</p>
+<p>还是统一使用正常的好，看着舒服。</p>
 </blockquote>
 
+<h4 id="toc_5">5. 虚元素</h4>
+
 <ul>
-<li>多个属性</li>
+<li>只有开始标签；</li>
 </ul>
 
-<p>使用空格分离即可；</p>
+<pre><code>&lt;hr&gt;
+&lt;br&gt;
+&lt;img src=&quot;test.png&quot;&gt;
+</code></pre>
+
+<h2 id="toc_6">二、元素属性</h2>
+
+<ul>
+<li>属性用在开始标签内部，通常由属性名与属性值组成；</li>
+</ul>
+
+<h4 id="toc_7">1. 结构示例：</h4>
+
+<pre><code>    属性名称   属性值
+      |        |    
+&lt;code key = &#39;value&#39;&gt;   示例内容   &lt;/code&gt;
+</code></pre>
+
+<ul>
+<li>举例超链接：</li>
+</ul>
+
+<pre><code>&lt;a href=&quot;https://www.baidu.com&quot;&gt;百度一下&lt;/a&gt;
+</code></pre>
+
+<h4 id="toc_8">2. 多个属性</h4>
+
+<ul>
+<li>使用空格分离即可；</li>
+</ul>
 
 <pre><code>&lt;a href=&quot;https://www.baidu.com&quot; id=&quot;firstLink&quot;&gt;百度一下&lt;/a&gt;
 </code></pre>
 
-<ul>
-<li>布尔属性</li>
-</ul>
+<h4 id="toc_9">3. 布尔属性</h4>
 
-<p>可省略属性值；</p>
+<ul>
+<li>可省略属性值；</li>
+</ul>
 
 <pre><code>&lt;button&gt;可用的按钮&lt;/button&gt;
 &lt;button disabled&gt;不可用的按钮&lt;/button&gt;
@@ -473,16 +498,26 @@ href：定义的元素属性，表示超链接目标 URL
 &lt;button disabled=&quot;&quot;&gt;不可用的按钮&lt;/button&gt;
 </code></pre>
 
+<h4 id="toc_10">4. 自定义属性</h4>
+
 <ul>
-<li>自定义属性</li>
+<li>使用 <code>data-</code> 开头命名；</li>
 </ul>
 
-<p>使用 <code>data-</code> 开头命名；</p>
+<pre><code>&lt;a href=&quot;https://www.baidu.com&quot; id=&quot;firstLink&quot; data-testName=&quot;百度&quot;&gt;百度一下&lt;/a&gt;
+</code></pre>
 
-<h3 id="toc_2">创建 HTML 文档</h3>
+<h2 id="toc_11">三、创建 HTML 文档</h2>
 
 <ul>
-<li>外层结构</li>
+<li>创建文件，如 test.html；</li>
+<li>如果是 webStorm 那么更方便；</li>
+</ul>
+
+<h4 id="toc_12">1. 外层结构</h4>
+
+<ul>
+<li>标识文档本身是 HTML 文档；</li>
 </ul>
 
 <pre><code>&lt;!DOCTYPE html&gt;
@@ -491,14 +526,14 @@ href：定义的元素属性，表示超链接目标 URL
     &lt;!-- 各种元素 --&gt;
 
 &lt;/html&gt;
-
 </code></pre>
 
-<ul>
-<li>元数据</li>
-</ul>
+<h4 id="toc_13">2. 元数据与内容</h4>
 
-<p>描述 HTML 文档的一些信息，包含在 <code>&lt;head&gt;</code> 元素内部；</p>
+<ul>
+<li>元数据：描述 HTML 文档信息，<code>&lt;head&gt;</code> 元素内部；</li>
+<li>内容：展示用户界面等，<code>&lt;body&gt;</code> 元素内部；</li>
+</ul>
 
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -506,20 +541,6 @@ href：定义的元素属性，表示超链接目标 URL
     
         &lt;!-- 描述 --&gt;
         
-    &lt;/head&gt;
-&lt;/html&gt;
-
-</code></pre>
-
-<ul>
-<li>内容</li>
-</ul>
-
-<p>文档主体部分，<code>&lt;body&gt;</code> 元素内部；</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
     &lt;/head&gt;
     &lt;body&gt;
 
@@ -529,24 +550,28 @@ href：定义的元素属性，表示超链接目标 URL
 &lt;/html&gt;
 </code></pre>
 
-<ul>
-<li>元素关系</li>
-</ul>
-
-<p>父元素：包含关系<br/>
-子元素：被包关系仅下一层<br/>
-后代元素：被包含关系所有<br/>
-兄弟元素：同级</p>
+<h4 id="toc_14">3. 元素关系</h4>
 
 <ul>
-<li>元素类型</li>
+<li>父元素：包含关系</li>
+<li>子元素：被包关系仅下一层</li>
+<li>后代元素：被包含关系所有</li>
+<li>兄弟元素：同级</li>
 </ul>
 
-<p>元数据元素：构建 HTML 基本结构，以及补充信息<br/>
-流元素：确定元素合法父子元素的范围<br/>
-短语元素：特殊的流元素</p>
+<h4 id="toc_15">4. 元素类型</h4>
 
-<h3 id="toc_3">HTML 实体</h3>
+<ul>
+<li>元数据元素：构建 HTML 基本结构，以及补充信息</li>
+<li>流元素：确定元素合法父子元素的范围</li>
+<li>短语元素：特殊的流元素</li>
+</ul>
+
+<h2 id="toc_16">四、HTML 实体</h2>
+
+<ul>
+<li>特殊字符的的显示，使用实体编号；</li>
+</ul>
 
 <table>
 <thead>
@@ -606,15 +631,25 @@ href：定义的元素属性，表示超链接目标 URL
 </tbody>
 </table>
 
-<h3 id="toc_4">全局属性</h3>
-
-<p>配置所有元素的公共属性；</p>
-
 <ul>
-<li>accesskey</li>
+<li>举例：</li>
 </ul>
 
-<p>设置选择元素快捷键；</p>
+<pre><code>说了是村长 &amp;copy; 2017
+说了是村长 &amp;#169; 2017
+</code></pre>
+
+<h2 id="toc_17">五、全局属性预览</h2>
+
+<ul>
+<li>配置所有元素的公共属性；</li>
+</ul>
+
+<h4 id="toc_18">1. accesskey</h4>
+
+<ul>
+<li>设置选择元素快捷键；</li>
+</ul>
 
 <pre><code>&lt;form&gt;
     &lt;input accesskey=&quot;k&quot; /&gt;
@@ -622,17 +657,17 @@ href：定义的元素属性，表示超链接目标 URL
 </code></pre>
 
 <blockquote>
-<p>windows 上是 Alt+&quot;k&quot;；mac 没试出来；</p>
+<p>windows 上是 Alt+&quot;k&quot;；mac control+option+&quot;K&quot;；</p>
 </blockquote>
 
+<h4 id="toc_19">2. class</h4>
+
 <ul>
-<li>class</li>
+<li>设置元素归类，应用 CSS 样式；</li>
 </ul>
 
-<p>设置元素归类，应用 CSS 样式；</p>
-
 <pre><code>&lt;style type=&quot;text/css&quot;&gt;
-class1{
+class1 {
     color:red;
 }
 &lt;/style&gt;
@@ -640,52 +675,38 @@ class1{
 &lt;p class=&quot;class1&quot;&gt;公开课&lt;/p&gt;
 </code></pre>
 
-<ul>
-<li>contenteditable</li>
-</ul>
+<h4 id="toc_20">3. contenteditable</h4>
 
-<p>可修改页面内容；</p>
+<ul>
+<li>可修改页面内容；</li>
+</ul>
 
 <pre><code>&lt;p contenteditable&gt;公开课&lt;/p&gt;
 </code></pre>
 
-<ul>
-<li>contextmenu</li>
-</ul>
-
-<p>快捷菜单；</p>
+<h4 id="toc_21">4. contextmenu</h4>
 
 <ul>
-<li>dir</li>
+<li>快捷菜单；当时暂不支持；</li>
 </ul>
 
-<p>文字方向；</p>
+<h4 id="toc_22">5. dir</h4>
+
+<ul>
+<li>文字方向；</li>
+</ul>
 
 <pre><code>&lt;p dir=&quot;rtl&quot;&gt;公开课&lt;/p&gt;
 &lt;p dir=&quot;ltl&quot;&gt;公开课&lt;/p&gt;
 </code></pre>
 
-<ul>
-<li>draggable</li>
-</ul>
-
-<p>元素是否可拖放；</p>
-
-<pre><code>37 章
-</code></pre>
+<h4 id="toc_23">6. draggable 和 dropzone</h4>
 
 <ul>
-<li>dropzone</li>
+<li>元素拖放相关，第五部分【高级功能】详细讲解；</li>
 </ul>
 
-<p>拖放相关；</p>
-
-<pre><code>37 章
-</code></pre>
-
-<ul>
-<li>hidden</li>
-</ul>
+<h4 id="toc_24">7. hidden</h4>
 
 <p>隐藏；</p>
 
@@ -693,58 +714,48 @@ class1{
 &lt;p &gt;公开课&lt;/p&gt;
 </code></pre>
 
+<h4 id="toc_25">8. id</h4>
+
 <ul>
-<li>id</li>
+<li>唯一标识；</li>
 </ul>
 
-<p>唯一标识；</p>
-
-<pre><code>&lt;style type=&quot;text/css&quot;&gt;
-#lesson{
-    color:red;
-}
-&lt;/style&gt;
-
-&lt;p id=&quot;lesson&quot;&gt;公开课&lt;/p&gt;
+<pre><code>&lt;p id=&quot;lesson&quot;&gt;公开课&lt;/p&gt;
 </code></pre>
 
-<blockquote>
-<p>还可以作为锚点跳转；</p>
-</blockquote>
+<h4 id="toc_26">9. lang</h4>
 
 <ul>
-<li>lang</li>
+<li>说明元素使用的语言；</li>
 </ul>
-
-<p>说明元素使用的语言；</p>
 
 <pre><code>&lt;html lang=&quot;en&quot;&gt;
 &lt;p lang=&quot;zh-CN&quot;&gt;公开课&lt;/p&gt;
 </code></pre>
 
-<ul>
-<li>spellcheck</li>
-</ul>
+<h4 id="toc_27">10. spellcheck</h4>
 
-<p>拼写检查；</p>
+<ul>
+<li>拼写检查；</li>
+</ul>
 
 <pre><code>&lt;textarea spellcheck&gt;lessn&lt;/textarea&gt;
 </code></pre>
 
-<ul>
-<li>style</li>
-</ul>
+<h4 id="toc_28">11. style</h4>
 
-<p>元素 CSS 样式；</p>
+<ul>
+<li>元素 CSS 样式；</li>
+</ul>
 
 <pre><code>&lt;p style=&quot;color:red&quot;&gt;公开课&lt;/p&gt;
 </code></pre>
 
-<ul>
-<li>tabindex</li>
-</ul>
+<h4 id="toc_29">12. tabindex</h4>
 
-<p>Tab 元素切换；</p>
+<ul>
+<li>Tab 按键元素切换；</li>
+</ul>
 
 <pre><code>&lt;form&gt;
     &lt;label&gt;Name: &lt;input type=&quot;text&quot; tabindex=&quot;1&quot;/&gt;&lt;/label&gt;
@@ -753,11 +764,11 @@ class1{
 &lt;/form&gt;
 </code></pre>
 
-<ul>
-<li>title</li>
-</ul>
+<h4 id="toc_30">13. title</h4>
 
-<p>元素额外信息；一般用于工具提示等；</p>
+<ul>
+<li>元素额外信息；一般用于工具提示等；</li>
+</ul>
 
 <pre><code>&lt;head&gt;
     &lt;title&gt;认识html标签&lt;/title&gt;

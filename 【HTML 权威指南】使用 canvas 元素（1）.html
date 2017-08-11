@@ -278,14 +278,14 @@
  <div class="markdown-body">
 <h1>5.4 使用 canvas 元素（1）</h1>
 
-<h3 id="toc_0">开始使用 canvas 元素</h3>
+<h2 id="toc_0">一、开始使用 canvas 元素</h2>
 
 <pre><code>&lt;canvas width=&quot;200&quot; height=&quot;100&quot; style=&quot;background: gray&quot;&gt;
     你的浏览器不支持 canvas；
 &lt;/canvas&gt;
 </code></pre>
 
-<h3 id="toc_1">获取画布的上下文</h3>
+<h2 id="toc_1">二、获取画布的上下文</h2>
 
 <table>
 <thead>
@@ -321,7 +321,7 @@
 &lt;/script&gt;
 </code></pre>
 
-<h3 id="toc_2">绘制矩形</h3>
+<h2 id="toc_2">三、绘制矩形</h2>
 
 <table>
 <thead>
@@ -359,7 +359,7 @@
 &lt;/script&gt;
 </code></pre>
 
-<h3 id="toc_3">设置画布绘制状态</h3>
+<h2 id="toc_3">四、设置画布绘制状态</h2>
 
 <table>
 <thead>
@@ -389,26 +389,20 @@
 </tbody>
 </table>
 
-<ul>
-<li>线条连接样式</li>
-</ul>
+<h4 id="toc_4">1. 线条连接样式</h4>
 
 <pre><code>    ctx.lineJoin = &quot;round&quot;;
     ctx.lineJoin = &quot;bevel&quot;;
     ctx.lineJoin = &quot;miter&quot;;
 </code></pre>
 
-<ul>
-<li>填充与描边样式</li>
-</ul>
+<h4 id="toc_5">2. 填充与描边样式</h4>
 
 <pre><code>    ctx.fillStyle = &quot;red&quot;;
     ctx.strokeStyle = &quot;rgb(255,0,255)&quot;;
 </code></pre>
 
-<ul>
-<li>线性渐变（x,y,w,h）</li>
-</ul>
+<h4 id="toc_6">3. 线性渐变（x,y,w,h）</h4>
 
 <pre><code>    var c = ctx.createLinearGradient(10,20,30,40);
     c.addColorStop(0,&quot;red&quot;);
@@ -419,9 +413,7 @@
     ctx.fillRect(10,20,30,40);
 </code></pre>
 
-<ul>
-<li>径向渐变（x1,y1,r1,x2,y2,r2）</li>
-</ul>
+<h4 id="toc_7">4. 径向渐变（x1,y1,r1,x2,y2,r2）</h4>
 
 <pre><code>    var c = ctx.createRadialGradient(100,100,100,100,100,50);
     c.addColorStop(0,&quot;red&quot;);
@@ -431,9 +423,7 @@
     ctx.fillRect(0,0,200,200);
 </code></pre>
 
-<ul>
-<li>使用图案</li>
-</ul>
+<h4 id="toc_8">5. 使用图案</h4>
 
 <table>
 <thead>
@@ -470,7 +460,7 @@
     ctx.fillRect(0,0,200,200);
 </code></pre>
 
-<h3 id="toc_4">保存和恢复绘制状态</h3>
+<h2 id="toc_9">五、保存和恢复绘制状态</h2>
 
 <table>
 <thead>
@@ -509,20 +499,16 @@
     }
 </code></pre>
 
-<h3 id="toc_5">绘制图像</h3>
+<h2 id="toc_10">六、绘制图像</h2>
 
-<ul>
-<li>drawImage(...)，有 3、5、9 参数，分别代表不同意思；</li>
-</ul>
+<h4 id="toc_11">1. drawImage(...)，有 3、5、9 参数，分别代表不同意思；</h4>
 
 <pre><code>三参数：2、3 代表图像在画布的位置；
 五参数：4、5 代表图像宽高；
 九参数：2、3 代表原图内偏移，4、5 原图使用的宽高，6、7 图像在画布的位置，8、9 图像宽高； 
 </code></pre>
 
-<ul>
-<li>使用视频图像</li>
-</ul>
+<h4 id="toc_12">2. 使用视频图像</h4>
 
 <pre><code>&lt;img id=&quot;img&quot; hidden src=&quot;src/test_on.png&quot;&gt;
 
@@ -538,9 +524,7 @@
 &lt;/script&gt;
 </code></pre>
 
-<ul>
-<li>使用画布图像</li>
-</ul>
+<h4 id="toc_13">3. 使用画布图像</h4>
 
 <pre><code>&lt;canvas id=&quot;myCanvas&quot; width=&quot;200&quot; height=&quot;200&quot; style=&quot;background: gray&quot;&gt;
     你的浏览器不支持 canvas；

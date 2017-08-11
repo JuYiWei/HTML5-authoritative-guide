@@ -280,69 +280,140 @@
 
 <ul>
 <li>
-<a href="#toc_0">定义和应用样式</a>
+<a href="#toc_0">一、定义和应用样式</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 结构示例</a>
 </li>
 <li>
-<a href="#toc_1">样式的层叠与继承</a>
+<a href="#toc_2">2. 元素内嵌样式</a>
 </li>
 <li>
-<a href="#toc_2">CSS 颜色</a>
+<a href="#toc_3">3. 文档内嵌样式</a>
 </li>
 <li>
-<a href="#toc_3">CSS 长度</a>
+<a href="#toc_4">3. 外部 CSS 样式表</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_4">其他 CSS 单位</a>
+<a href="#toc_5">二、样式的层叠与继承</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_6">1. 浏览器样式</a>
 </li>
 <li>
-<a href="#toc_5">CSS 支持情况</a>
+<a href="#toc_7">2. 用户样式</a>
 </li>
 <li>
-<a href="#toc_6">CSS 工具</a>
+<a href="#toc_8">3. 样式层叠优先级</a>
+</li>
+<li>
+<a href="#toc_9">4. 调整样式层叠优先级</a>
+</li>
+<li>
+<a href="#toc_10">5. 同级样式冲突</a>
+</li>
+<li>
+<a href="#toc_11">6. 继承</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_12">三、CSS 颜色</a>
+</li>
+<li>
+<a href="#toc_13">四、CSS 长度</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_14">1. 绝对长度</a>
+</li>
+<li>
+<a href="#toc_15">2. 相对长度</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_16">五、其他 CSS 单位</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_17">1. 角度</a>
+</li>
+<li>
+<a href="#toc_18">2. 时间</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_19">六、CSS 支持情况</a>
+</li>
+<li>
+<a href="#toc_20">七、CSS 工具</a>
 </li>
 </ul>
 
 
-<h3 id="toc_0">定义和应用样式</h3>
+<h2 id="toc_0">一、定义和应用样式</h2>
 
-<pre><code>background-color:grey; color:white
+<blockquote>
+<p>推荐：<a href="http://css.doyoe.com/">CSS 参考手册</a></p>
+</blockquote>
+
+<h4 id="toc_1">1. 结构示例</h4>
+
+<pre><code>key   value
+ |      |
+color:white
 </code></pre>
 
-<ul>
-<li>元素内嵌样式</li>
-</ul>
+<h4 id="toc_2">2. 元素内嵌样式</h4>
 
-<pre><code>&lt;p  style=&quot;color:red&quot;&gt;字体颜色红色&lt;/p&gt;
+<pre><code>&lt;p style=&quot;color:red&quot;&gt;字体颜色红色&lt;/p&gt;
 </code></pre>
 
-<ul>
-<li>文档内嵌样式</li>
-</ul>
+<h4 id="toc_3">3. 文档内嵌样式</h4>
 
 <pre><code>&lt;head&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-    p{
-        color:green;
-    }
-&lt;/style&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        p {
+            color:green;
+        }
+    &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;p&gt;字体颜色绿色&lt;/p&gt;
 &lt;/body&gt;
 </code></pre>
 
+<h4 id="toc_4">3. 外部 CSS 样式表</h4>
+
 <ul>
-<li><p>外部 CSS 样式表</p></li>
-<li><p>css</p></li>
+<li>test.css</li>
 </ul>
 
-<pre><code>p{
+<pre><code>p {
     color:blue;
 }
 </code></pre>
 
 <ul>
-<li>html</li>
+<li>test.html</li>
 </ul>
 
 <pre><code>&lt;head&gt;
@@ -353,36 +424,41 @@
 &lt;/body&gt;
 </code></pre>
 
-<h3 id="toc_1">样式的层叠与继承</h3>
+<h2 id="toc_5">二、样式的层叠与继承</h2>
+
+<h4 id="toc_6">1. 浏览器样式</h4>
 
 <ul>
-<li>浏览器样式</li>
+<li>浏览器默认样式；</li>
 </ul>
 
-<p>浏览器默认样式；</p>
+<h4 id="toc_7">2. 用户样式</h4>
 
 <ul>
-<li>用户样式</li>
+<li>用户在浏览器中自定义的样式；</li>
 </ul>
 
-<p>用户在浏览器中自定义的样式；</p>
+<h4 id="toc_8">3. 样式层叠优先级</h4>
 
 <ul>
-<li><p>样式层叠优先级</p></li>
-<li><p>1 元素内嵌样式</p></li>
-<li><p>2 文档内嵌样式</p></li>
-<li><p>3 外部样式表</p></li>
-<li><p>4 用户样式</p></li>
-<li><p>5 浏览器样式</p></li>
-<li><p>调整样式层叠优先级</p></li>
+<li>从高到底排序；</li>
+<li>1 元素内嵌样式；</li>
+<li>2 文档内嵌样式；</li>
+<li>3 外部样式表；</li>
+<li>4 用户样式；</li>
+<li>5 浏览器样式；</li>
 </ul>
 
-<p><code>important</code>属性标记</p>
+<h4 id="toc_9">4. 调整样式层叠优先级</h4>
+
+<ul>
+<li><code>important</code> 属性标记，标记优先；</li>
+</ul>
 
 <pre><code>&lt;head&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-        p{
-            color:orange !important;
+    &lt;style&gt;
+        p {
+            color:green !important;
         }
     &lt;/style&gt;
 &lt;/head&gt;
@@ -391,62 +467,81 @@
 &lt;/body&gt;
 </code></pre>
 
-<ul>
-<li>同级样式冲突</li>
-</ul>
-
-<p>选择器选择元素时注意使用 id 与 class；</p>
+<h4 id="toc_10">5. 同级样式冲突</h4>
 
 <ul>
-<li>1 选择器 id 数目；</li>
-<li>2 选择器其他属性与伪类数目；</li>
-<li><p>3 选择器元素名与伪类数目；</p></li>
-<li><p>继承</p></li>
+<li>选择器选择元素时注意使用 id 与 class；</li>
 </ul>
-
-<p>子元素可能会继承父元素的某些属性；(元素外观会继承，元素布局不会继承）</p>
-
-<pre><code>&lt;/head&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-        p{
-            color:orange;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p&gt;1234 &lt;span&gt;2234&lt;/span&gt; 3234&lt;/p&gt;
-&lt;p&gt;1234 &lt;span style=&quot;color: green&quot;&gt;2234&lt;/span&gt; 3234&lt;/p&gt;
-&lt;/body&gt;
-</code></pre>
-
-<h3 id="toc_2">CSS 颜色</h3>
-
-<p>颜色名：red<br/>
-十六进制：###333333<br/>
-十进制：211,211,211<br/>
-函数：rgb()、rgba()、hsl()、hsla()</p>
-
-<h3 id="toc_3">CSS 长度</h3>
 
 <pre><code>&lt;head&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-        p{
-            color:orange;
-            width: 200px;
-            background: grey;
+    &lt;style&gt;
+        p {
+            color:green;
+        }
+        p.testClass {
+            color: red;
+        }
+        p#testID1 {
+            color: yellow;
+        }
+        p#testID2 {
+            color: yellow;
         }
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;p&gt;1234 2234 3234&lt;/p&gt;
+&lt;p&gt;字体颜色&lt;/p&gt;
+&lt;p class=&quot;testClass&quot;&gt;字体颜色&lt;/p&gt;
+&lt;p id=&quot;testID1&quot;&gt;字体颜色&lt;/p&gt;
+&lt;p id=&quot;testID2&quot; class=&quot;testClass&quot;&gt;字体颜色&lt;/p&gt;
 &lt;/body&gt;
 </code></pre>
 
+<h4 id="toc_11">6. 继承</h4>
+
 <ul>
-<li>绝对长度</li>
+<li>子元素可能会继承父元素的某些属性；</li>
+<li>元素外观会继承，元素布局不会继承；</li>
 </ul>
 
-<p>实际使用较少，相对长度更灵活；</p>
+<pre><code>&lt;div style=&quot;color: red&quot;&gt;
+    &lt;p&gt;div 前景色是红色的&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2 id="toc_12">三、CSS 颜色</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">类型</th>
+<th style="text-align: left">说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">颜色名</td>
+<td style="text-align: left">red</td>
+</tr>
+<tr>
+<td style="text-align: left">十六进制</td>
+<td style="text-align: left">###333</td>
+</tr>
+<tr>
+<td style="text-align: left">函数</td>
+<td style="text-align: left">rgb() rgba() hsl() hsla()</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_13">四、CSS 长度</h2>
+
+<h4 id="toc_14">1. 绝对长度</h4>
+
+<ul>
+<li>实际使用较少，相对长度更灵活；</li>
+</ul>
 
 <table>
 <thead>
@@ -480,9 +575,10 @@
 </tbody>
 </table>
 
-<ul>
-<li>相对长度</li>
-</ul>
+<pre><code>&lt;p style=&quot;width: 200px;background-color: red&quot;&gt;CSS 长度&lt;/p&gt;
+</code></pre>
+
+<h4 id="toc_15">2. 相对长度</h4>
 
 <table>
 <thead>
@@ -516,11 +612,12 @@
 </tbody>
 </table>
 
-<h3 id="toc_4">其他 CSS 单位</h3>
+<pre><code>&lt;p style=&quot;width: 90%;background-color: red&quot;&gt;CSS 长度&lt;/p&gt;
+</code></pre>
 
-<ul>
-<li>角度</li>
-</ul>
+<h2 id="toc_16">五、其他 CSS 单位</h2>
+
+<h4 id="toc_17">1. 角度</h4>
 
 <table>
 <thead>
@@ -550,9 +647,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>时间</li>
-</ul>
+<h4 id="toc_18">2. 时间</h4>
 
 <table>
 <thead>
@@ -574,13 +669,15 @@
 </tbody>
 </table>
 
-<h3 id="toc_5">CSS 支持情况</h3>
+<h2 id="toc_19">六、CSS 支持情况</h2>
 
 <p><a href="http://caniuse.com/">http://caniuse.com/</a></p>
 
-<h3 id="toc_6">CSS 工具</h3>
+<h2 id="toc_20">七、CSS 工具</h2>
 
-<p>略</p>
+<ul>
+<li>略；</li>
+</ul>
 
 
 </div>

@@ -280,43 +280,103 @@
 
 <ul>
 <li>
-<a href="#toc_0">div 块</a>
+<a href="#toc_0">一、为什么分组</a>
 </li>
 <li>
-<a href="#toc_1">引用他处内容</a>
+<a href="#toc_1">二、段落</a>
 </li>
 <li>
-<a href="#toc_2">添加主题分离</a>
+<a href="#toc_2">三、div</a>
 </li>
 <li>
-<a href="#toc_3">内容组织为列表</a>
+<a href="#toc_3">四、使用预先编排好格式的内容</a>
 </li>
 <li>
-<a href="#toc_4">插图</a>
+<a href="#toc_4">五、引用他处内容</a>
+</li>
+<li>
+<a href="#toc_5">六、添加主题分离</a>
+</li>
+<li>
+<a href="#toc_6">七、内容组织为列表</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_7">1. 有序列表 ol</a>
+</li>
+<li>
+<a href="#toc_8">2. 无序列表 ul</a>
+</li>
+<li>
+<a href="#toc_9">3. li</a>
+</li>
+<li>
+<a href="#toc_10">4. 说明列表</a>
+</li>
+<li>
+<a href="#toc_11">5. 自定义列表</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_12">八、插图</a>
 </li>
 </ul>
 
 
-<h3 id="toc_0">div 块</h3>
+<h2 id="toc_0">一、为什么分组</h2>
 
-<pre><code>略
+<ul>
+<li>略；</li>
+</ul>
+
+<h2 id="toc_1">二、段落</h2>
+
+<ul>
+<li>略；</li>
+</ul>
+
+<h2 id="toc_2">三、div</h2>
+
+<ul>
+<li>块级元素，把页面分块；</li>
+</ul>
+
+<pre><code>&lt;div&gt;
+    块级 1
+&lt;/div&gt;
+
+&lt;div&gt;
+    块级 2
+&lt;/div&gt;
+
+&lt;div&gt;
+    块级 3
+&lt;/div&gt;
 </code></pre>
 
-<h3 id="toc_1">引用他处内容</h3>
+<h2 id="toc_3">四、使用预先编排好格式的内容</h2>
+
+<ul>
+<li>pre 元素，不合并空格，保证原文件格式；</li>
+</ul>
+
+<h2 id="toc_4">五、引用他处内容</h2>
 
 <pre><code>&lt;blockquote&gt;类选择器在css样式编码中是最常用到的，如右侧代码编辑器中的代码:可以实现为“胆小如鼠”、“勇气”字体设置为红色。&lt;/blockquote&gt;
 </code></pre>
 
-<h3 id="toc_2">添加主题分离</h3>
+<h2 id="toc_5">六、添加主题分离</h2>
 
 <pre><code>&lt;hr&gt;
 </code></pre>
 
-<h3 id="toc_3">内容组织为列表</h3>
+<h2 id="toc_6">七、内容组织为列表</h2>
 
-<ul>
-<li>有序列表</li>
-</ul>
+<h4 id="toc_7">1. 有序列表 ol</h4>
 
 <pre><code>&lt;ol start=&quot;10&quot; type=&quot;a&quot; reversed&gt;
     &lt;li&gt;apple&lt;/li&gt;
@@ -363,9 +423,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>无序列表</li>
-</ul>
+<h4 id="toc_8">2. 无序列表 ul</h4>
 
 <pre><code>&lt;ul&gt;
     &lt;li&gt;apple&lt;/li&gt;
@@ -374,9 +432,10 @@
 &lt;/ul&gt;
 </code></pre>
 
+<h4 id="toc_9">3. li</h4>
+
 <ul>
-<li><p>li</p></li>
-<li><p>在有序列表中可用，<code>li</code>元素的<code>value</code>属性，设置编号；</p></li>
+<li>在有序列表中可用，<code>li</code>元素的<code>value</code>属性，设置编号；</li>
 </ul>
 
 <pre><code>&lt;ol&gt;
@@ -386,9 +445,7 @@
 &lt;/ol&gt;
 </code></pre>
 
-<ul>
-<li>说明列表</li>
-</ul>
+<h4 id="toc_10">4. 说明列表</h4>
 
 <pre><code>&lt;dl&gt;
     &lt;dt&gt;Apple&lt;/dt&gt;
@@ -397,13 +454,11 @@
 &lt;/dl&gt;
 </code></pre>
 
-<ul>
-<li>自定义列表</li>
-</ul>
+<h4 id="toc_11">5. 自定义列表</h4>
 
-<p>结合 CSS counter 和 :before 选择器，具体在 17 章介绍；</p>
+<p>结合 CSS counter 和 :before 选择器，具体在第三部分第 2 章介绍；</p>
 
-<h3 id="toc_4">插图</h3>
+<h2 id="toc_12">八、插图</h2>
 
 <ul>
 <li>有点像缩进的 div；</li>

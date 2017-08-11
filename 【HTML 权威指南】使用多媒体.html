@@ -280,18 +280,54 @@
 
 <ul>
 <li>
-<a href="#toc_0">使用 video 元素</a>
+<a href="#toc_0">一、使用 video 元素</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 预先加载视频</a>
 </li>
 <li>
-<a href="#toc_1">使用 audio 元素</a>
+<a href="#toc_2">2. 显示占位图，<code>poster</code> 属性指定图片；</a>
 </li>
 <li>
-<a href="#toc_2">通过 DOM 操作嵌入式媒体</a>
+<a href="#toc_3">3. 设置宽高；</a>
+</li>
+<li>
+<a href="#toc_4">4. 指定视频来源和格式；指定多种格式，浏览器自动选择可播放的视频；</a>
+</li>
+<li>
+<a href="#toc_5">5. track 元素：提供视频相关内容，例如字幕等，暂无浏览器支持；</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_6">二、使用 audio 元素</a>
+</li>
+<li>
+<a href="#toc_7">三、通过 DOM 操作嵌入式媒体</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_8">1. 获得媒体信息；</a>
+</li>
+<li>
+<a href="#toc_9">2. 评估回放能力</a>
+</li>
+<li>
+<a href="#toc_10">2. 控制媒体回放</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
 
-<h3 id="toc_0">使用 video 元素</h3>
+<h2 id="toc_0">一、使用 video 元素</h2>
 
 <table>
 <thead>
@@ -341,9 +377,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>预先加载视频</li>
-</ul>
+<h4 id="toc_1">1. 预先加载视频</h4>
 
 <table>
 <thead>
@@ -369,23 +403,17 @@
 </tbody>
 </table>
 
-<ul>
-<li>显示占位图，<code>poster</code> 属性指定图片；</li>
-</ul>
+<h4 id="toc_2">2. 显示占位图，<code>poster</code> 属性指定图片；</h4>
 
 <pre><code>&lt;video poster=&quot;src/test_on.png&quot; src=&quot;src/pm4.mp4&quot; autoplay&gt;&lt;/video&gt;
 </code></pre>
 
-<ul>
-<li>设置宽高；</li>
-</ul>
+<h4 id="toc_3">3. 设置宽高；</h4>
 
 <pre><code>&lt;video src=&quot;src/pm4.mp4&quot; width=&quot;300px&quot; height=&quot;200px&quot;&gt;&lt;/video&gt;
 </code></pre>
 
-<ul>
-<li>指定视频来源和格式；指定多种格式，浏览器自动选择可播放的视频；</li>
-</ul>
+<h4 id="toc_4">4. 指定视频来源和格式；指定多种格式，浏览器自动选择可播放的视频；</h4>
 
 <pre><code>&lt;video autoplay&gt;
     &lt;source src=&quot;src/pm4.mp4&quot; type=&quot;video/mp4&quot;/&gt;
@@ -393,21 +421,17 @@
 &lt;/video&gt;
 </code></pre>
 
-<ul>
-<li>track 元素：提供视频相关内容，例如字幕等，暂无浏览器支持；</li>
-</ul>
+<h4 id="toc_5">5. track 元素：提供视频相关内容，例如字幕等，暂无浏览器支持；</h4>
 
-<h3 id="toc_1">使用 audio 元素</h3>
+<h2 id="toc_6">二、使用 audio 元素</h2>
 
 <ul>
 <li>与 <code>video</code> 类似，略；</li>
 </ul>
 
-<h3 id="toc_2">通过 DOM 操作嵌入式媒体</h3>
+<h2 id="toc_7">三、通过 DOM 操作嵌入式媒体</h2>
 
-<ul>
-<li>获得媒体信息；</li>
-</ul>
+<h4 id="toc_8">1. 获得媒体信息；</h4>
 
 <table>
 <thead>
@@ -481,9 +505,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>评估回放能力</li>
-</ul>
+<h4 id="toc_9">2. 评估回放能力</h4>
 
 <table>
 <thead>
@@ -509,9 +531,7 @@
 </tbody>
 </table>
 
-<ul>
-<li>控制媒体回放</li>
-</ul>
+<h4 id="toc_10">2. 控制媒体回放</h4>
 
 <table>
 <thead>

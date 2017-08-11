@@ -280,25 +280,104 @@
 
 <ul>
 <li>
-<a href="#toc_0">结构性伪类</a>
+<a href="#toc_0">一、结构性伪类</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_1">1. 根元素</a>
 </li>
 <li>
-<a href="#toc_1">UI 伪类</a>
+<a href="#toc_2">2. 子元素</a>
 </li>
 <li>
-<a href="#toc_2">动态伪类</a>
+<a href="#toc_3">3. nth-child</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<a href="#toc_3">其他伪类</a>
+<a href="#toc_4">二、UI 伪类</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_5">1. 启用/禁用</a>
+</li>
+<li>
+<a href="#toc_6">2. 已勾选</a>
+</li>
+<li>
+<a href="#toc_7">3. 默认</a>
+</li>
+<li>
+<a href="#toc_8">4. 有效/无效的 input</a>
+</li>
+<li>
+<a href="#toc_9">5. 限定范围的 input</a>
+</li>
+<li>
+<a href="#toc_10">6. 必须/可选的 input</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_11">三、动态伪类</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_12">1. 超链接</a>
+</li>
+<li>
+<a href="#toc_13">2. 已访问的超链接</a>
+</li>
+<li>
+<a href="#toc_14">3. 鼠标悬停</a>
+</li>
+<li>
+<a href="#toc_15">4. 元素激活时</a>
+</li>
+<li>
+<a href="#toc_16">5. 焦点元素</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_17">四、其他伪类</a>
+<ul>
+<li>
+<ul>
+<li>
+<a href="#toc_18">1. 否定选择器</a>
+</li>
+<li>
+<a href="#toc_19">2. 没有子元素的元素</a>
+</li>
+<li>
+<a href="#toc_20">3. 基于 lang 全局属性的元素</a>
+</li>
+<li>
+<a href="#toc_21">4. 超链接 target 属性相关</a>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
 
-<h3 id="toc_0">结构性伪类</h3>
+<h2 id="toc_0">一、结构性伪类</h2>
+
+<h4 id="toc_1">1. 根元素</h4>
 
 <ul>
-<li><p>根元素</p></li>
-<li><p><code>:root</code>，总是返回<code>html</code>元素，实际使用可能比较少；</p></li>
+<li><code>:root</code>，总是返回<code>html</code>元素，实际使用可能比较少；</li>
 </ul>
 
 <pre><code>:root {
@@ -307,9 +386,7 @@
 }
 </code></pre>
 
-<ul>
-<li>子元素</li>
-</ul>
+<h4 id="toc_2">2. 子元素</h4>
 
 <table>
 <thead>
@@ -445,9 +522,7 @@ div&gt;p:only-of-type {
 &lt;/body&gt;
 </code></pre>
 
-<ul>
-<li>nth-child</li>
-</ul>
+<h4 id="toc_3">3. nth-child</h4>
 
 <table>
 <thead>
@@ -481,11 +556,12 @@ div&gt;p:only-of-type {
 <p>与上述类似，略了，要举一反三；</p>
 </blockquote>
 
-<h3 id="toc_1">UI 伪类</h3>
+<h2 id="toc_4">二、UI 伪类</h2>
+
+<h4 id="toc_5">1. 启用/禁用</h4>
 
 <ul>
-<li><p>启用/禁用</p></li>
-<li><p><code>:enabled</code> 和 <code>:disabled</code></p></li>
+<li><code>:enabled</code> 和 <code>:disabled</code>；</li>
 </ul>
 
 <pre><code>:enabled {
@@ -501,50 +577,93 @@ div&gt;p:only-of-type {
 &lt;button disabled&gt;不可用&lt;/button&gt;
 </code></pre>
 
-<ul>
-<li><p>已勾选</p></li>
-<li><p><code>:checked</code></p></li>
-<li><p>默认</p></li>
-<li><p><code>:default</code></p></li>
-<li><p>有效/无效的 input </p></li>
-<li><p><code>:valid</code> 和 <code>:invalid</code></p></li>
-<li><p>限定范围的 input</p></li>
-<li><p><code>:in-range</code> 和 <code>out-of-range</code></p></li>
-<li><p>必须/可选的 input</p></li>
-<li><p><code>:required</code> 和 <code>:optional</code></p></li>
-</ul>
-
-<h3 id="toc_2">动态伪类</h3>
+<h4 id="toc_6">2. 已勾选</h4>
 
 <ul>
-<li><p>link 超链接</p></li>
-<li><p>visited已访问的超链接</p></li>
-<li><p>hover 鼠标悬停</p></li>
-<li><p>active 元素激活时</p></li>
-<li><p>focus 焦点元素</p></li>
+<li><code>:checked</code>；</li>
 </ul>
 
-<h3 id="toc_3">其他伪类</h3>
+<h4 id="toc_7">3. 默认</h4>
 
 <ul>
-<li><p>not 否定选择器</p></li>
-<li><p>empty 没有子元素的元素</p></li>
-<li><p>lang 基于 lang 全局属性的元素</p></li>
-<li><p>target 超链接 target 属性相关</p></li>
+<li><code>:default</code>；</li>
 </ul>
 
-<pre><code>:target {
-    border: thin black solid;
-    color: red;
-}
+<h4 id="toc_8">4. 有效/无效的 input</h4>
 
+<ul>
+<li><code>:valid</code> 和 <code>:invalid</code>；</li>
+</ul>
 
-&lt;a href=&quot;###p1&quot;&gt;p1&lt;/a&gt;
-&lt;a href=&quot;###p2&quot;&gt;p2&lt;/a&gt;
+<h4 id="toc_9">5. 限定范围的 input</h4>
 
-&lt;p id=&quot;p1&quot;&gt;content 1&lt;/p&gt;
-&lt;p id=&quot;p2&quot;&gt;content 2&lt;/p&gt;
-</code></pre>
+<ul>
+<li><code>:in-range</code> 和 <code>out-of-range</code>；</li>
+</ul>
+
+<h4 id="toc_10">6. 必须/可选的 input</h4>
+
+<ul>
+<li><code>:required</code> 和 <code>:optional</code>；</li>
+</ul>
+
+<h2 id="toc_11">三、动态伪类</h2>
+
+<h4 id="toc_12">1. 超链接</h4>
+
+<ul>
+<li>:link；</li>
+</ul>
+
+<h4 id="toc_13">2. 已访问的超链接</h4>
+
+<ul>
+<li>:visited；</li>
+</ul>
+
+<h4 id="toc_14">3. 鼠标悬停</h4>
+
+<ul>
+<li>:hover；</li>
+</ul>
+
+<h4 id="toc_15">4. 元素激活时</h4>
+
+<ul>
+<li>:active；</li>
+</ul>
+
+<h4 id="toc_16">5. 焦点元素</h4>
+
+<ul>
+<li>:focus；</li>
+</ul>
+
+<h2 id="toc_17">四、其他伪类</h2>
+
+<h4 id="toc_18">1. 否定选择器</h4>
+
+<ul>
+<li>:not；</li>
+</ul>
+
+<h4 id="toc_19">2. 没有子元素的元素</h4>
+
+<ul>
+<li>empty；</li>
+</ul>
+
+<h4 id="toc_20">3. 基于 lang 全局属性的元素</h4>
+
+<ul>
+<li>lang；</li>
+</ul>
+
+<h4 id="toc_21">4. 超链接 target 属性相关</h4>
+
+<ul>
+<li>target；</li>
+</ul>
 
 
 </div>
